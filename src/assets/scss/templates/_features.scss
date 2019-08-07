@@ -1,0 +1,266 @@
+//Features from 2015-2018 Redesign
+.feature-2015-redesign-heading {
+	background: $black;
+	background-repeat: no-repeat;
+	@include breakpoint(small) {
+		padding: rem-calc(65%) 0 ;
+		margin: 0 0 rem-calc(32);
+		height: auto;
+		position: relative;
+		text-align: left;
+	}
+
+	@include breakpoint(medium only) {
+		padding: rem-calc(27%) 0 ;
+	}
+	@include breakpoint(large) {
+		background-position: top center;
+	}
+	@include breakpoint(xlarge) {
+		background-position: center center;
+	}
+
+	.feature-2015-redesign-heading-area {
+		@include xy-grid-container(75rem);
+		@include xy-grid;
+	}
+
+	.feature-2015-redesign-heading-text {
+		@include breakpoint(small) {
+			@include xy-cell(8);
+		}
+
+		@include breakpoint(medium) {
+			@include xy-cell(9);
+			padding-top: 6rem;
+		}
+
+		@include breakpoint(large) {
+			padding-top: 1rem;
+			@include xy-cell(5);
+			@include xy-cell-offset(7);
+		}
+		@include breakpoint(xlarge) {
+			padding-top: 5rem;
+		}
+
+	}
+
+	h1 {
+		color: #fff;
+		font-weight: 500;
+
+		@include breakpoint(small) {
+			font-size: 2.2rem;
+		}
+
+		@include breakpoint(medium) {
+			font-size: 2.5375rem;
+		}
+
+		@include breakpoint(large) {
+			font-size: 2.875rem;
+		}
+
+	}
+
+	h2 {
+		color: #fefefe;
+		font-weight: 300;
+		font-size: 1.3125rem;
+	}
+
+}
+
+//Features from 2019 Redesign
+.feature-2019-redesign-heading {
+	background: $white;
+	background-repeat: no-repeat;
+	@include breakpoint(small) {
+		padding: rem-calc(65%) 0 ;
+		margin: 0 0 rem-calc(32);
+		height: auto;
+		position: relative;
+		text-align: left;
+	}
+
+	@include breakpoint(medium only) {
+		padding: rem-calc(27%) 0 ;
+		margin: 0 0 rem-calc(32);
+	}
+	@include breakpoint(large) {
+		background-position: top center;
+	}
+	@include breakpoint(xlarge) {
+		background-position: center center;
+	}
+	//large only
+	@media screen and (min-width: 64em) and (max-width: 74.9375em) { 
+
+	}
+
+	.feature-2019-redesign-heading-area {
+		@include xy-grid-container(75rem);
+		@include xy-grid;
+	}
+
+	.feature-2019-redesign-heading-text {
+		@include breakpoint(small) {
+		}
+
+		@include breakpoint(medium) {
+			@include xy-cell(9);
+			-webkit-transform: translateY(5%);
+			-ms-transform: translateY(5%);
+			transform: translateY(5%);
+			color: $white;
+			padding: 2rem;
+			font-size: 1.25rem;
+			background-color: rgba(44, 44, 51, 0.66);			
+			margin-top: 1rem;
+		}
+
+		@include breakpoint(large) {
+			-webkit-transform:translate(-3%, 10%);
+			-ms-transform: translate(-3%, 10%);
+			transform: translate(-3%, 10%);
+			@include xy-cell(7);
+		}
+		@include breakpoint(xlarge) {
+			-webkit-transform:translate(-5%, 10%);
+			-ms-transform: translate(-5%, 10%);
+			transform: translate(-5%, 10%);
+		}
+
+	}
+
+	h1 {
+
+		@include breakpoint(small) {
+			font-size: 2.2rem;
+		}
+
+		@include breakpoint(medium) {
+			font-size: 2.5375rem;
+		}
+
+		@include breakpoint(large) {
+			font-size: 2.875rem;
+		}
+
+	}
+
+	h2 {
+		font-size: 1.35rem;
+	}
+	h3, h4 {
+		font-size: 1.25rem;
+	}	
+
+}
+
+.small-title-tag {
+	@include callout-base;
+	h2 {
+		font-size: 1.3125rem;
+	}
+	h3 {
+		font-size: 1.125rem;
+	}
+	h4 {
+		font-size: 1rem;
+	}
+
+}
+
+.main-grid.feature-2019 {
+	@include breakpoint(large) {
+		.entry-content {
+			@include xy-cell(100%);
+		}
+		.wp-block-columns {
+		 
+		}
+		.wp-block-column {
+		  margin: 0 3rem 0 0;
+		}		
+		.wp-block-column:first-child {
+			flex-basis: 125%;
+		}
+		.wp-block-column:nth-child(2n) {
+			//background: blue;
+			max-width: calc(700px + (100vw - 768px) / 2);
+			margin-left: 0;
+			margin-right: calc(-1 * ((100vw - 768px) / 2));
+			margin-top: 10rem; 
+			p {
+				font-size: 1rem;
+				line-height: 1.5;
+			}
+		}
+		.sidebar-header, .sidebar-paragraph {
+			
+		}	
+	}
+	@include breakpoint(medium down) {
+		.wp-block-columns.has-2-columns {
+			flex-flow: row wrap;
+		}
+
+		.has-2-columns .wp-block-column {
+			flex-basis: 100%;
+		}
+		.wp-block-column:nth-child(2n) {
+			margin-left: 0px;
+		}
+	}	
+}
+
+.main-grid.feature-2015 {
+	margin-top: 1rem;
+}
+
+//Centerpiece
+$hero-full-screen-bg-size: cover;
+$hero-full-screen-text-color: $white;
+
+.hero-full-screen {
+	height: 75vh;
+
+	@include breakpoint(medium down) {
+		height: 25vh;
+	}
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background: center center no-repeat;
+	background-size: $hero-full-screen-bg-size;
+
+	.middle-content-section {
+		text-align: center;
+		color: $hero-full-screen-text-color;
+	}
+
+	.top-content-section {
+		width: 100%;
+	}
+
+	.bottom-content-section {
+		padding: 1rem;
+
+		svg {
+			height: rem-calc(40);
+			width: rem-calc(40);
+			fill: $hero-full-screen-text-color;
+
+			@include breakpoint(medium down) {
+				display: none;
+			}
+
+		}
+
+	}
+
+}

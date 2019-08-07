@@ -1,0 +1,122 @@
+//ARNHEM
+$font-stack-arnhem: 'arnhem', Georgia, serif;
+$font-stack-arnhem-weight: 300;
+$font-stack-arnhem-bold: 'arnhem-bold', Georgia, serif;
+$font-stack-arnhem-bold-weight: 700;
+
+@font-face {
+  font-family: 'arnhem';
+  src: url('../fonts/arnhem/Arnhem-Bold.eot');
+  src: url('../fonts/arnhem//Arnhem-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/arnhem/Arnhem-Bold.woff') format('woff'),
+       url('../fonts/arnhem/Arnhem-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arnhem';
+  src: url('../fonts/arnhem/Arnhem-BoldItalic.eot');
+  src: url('../fonts/arnhem/Arnhem-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/arnhem/Arnhem-BoldItalic.woff') format('woff'),
+       url('../fonts/arnhem/Arnhem-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'arnhem';
+  src: url('../fonts/arnhem/Arnhem-Blond.eot');
+  src: url('../fonts/arnhem/Arnhem-Blond.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/arnhem/Arnhem-Blond.woff') format('woff'),
+       url('../fonts/arnhem/Arnhem-Blond.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arnhem';
+  src: url('../fonts/arnhem/Arnhem-BlondItalic.eot');
+  src: url('../fonts/arnhem/Arnhem-BlondItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/arnhem/Arnhem-BlondItalic.woff') format('woff'),
+       url('../fonts/arnhem/Arnhem-BlondItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+//QUADON
+$font-header-quadon: 'quadon-bold', 'Helvetica Neue', Roboto, sans-serif;
+$font-header-quadon-weight: 500;
+$font-header-quadon-extrabold: 'quadon-extrabold', 'Helvetica Neue', Roboto, sans-serif;
+$font-header-quadon-extrabold-weight: 700;
+
+@font-face {
+  font-family: 'quadon-bold';
+  src: url('../fonts/quadon/Quadon-Bold.eot');
+  src: url('../fonts/quadon/Quadon-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/quadon/Quadon-Bold.woff') format('woff'),
+       url('../fonts/quadon/Quadon-Bold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'quadon-extrabold';
+  src: url('../fonts/quadon/Quadon-ExtraBold.eot');
+  src: url('../fonts/quadon/Quadon-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/quadon/Quadon-ExtraBold.woff') format('woff'),
+       url('../fonts/quadon/Quadon-ExtraBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+//GENTONA
+$font-stack-gentona-semibold: 'gentona-semibold', 'Helvetica Neue', Roboto, sans-serif;
+$font-stack-gentona-semibold-weight: 600;
+$font-header-gentona-verybold: 'gentona-bold', 'Helvetica Neue', Roboto, sans-serif;;
+$font-header-gentona-verybold-weight: 700;
+
+@font-face {
+  font-family: 'gentona-light';
+  src: url('../fonts/gentona/Gentona-Light.eot');
+  src: url('../fonts/gentona/Gentona-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-Light.woff') format('woff'),
+       url('../fonts/gentona/Gentona-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gentona-lightitalic';
+  src: url('../fonts/gentona/Gentona-LightItalic.eot');
+  src: url('../fonts/gentona/Gentona-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-LightItalic.woff') format('woff'),
+       url('../fonts/gentona/Gentona-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'gentona-semibold';
+  src: url('../fonts/gentona/Gentona-SemiBold.eot');
+  src: url('../fonts/gentona/Gentona-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-SemiBold.woff') format('woff'),
+       url('../fonts/gentona/Gentona-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gentona-bold';
+  src: url('../fonts/gentona/Gentona-Bold.eot');
+  src: url('../fonts/gentona/Gentona-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-Bold.woff') format('woff'),
+       url('../fonts/gentona/Gentona-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+//Icon Fonts
+$font-awesome: "Font Awesome 5 Free", 'gentona-semibold', 'Helvetica Neue', Roboto, sans-serif;

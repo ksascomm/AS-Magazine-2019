@@ -1,0 +1,72 @@
+.footer {
+  background-color: $black;
+  color: $white;
+  .widget_text {
+    .textwidget {
+      ul {
+        list-style-type: none;
+      }
+      p {
+        font-family: $font-stack-gentona-semibold;
+        font-weight: $font-stack-gentona-semibold-weight;
+      }
+      a {
+        color: $white;
+        font-family: $font-stack-gentona-semibold;
+        font-weight: $font-stack-gentona-semibold-weight;
+        &:hover {
+          color: $bluejaysblue;
+          transition: color 0.5s ease;
+        }
+      }
+    }
+  }
+  .social-media {
+    a {
+      margin-left: .75rem;
+      border-bottom: none;
+      &:hover {
+        color: $spiritblue;
+        transition: color 0.5s ease;
+      }
+      @include breakpoint(medium down) {
+        margin-top: 1rem;
+      }
+      .fab {
+        font-weight: initial;
+      }
+    }
+  }
+  .copydate {
+    color: $white;
+    p {
+      font-size: 1rem;
+      text-align: center;   
+    }
+  }
+  .widget {
+    @include breakpoint(medium down) {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.footer-container {
+  @include xy-grid-container;
+  margin: 0 auto;
+  //margin-top: rem-calc(60);
+}
+
+.footer-grid {
+  //@include xy-grid-container;
+  @include xy-grid;
+  text-align:center;
+  padding: rem-calc(30) 0;
+
+  section {
+    @include xy-cell();
+    @include breakpoint(large) {
+      @include xy-cell(auto);
+    }
+  }
+}

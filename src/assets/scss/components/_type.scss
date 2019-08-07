@@ -1,0 +1,91 @@
+//TYPOGRAPHY
+//font-stack-arnhem = arnhem
+//font-header = quadon
+//font-stack-gentona-semibold = gentonasemibold. 
+body {
+  font-family: $font-stack-arnhem;
+  font-weight: $font-stack-arnhem-weight;
+  font-size: $global-font-size * 1.125
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-header-gentona-verybold;
+  font-weight: $font-header-gentona-verybold-weight;
+  small {
+    color: $dark-gray;
+  }
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.65rem;
+}
+
+h3 {
+	font-size: 1.45rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+}
+
+h5 {
+	font-size: 1.15rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+p {
+  a {
+      border: none;
+      border-bottom: .125em solid;
+      border-bottom-color: $medium-gray;
+      background-color: transparent;
+      border-radius: 0;
+      transition: border-color,background-color,color;
+      transition-duration: 250ms,250ms,250ms;
+      transition-timing-function: ease-in-out,ease-in-out,ease-in-out;
+      &:hover {
+        border-bottom: .125em solid;
+        border-bottom-color: $dark-gray;
+  	}
+  }
+}
+
+.curated-posts-section-wrapper, .news-section-wrapper, .dean-seen-section-wrapper, .social-section-wrapper, .past-issues-section-wrapper, .related-posts-container, .related-features-container, .toc .story {
+  a {
+  color: $heritageblue;
+    &:hover, &:focus {
+      color: $spiritblue;
+    }
+  }
+}
+
+.entry-content {
+  margin-bottom: 2rem;
+  a {
+    color: $heritageblue;
+  }
+}
+.padding-top {
+  padding-top: 1rem;
+}
+
+.breadcrumbs {
+    margin: 0 0 1rem 0;
+    list-style: none;
+    text-transform: uppercase;
+    font-family: $font-header-gentona-verybold;
+    font-weight: $font-header-gentona-verybold-weight;
+    a {
+      color: $heritageblue;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+}

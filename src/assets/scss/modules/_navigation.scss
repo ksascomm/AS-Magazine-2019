@@ -1,0 +1,244 @@
+.main-navigation {
+  @include xy-grid();
+  @include xy-grid-container();
+  //@include xy-grid-layout();
+  .top-bar-right {
+    @include xy-cell-offset(2%);
+  }
+}
+
+.search-box {
+  .input-group.search {
+    margin-bottom: 0;
+  }
+  input {
+    &[type='text'] {
+      font-family: $font-stack-gentona-semibold;
+    }
+    &[type="submit"] {
+      font-family: $font-awesome !important;
+    }
+    &.search-field {
+    height: 34px;
+    }
+  }
+  .input-group-button {
+    height: 35px;
+  }
+}
+
+.site-header, .top-bar, .top-bar ul  {
+  background: $heritageblue;
+}
+
+// Navigation breakpoints
+.mobile-menu,
+.site-title-bar {
+  @include hide-for(medium);
+}
+//
+.desktop-menu,
+.site-navigation .top-bar-left {
+  @include show-for(medium);
+}
+
+// Site title
+.site-desktop-title a {
+  font-weight: bold;
+}
+
+// WP post navigation
+.post-navigation {
+  @include clearfix;
+}
+
+.nav-previous {
+  float:left;
+}
+
+.nav-next {
+  float:right;
+}
+
+
+
+.topbar-center-logo {
+  
+  .menu {
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+.topbar-center-logo .top-bar-center {
+  flex: 1 0 auto;
+
+  @include breakpoint(small only) {
+    display: none;
+  }
+  h1 {
+    font-family: $font-header-gentona-verybold;
+    font-weight: $font-header-gentona-verybold-weight;
+  }
+  a {
+  	color: $white;
+  }
+}
+
+.topbar-center-logo-mobile {
+
+  .menu-icon {
+    vertical-align: text-top;
+  }
+}
+
+.top-bar {
+  .menu {
+    a {
+      font-size: 1.25rem;
+      font-family: 'gentona-bold';
+      &:hover {
+        color: $spiritblue;
+      }
+    }
+  }
+  padding-bottom: 0rem;
+}
+
+ul.dropdown.menu.vertical.submenu.is-dropdown-submenu {
+  background: $white;
+  li {
+    border-bottom: 1px solid $gray;
+    a {
+      color: $black;
+      &:hover {
+        text-decoration: none;
+        background: $spiritblue;
+        color: $white;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+.nav-shield {
+  @include breakpoint(small only) {
+    //@include xy-cell(12);
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 70%;
+      }
+  }
+  @include breakpoint(medium) {  
+    //@include xy-cell(5);
+    img {
+      margin: .75rem 1rem;
+      max-width: 250px;
+    }
+  }
+  @include breakpoint(medium only) {
+     //margin-top: 1rem;
+  }
+  @include breakpoint(large) {  
+    //@include xy-cell(3);
+  }
+
+}
+
+//Explore KSAS area
+
+.roof-header-top {
+  width: 100%;
+  height: 1.5rem;
+  padding: 8px 20px 10px;
+  li.bar {
+    &:after { 
+      font-family: $font-stack-gentona-semibold;
+      content: "|";
+      color: $black;
+      }
+  }
+  .roof-menu {
+    font-size: 1rem;
+  }
+  .menu.simple {
+    a.button {
+      padding: 0.7rem 1rem;
+    }
+  }
+  .roof-header-top-links {
+    ul li {
+      display: inline;
+    }
+    a {
+      font-family: $font-stack-gentona-semibold;
+      font-weight: $font-stack-gentona-semibold-weight;
+      color: $white;
+    }
+  }
+  .button, a.button {
+    background-color: $white;
+    color: $heritageblue;
+    &:hover {
+      background-color: $heritageblue;
+      color: $white;
+      border: 1px solid $white;
+    }
+  }  
+  .off-canvas {
+    background: $white;
+    .menu > li > a {
+      color: $white;
+      &:hover {
+        background: $light-gray;
+      }
+    }
+  }
+  #global-links {
+    h3 {
+      font-size: 1.25rem;
+      color: $black;
+      font-family: $font-stack-gentona-semibold;
+      font-weight: $font-stack-gentona-semibold-weight;
+    }
+    .menu {
+      display: inherit;
+      li {
+        display: list-item;
+        a {
+          padding: 0.35rem 1rem; 
+          font-family: $font-stack-gentona-semibold;
+          font-weight: $font-stack-gentona-semibold-weight;
+          color: $heritageblue;
+          &:hover, &:active {
+              color: $black;
+          }
+        }      
+      }
+    }
+  } 
+  form { 
+    @include breakpoint (medium) {
+      width: 200px;      
+    }
+    input {
+      height: 2rem;
+      &[type="submit"] {
+        font-family: $font-awesome;
+      }
+    }
+    .input-group {
+      margin-bottom: 0;
+    }
+    .button {
+      padding: 0 1rem;
+    }
+  }
+
+}

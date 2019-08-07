@@ -1,0 +1,95 @@
+//function foundationpress_gallery($attr) in foundation.php renders .gallery superfluous
+
+.gallery
+ {
+  
+  @include grid-row();
+
+    &.gallery-columns-2 {
+      @include breakpoint(small) {
+        .gallery-item {
+          @include grid-column(12);
+        }
+      }
+       @include breakpoint(medium) {
+        .gallery-item {
+          @include grid-column(6);
+        }
+      }
+   }
+
+    &.gallery-columns-3 {
+      @include breakpoint(small) {
+        .gallery-item {
+          @include grid-column(12);
+        }
+      }
+       @include breakpoint(medium) {
+        .gallery-item {
+          @include grid-column(4);
+        }
+      }
+    }
+
+    &.gallery-columns-4 {
+      @include breakpoint(small) {
+        .gallery-item {
+          @include grid-column(12);
+        }
+      }
+       @include breakpoint(medium) {
+        .gallery-item {
+          @include grid-column(3);
+        }
+      }
+    }
+
+    &.gallery-columns-6 {
+      @include breakpoint(small) {
+        .gallery-item {
+          @include grid-column(12);
+        }
+      }
+       @include breakpoint(medium) {
+        .gallery-item {
+          @include grid-column(2);
+        }
+      }
+    }
+
+    .gallery-item {
+      padding: .75rem 0;
+      &:last-child:not(:first-child) {
+        float: left !important;
+      }
+    }
+    .gallery-caption {
+    font-size: 12px;
+    font-size: 0.857142857rem;
+  }
+}
+
+.fp-gallery {
+  a {
+    &[href$=".jpg"]:after, &[href$=".jpeg"]:after, &[href$=".png"]:after {
+      display: none;
+    }
+  }
+  .fp-gallery-item {
+    margin-bottom: 1rem;
+    a.thumbnail {
+      margin-bottom: 0;
+    }
+    a.thumbnail:hover, a.thumbnail:focus {
+      box-shadow: 0 0 6px 1px rgba(65, 143, 222, 1);
+    }
+  }
+  .gallery-caption {
+    padding-top: .5rem;
+    font-size: 12px;
+    font-size: 0.857142857rem;
+  }
+  img {
+    padding-bottom: inherit !important;
+  }
+}

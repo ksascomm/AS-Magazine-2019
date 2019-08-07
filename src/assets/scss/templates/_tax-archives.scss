@@ -1,0 +1,38 @@
+//Author, Category & Tax Archive
+
+h1.term-title {
+  text-transform: capitalize;
+}
+
+.taxonomy-archive {
+  border: none;
+  h1 {
+    font-size: 1.5rem;
+    a {
+      color: $heritageblue;
+    }
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+.tag-list {
+  text-transform: capitalize;
+  .tag-title {
+    font-size: 1.5rem;
+    font-family: $font-header-gentona-verybold; 
+  }
+  .tag-link {
+    font-family: $font-stack-gentona-semibold; 
+    a {
+      color: $heritageblue;
+      padding: 0;
+      margin-bottom: .5rem;
+      background: transparent !important;
+    }
+  }
+}
