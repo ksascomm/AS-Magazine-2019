@@ -15,7 +15,8 @@
 				<?php the_excerpt();?>
 				<?php endif;?>
 			</div>
-			<?php the_post_thumbnail(array( 650, 650)); ?>
+			<?php //the_post_thumbnail(array( 650, 650)); ?>
+			<img src="http://via.placeholder.com/650x350" alt="">
 		</div>
 	</div>
 </div>

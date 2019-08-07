@@ -5,7 +5,8 @@
 			if ( ! empty( $categories ) ) {
 			    echo '<a class="button small category" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
 			}?>	
-			<?php the_post_thumbnail(array( 350, 350)); ?>
+			<?php //the_post_thumbnail(array( 350, 350)); ?>
+			<img src="http://via.placeholder.com/350x350" alt="">
 			<h1><?php $field = get_field_object('curated_order'); $value = $field['value']; ?>
 				<?php echo $value; ?>
 			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
