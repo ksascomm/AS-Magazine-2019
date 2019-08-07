@@ -42,5 +42,7 @@ get_header(); ?>
 		
 </div>
 <?php get_template_part( 'template-parts/feature', 'footer' ); ?>
-<?php comments_template(); ?>
+<div class="grid-container">
+	<?php comments_template(); ?>
+</div>
 <?php get_footer();
