@@ -9,7 +9,7 @@ This theme is built off [FoundationPress](https://github.com/olefredrik/Foundati
 ### 1. Clone the repository and install with npm
 ```bash
 $ cd my-wordpress-folder/wp-content/themes/
-$ git clone https://github.com/ksascomm/AS_Magazine_2019.git
+$ git clone https://github.com/ksascomm/AS-Magazine-2019.git
 $ cd AS_Magazine_2019
 $ npm install
 ```
