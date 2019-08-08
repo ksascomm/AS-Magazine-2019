@@ -30,11 +30,12 @@ $volume_name = get_the_volume_name($post);
 			<p class="byline issue"><?php echo $volume_name; ?></p>
 			<?php foundationpress_entry_meta(); ?>
 		</div>
-		<?php if ( get_field( 'show_featured_image' ) == 0 ) { 
-			} else { 
-				get_template_part( 'template-parts/featured-image' ); 
-			} 
-		?>
+	<?php if ( function_exists('get_field') && get_field( 'show_featured_image' ) == 1 ) {
+			get_template_part( 'template-parts/featured-image' ); 
+		} else {
+		//do nothing	
+		}
+	?>
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>

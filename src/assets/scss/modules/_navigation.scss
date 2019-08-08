@@ -1,7 +1,6 @@
 .main-navigation {
   @include xy-grid();
   @include xy-grid-container();
-  //@include xy-grid-layout();
   .top-bar-right {
     @include xy-cell-offset(2%);
   }
@@ -34,17 +33,33 @@
 // Navigation breakpoints
 .mobile-menu,
 .site-title-bar {
-  @include hide-for(medium);
+  @include hide-for(large);
 }
 //
 .desktop-menu,
-.site-navigation .top-bar-left {
-  @include show-for(medium);
+.site-navigation .top-bar-left, .site-navigation .top-bar-center, .site-navigation .top-bar-right {
+  @include show-for(large);
 }
 
 // Site title
-.site-desktop-title a {
-  font-weight: bold;
+.site-title-bar {
+  background: $black;
+  font-family: $font-header-gentona-verybold;
+  a {
+    color: $white;
+  }
+}
+
+.mobile-off-canvas-menu {
+ background: $black;
+  a {
+    font-family: $font-stack-gentona-semibold;
+     color: $white;
+     &:hover {
+      color: $spiritblue;
+     }
+  }
+  
 }
 
 // WP post navigation
@@ -79,8 +94,15 @@
     display: none;
   }
   h1 {
-    font-family: $font-header-gentona-verybold;
-    font-weight: $font-header-gentona-verybold-weight;
+    @include breakpoint(small) {
+      font-size: 1.25rem
+    }
+    @include breakpoint(medium) {
+      font-size: 1.5rem;
+    }
+    @include breakpoint(large) {
+      font-size: 2rem;
+    }    
   }
   a {
   	color: $white;
@@ -97,9 +119,18 @@
 .top-bar {
   .menu {
     a {
-      font-size: 1.25rem;
-      font-family: 'gentona-bold';
-      &:hover {
+    font-family: $font-stack-gentona-semibold;  
+    @include breakpoint(small) {
+      font-size: 1rem
+    }
+    @include breakpoint(medium) {
+      font-size: 1.125rem;
+    }
+    @include breakpoint(large) {
+      font-size: 1.25rem
+    }  
+    
+    &:hover {
         color: $spiritblue;
       }
     }

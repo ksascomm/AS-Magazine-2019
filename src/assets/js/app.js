@@ -22,16 +22,16 @@ $(document).ready(function(){
 	    {
 	      breakpoint: 1024,
 	      settings: {
-	        slidesToShow: 3,
+	        slidesToShow: 2,
 	        slidesToScroll: 1,
 	        infinite: true,
 	        dots: true
 	      }
 	    },
 	    {
-	      breakpoint: 600,
+	      breakpoint: 767,
 	      settings: {
-	        slidesToShow: 2,
+	        slidesToShow: 1,
 	        slidesToScroll: 1
 	      }
 	    },

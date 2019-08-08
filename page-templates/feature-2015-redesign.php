@@ -38,10 +38,9 @@ get_header(); ?>
 					</div>
 				</article>
 			<?php endwhile; ?>
-		</main>
-		<?php get_template_part( 'template-parts/sticky-social-bar' ); ?>
-		
+		</main>		
 	</div>
+	<?php get_template_part('template-parts/explore-and-share');?>
 </div>
 <?php get_template_part( 'template-parts/feature', 'footer' ); ?>
 <?php get_footer();

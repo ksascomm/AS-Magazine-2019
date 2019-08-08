@@ -1,11 +1,13 @@
 .cover-story {
-  .site-header, .top-bar, .top-bar ul, .dropdown.menu > li > a, .menu {
-    background: transparent;
+  @include breakpoint(small) {
+    height: 40vh;
   }
-  .site-header {
-    background: rgba(0, 0, 0, .35);
+  @include breakpoint (medium) {
+    height: 50vh;
   }
-  height: 75vh;
+  @include breakpoint (large) {
+    height: 75vh;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,27 +18,31 @@
       @include xy-grid-container(75rem);
       @include xy-grid;
     }
+    @include breakpoint(small only) {
+      a {
+        max-width: 90%;
+      }
+    }
     @include breakpoint(medium) {
       height: rem-calc(390);
-      //margin: 0 0 rem-calc(72);
     }
 
     @include breakpoint(large) {
       height: rem-calc(400);
-      padding: rem-calc(35%) 0;;
-    }
-
-    @include breakpoint(xlarge) {
-      height: rem-calc(500);
-      background-position: center center;
-      //padding: rem-calc(35%) 0;;
+      padding: rem-calc(35%) 0;
       a {
         &:hover {
           opacity: .7;
           transition: all .1s ease-in;
           border: none;
         }
-      }
+      }      
+    }
+
+    @include breakpoint(xlarge) {
+      height: rem-calc(500);
+      background-position: center center;
+
     }
     .tagline {
       text-shadow: 4px 0px 36px rgba(44,44,51,0.63);
@@ -120,17 +126,22 @@
       h1 {
         font-size: 1.25rem;
       }
-      .excerpt {
-        font-size: 1rem;
+      @include breakpoint (large) {
+        .excerpt {
+          font-size: 1rem;
+        }
       }
     }
     &.large {
       h1 {
         font-size: 1.5rem;
       }
-      .excerpt {
-        font-size: 1.125rem;
+      @include breakpoint (large) {
+        .excerpt {
+          font-size: 1.125rem;
+        }  
       }
+
     }
     .button.category {
       background-color: $light-gray;
@@ -140,20 +151,21 @@
     .card {
       border: none;
     }
+    .post-image {
+      @include breakpoint(medium down) {
+        display: block;
+      }
+    }
   }
 }
 
 .news-section-wrapper {
-  h1 {
-    font-family: $font-header-gentona-verybold;
-    font-weight: $font-header-gentona-verybold-weight;
-  }
   background: $light-gray;
   .slick-slide {
-    border-right: 1px solid #d9d9d9;
     padding: 0 1rem 0 0;
-    h3 {
-
+    border-right: 1px solid #d9d9d9;
+    @include breakpoint(small only) {
+      border-right: none;
     }
     p {
       font-size: 1rem;
@@ -162,13 +174,15 @@
   .slick-dots li button:before {
     font-size: 1rem;
   }
+  .slick-arrow {
+    @include breakpoint(medium down) {
+      margin: .5rem;
+    }
+  }
 }
 
 .social-section-wrapper {
-  h1 {
-    font-family: $font-header-gentona-verybold;
-    font-weight: $font-header-gentona-verybold-weight;
-  }
+
 }
 
 .cta-section {

@@ -19,7 +19,13 @@
 		<link rel="stylesheet" href="https://dl.dropbox.com/s/mznfcnfrb69cswq/kathy.css"  type="text/css">
 	</head>
 	<body <?php body_class(); ?>>
-
+	<div role="navigation" aria-label="Skip to main content">
+		<a class="skip-main show-on-focus" href="#page" >Skip to main content</a>
+	</div>
+	<div class="show-for-print" aria-hidden="true">
+		<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/krieger.blue.svg" alt="krieger logo">
+		<h1><?php echo get_bloginfo( 'description' ); ?> <?php echo get_bloginfo( 'title' ); ?></h1>
+	</div>
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
 		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
 	<?php endif; ?>
@@ -30,7 +36,7 @@
 			<div class="title-bar-left">
 				<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 				<span class="site-mobile-title title-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<?php bloginfo( 'name' ); ?> Main Menu
 				</span>
 			</div>
 		</div>
@@ -49,7 +55,7 @@
 			<div class="top-bar-left">
 				<div class="nav-shield">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img data-interchange="[<?php echo get_template_directory_uri(); ?>/dist/assets/images/krieger.blue.svg, small], [<?php echo get_template_directory_uri(); ?>/dist/assets/images/ksas-horizontal-md.png, medium], [<?php echo get_template_directory_uri(); ?>/dist/assets/images/ksas-horizontal-lg.png, large]" alt="Krieger School of Arts & Sciences">
+						<img data-interchange="[<?php echo get_template_directory_uri(); ?>/dist/assets/images/ksas-horizontal-md.png, small], [<?php echo get_template_directory_uri(); ?>/dist/assets/images/ksas-horizontal-md.png, medium], [<?php echo get_template_directory_uri(); ?>/dist/assets/images/ksas-horizontal-lg.png, large]" alt="Krieger School of Arts & Sciences">
 					</a>
 				</div>
 			</div>

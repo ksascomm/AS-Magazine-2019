@@ -25,8 +25,14 @@
 		<div class="cell large-9">
 			<div class="entry-content">
 				<blockquote><?php the_content();?></blockquote>
-				<cite><?php the_field( 'seen_heard_citation' ); ?>
-				<?php the_field( 'seen_heard_source' ); ?></cite>
+				<cite>
+					<?php if ( function_exists('get_field') && get_field('seen_heard_citation')):?>
+						<?php the_field( 'seen_heard_citation' ); ?>
+					<?php endif;?>
+					<?php if ( function_exists('get_field') && get_field('seen_heard_source')):?>
+						<?php the_field( 'seen_heard_source' ); ?>
+					<?php endif;?>
+				</cite>
 				<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
 			</div>
 		</div>

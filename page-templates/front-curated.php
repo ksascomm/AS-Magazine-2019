@@ -96,7 +96,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						while ($curated_content_query->have_posts()) : $curated_content_query->the_post();
 						//$count++; 
 						//if ($count == 1 || $count == 6) :
-						if( get_field('curated_order') == '1' || get_field('curated_order') == '6'): ?>
+						if ( function_exists('get_field') && ( get_field('curated_order') == '1' || get_field('curated_order') == '6')): ?>
 							<div class="cell small-12 large-6">
 								<?php get_template_part( 'template-parts/content', 'curated-large' ); ?>
 							</div>
@@ -107,6 +107,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						<?php endif; endwhile;?>
 					</div>
 				<?php wp_reset_postdata(); endif;?>
+				<?php if ( function_exists('get_field') && get_field('current_issue_link')):?>
 				<div class="cell small-12 cta-section">
 					<div class="float-right cta-link">
 						<h3>
@@ -114,9 +115,11 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							<?php if ( $current_issue_link ) { ?>
 								<a href="<?php echo $current_issue_link; ?>">View The Rest Of This Issue <span class="fas fa-arrow-circle-right"></span></a>
 							<?php } ?>
+						
 						</h3>
 					</div>
-				</div>				
+				</div>
+				<?php endif;?>				
 			</div> 
 		</div>
 	</div>
@@ -143,6 +146,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 					</div>	
 				</div> 
 				<?php wp_reset_postdata(); endif;?>
+				<?php if ( function_exists('get_field') && get_field('contact_link')):?>
 				<div class="cell small-12 cta-section">
 					<div class="float-right cta-link">
 						<h3>
@@ -153,6 +157,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						</h3>
 					</div>
 				</div>
+				<?php endif;?>
 			</div>
 		</div>
 	</div>
@@ -184,8 +189,14 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							    echo '<a class="button small tag" href="' . esc_url( get_tag_link( $seenheardtags[0]->term_id ) ) . '">' . esc_html( $seenheardtags[0]->name ) . '</a>';
 							}?>							
 							<blockquote><?php the_content();?></blockquote>
-							<cite><?php the_field( 'seen_heard_citation' ); ?>
-							<?php the_field( 'seen_heard_source' ); ?></cite>
+							<cite>
+								<?php if ( function_exists('get_field') && get_field('seen_heard_citation')):?>
+									<?php the_field( 'seen_heard_citation' ); ?>
+								<?php endif;?>
+								<?php if ( function_exists('get_field') && get_field('seen_heard_source')):?>
+									<?php the_field( 'seen_heard_source' ); ?>
+								<?php endif;?>
+							</cite>
 						</div>
 					</div>
 				<?php endwhile; wp_reset_postdata(); endif;?>

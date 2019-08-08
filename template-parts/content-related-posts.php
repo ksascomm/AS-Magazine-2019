@@ -18,7 +18,7 @@ if ($tags) :?>
 <div class="related-posts-container">
 	<div class="grid-container">
 		<h3>Related Stories</h3>
-		<div class="grid-x grid-margin-x small-up-2 medium-up-4">		
+		<div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-4">		
 		 <?php //list 4 post titles related to first tag on current post
 
 		 	$first_tag = $tags[0]->term_id;

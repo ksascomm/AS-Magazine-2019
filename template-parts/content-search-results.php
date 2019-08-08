@@ -9,14 +9,6 @@
  */
 
 ?>
-<?php
-$categories = get_the_category();
-$thiscat = $categories[0]->cat_ID;
-$catname = $categories[0]->name;
-$catslug = $categories[0]->slug;
-$volume = get_the_volume($post); 
-$volume_name = get_the_volume_name($post); 
-?>
 <article aria-labelledby="post-<?php the_ID(); ?>" <?php post_class('post-listing news-article single-search-result'); ?>>
 	<header>
 		<h3>
@@ -24,7 +16,10 @@ $volume_name = get_the_volume_name($post);
 				<?php the_title(); ?>
 			</a>
 		</h3>
-		<h4>Issue: <?php echo $volume_name; ?></h4>
+		<h4>
+			<?php $volume_name = get_the_volume_name($post); ?>			
+			Issue: <?php echo $volume_name; ?>	
+		</h4>
 	</header>
 
 	<div class="entry-content">
