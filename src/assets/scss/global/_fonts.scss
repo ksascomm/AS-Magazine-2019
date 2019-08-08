@@ -116,6 +116,56 @@ $font-header-gentona-verybold-weight: 700;
   font-style: normal;
 }
 
+//Titling Gothic
+
+/*==================*/
+/*=== Bold (700) ===*/
+/*==================*/
+@font-face {
+  font-family: 'titling-gothic';
+  src: url('../fonts/titling-gothic/Titling-Gothic-Bold.eot');
+  src: url('../fonts/titling-gothic/Titling-Gothic-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/titling-gothic/Titling-Gothic-Bold.woff') format('woff'),
+       url('../fonts/titling-gothic/Titling-Gothic-Bold.ttf') format('truetype'),
+       url('../fonts/titling-gothic/Titling-Gothic-Bold.svg#titlinggothicbold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+
+/*====================*/
+/*=== Medium (500) ===*/
+/*====================*/
+@font-face {
+  font-family: 'titling-gothic';
+  src: url('../fonts/titling-gothic/Titling-Gothic-Medium.eot');
+  src: url('../fonts/titling-gothic/Titling-Gothic-medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/titling-gothic/Titling-Gothic-medium.woff') format('woff'),
+       url('../fonts/titling-gothic/Titling-Gothic-medium.ttf') format('truetype'),
+       url('../fonts/titling-gothic/Titling-Gothic-medium.svg#titlinggothicmedium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+
+/*=====================*/
+/*=== Regular (300) ===*/
+/*=====================*/
+@font-face {
+  font-family: 'titling-gothic';
+  src: url('../fonts/titling-gothic/Titling-Gothic-Regular.eot');
+  src: url('../fonts/titling-gothic/Titling-Gothic-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/titling-gothic/Titling-Gothic-Regular.woff') format('woff'),
+       url('../fonts/titling-gothic/Titling-Gothic-Regular.ttf') format('truetype'),
+       url('../fonts/titling-gothic/Titling-Gothic-Regular.svg#titlinggothicregular') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
 
 
 //Icon Fonts
