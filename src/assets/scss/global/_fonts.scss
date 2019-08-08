@@ -1,11 +1,11 @@
 //ARNHEM
-$font-stack-arnhem: 'arnhem', Georgia, serif;
+$font-stack-arnhem: 'arnhem-blond', Georgia, serif;
 $font-stack-arnhem-weight: 300;
 $font-stack-arnhem-bold: 'arnhem-bold', Georgia, serif;
 $font-stack-arnhem-bold-weight: 700;
 
 @font-face {
-  font-family: 'arnhem';
+  font-family: 'arnhem-bold';
   src: url('../fonts/arnhem/Arnhem-Bold.eot');
   src: url('../fonts/arnhem//Arnhem-Bold.eot?#iefix') format('embedded-opentype'),
        url('../fonts/arnhem/Arnhem-Bold.woff') format('woff'),
@@ -15,7 +15,7 @@ $font-stack-arnhem-bold-weight: 700;
 }
 
 @font-face {
-  font-family: 'arnhem';
+  font-family: 'arnhem-bolditalic';
   src: url('../fonts/arnhem/Arnhem-BoldItalic.eot');
   src: url('../fonts/arnhem/Arnhem-BoldItalic.eot?#iefix') format('embedded-opentype'),
        url('../fonts/arnhem/Arnhem-BoldItalic.woff') format('woff'),
@@ -25,7 +25,7 @@ $font-stack-arnhem-bold-weight: 700;
 }
 
 @font-face {
-  font-family: 'arnhem';
+  font-family: 'arnhem-blond';
   src: url('../fonts/arnhem/Arnhem-Blond.eot');
   src: url('../fonts/arnhem/Arnhem-Blond.eot?#iefix') format('embedded-opentype'),
        url('../fonts/arnhem/Arnhem-Blond.woff') format('woff'),
@@ -35,7 +35,7 @@ $font-stack-arnhem-bold-weight: 700;
 }
 
 @font-face {
-  font-family: 'arnhem';
+  font-family: 'arnhem-blonditalic';
   src: url('../fonts/arnhem/Arnhem-BlondItalic.eot');
   src: url('../fonts/arnhem/Arnhem-BlondItalic.eot?#iefix') format('embedded-opentype'),
        url('../fonts/arnhem/Arnhem-BlondItalic.woff') format('woff'),
