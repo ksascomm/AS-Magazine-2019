@@ -27,18 +27,21 @@
 }
 
 .site-header, .top-bar, .top-bar ul  {
+  @include breakpoint(small only) {
+    background: $white;
+  }
   background: $heritageblue;
 }
 
 // Navigation breakpoints
 .mobile-menu,
 .site-title-bar {
-  @include hide-for(large);
+  @include hide-for(medium);
 }
 //
 .desktop-menu,
 .site-navigation .top-bar-left, .site-navigation .top-bar-center, .site-navigation .top-bar-right {
-  @include show-for(large);
+  @include show-for(medium);
 }
 
 // Site title
@@ -154,6 +157,7 @@ ul.dropdown.menu.vertical.submenu.is-dropdown-submenu {
   }
 }
 
+//Divisional logo on medium and up displays
 .nav-shield {
   @include breakpoint(small only) {
     //@include xy-cell(12);
@@ -178,6 +182,19 @@ ul.dropdown.menu.vertical.submenu.is-dropdown-submenu {
   }
   @include breakpoint(large) {  
     //@include xy-cell(3);
+  }
+
+}
+
+//Divisional logo on small only displays
+.mobile-logo {
+  margin-bottom: -1rem;
+  margin-top: -1rem;
+  img {
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;    
   }
 
 }

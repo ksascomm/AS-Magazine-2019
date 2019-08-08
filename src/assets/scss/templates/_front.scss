@@ -1,6 +1,6 @@
 .cover-story {
   @include breakpoint(small) {
-    height: 40vh;
+    height: 45vh;
   }
   @include breakpoint (medium) {
     height: 50vh;
@@ -12,7 +12,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  &.mobile {
+    height: inherit;
+    .cover-story-title, .cover-story-excerpt {
+      @include xy-cell(12);
+    }
 
+  }
   .middle-content-section {
     .marketing {
       @include xy-grid-container(75rem);
@@ -117,6 +123,9 @@
   }
 }
 .curated-posts {
+  h1.show-for-small-only {
+    @include xy-cell(12);
+  }
   .curated-post {
     h1 {
       font-family: $font-stack-gentona-semibold;
@@ -141,7 +150,6 @@
           font-size: 1.125rem;
         }  
       }
-
     }
     .button.category {
       background-color: $light-gray;

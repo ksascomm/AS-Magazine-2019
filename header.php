@@ -40,7 +40,9 @@
 				</span>
 			</div>
 		</div>
-
+		<div class="mobile-logo show-for-small-only">
+			<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/krieger.logo.horizontal.blue.svg" alt="Krieger School of Arts & Sciences">
+		</div>
 	
 		<div class="roof-header-top show-for-large hide-for-print">
 			<div class="row align-justify">
