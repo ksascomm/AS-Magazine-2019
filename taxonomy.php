@@ -17,7 +17,7 @@ get_header(); ?>
 
 <div class="main-container">
 	<div class="main-grid">
-		<main class="main-content">
+		<main class="main-content-full-width">
 	
 		<h1 class="term-title">Section: <?php single_term_title(); ?> </h1>
 

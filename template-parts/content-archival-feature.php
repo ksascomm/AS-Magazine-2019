@@ -18,6 +18,11 @@
 			echo $volume_name; ?>
 		</p>
 		<?php foundationpress_entry_meta(); ?>
+		<p class="byline other-credits">
+			<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?>
+				<?php the_field( 'ecpt_other_credits' ); ?>
+			<?php endif;?>
+		</p>
 	</div>
 	<?php if ( function_exists('get_field') && get_field( 'show_featured_image' ) == 1 ) {
 			get_template_part( 'template-parts/featured-image' ); 

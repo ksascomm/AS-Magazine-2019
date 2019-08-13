@@ -15,7 +15,9 @@ $issues = get_the_terms($post->ID, 'volume');
 if($issues && !is_wp_error($issues)) :
 $issue_names = array();
 foreach($issues as $issue) {
-	$issue_names[] = $issue->name;
+	if($issue->term_id !=114) { //exclude "Feature" from echo
+		$issue_names[] = $issue->name;
+	}
 }
 $issue_name = join(" ", $issue_names); endif; ?>
 <div class="cell">
@@ -30,7 +32,7 @@ $issue_name = join(" ", $issue_names); endif; ?>
 				<h1>
 					<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?></a>
 				</h1>
-				<h2><?php echo $issue->name; ?></h2>
+				<h2><?php echo $issue_name; ?></h2>
 			</header>
 			<div class="entry-content">
 				<?php

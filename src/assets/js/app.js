@@ -9,6 +9,7 @@ import Foundation from 'foundation-sites';
 //import './lib/foundation-explicit-pieces';
 import './lib/youtube-embed';
 import './lib/slick';
+import './lib/twentytwenty';
 
 $(document).foundation();
 
@@ -44,4 +45,5 @@ $(document).ready(function(){
 	    }
 	  ]
 	});
+   $("#then-now-container").twentytwenty();
 });

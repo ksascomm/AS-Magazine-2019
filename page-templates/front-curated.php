@@ -67,7 +67,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 
 	<?php if ( $asmag_homepage_coverstory_query->have_posts() ) : while ($asmag_homepage_coverstory_query->have_posts()) : $asmag_homepage_coverstory_query->the_post(); ?>
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-		<div class="cover-story hide-for-small-only" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: center;">
+		<div class="cover-story show-for-large" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: center;">
 			<div class="middle-content-section">
 				<div class="marketing">
 					<a href="<?php the_permalink();?>">
@@ -83,9 +83,9 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 			</div>
 		</div>
 		<!--Mobile Version-->
-		<div class="cover-story mobile show-for-small-only">
+		<div class="cover-story mobile hide-for-large">
 			<div class="cover-story-image">
-				<?php the_post_thumbnail(array( 650, 650)); ?>
+				<?php the_post_thumbnail('featured-medium'); ?>
 			</div>
 			<div class="grid-container">
 				<div class="grid-x grid-padding-x padding-top">

@@ -6,3 +6,26 @@
 [data-whatinput="touch"] a:focus, button:focus {
   outline: none;
 }
+
+.breadcrumbs {
+    margin: 0 0 1rem 0;
+    list-style: none;
+    text-transform: uppercase;
+    font-family: $font-header-gentona-verybold;
+    font-weight: $font-header-gentona-verybold-weight;
+    a {
+      color: $heritageblue;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+}
+
+.curated-posts-section-wrapper, .news-section-wrapper, .dean-seen-section-wrapper, .social-section-wrapper, .past-issues-section-wrapper, .related-posts-container, .related-features-container, .toc .story {
+  a {
+  color: $heritageblue;
+    &:hover, &:focus {
+      color: $spiritblue;
+    }
+  }
+}

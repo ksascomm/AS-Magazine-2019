@@ -5,8 +5,11 @@
 			if ( ! empty( $categories ) ) {
 			    echo '<a class="button small category" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
 			}?>	
-			<?php //the_post_thumbnail(array( 350, 350)); ?>
-			<img src="http://via.placeholder.com/350x350" alt="">
+			
+			<div class="post-image">
+				<?php //the_post_thumbnail(array( 350, 350)); ?>
+				<img src="http://via.placeholder.com/350x350" alt="">
+			</div>
 			<h1><?php if ( function_exists('get_field') && get_field('curated_order')) :
 					$field = get_field_object('curated_order'); $value = $field['value']; ?>
 				<?php echo $value; ?>

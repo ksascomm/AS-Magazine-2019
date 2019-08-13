@@ -23,6 +23,8 @@ get_header(); ?>
 					get_template_part('template-parts/content', 'seen-heard');
 				elseif (has_tag('snapshot') ):
 					get_template_part('template-parts/content', 'snapshot');
+				elseif (has_category('then-now') ):
+					get_template_part('template-parts/content', 'then-now');					
 				else:
 					get_template_part( 'template-parts/content', '' ); ?>
 			<?php endif;

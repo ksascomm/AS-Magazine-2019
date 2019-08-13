@@ -17,13 +17,13 @@ get_header(); ?>
 		<main class="main-content features" >
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="show-for-small-only">
-					<h1><?php the_title(); ?></h1>
+					<header class="hide-for-large">
+						<h1><?php the_title(); ?></h1>
 					<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?> 
 						<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
 					<?php endif;?>
 					</header>
-					<div class="entry-content" id="sticky">
+					<div class="entry-content">
 						<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?> 
 							<h4><?php the_field( 'ecpt_other_credits' );?></h4>
 						<?php endif;?>

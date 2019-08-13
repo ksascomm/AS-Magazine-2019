@@ -98,13 +98,13 @@
   }
   h1 {
     @include breakpoint(small) {
-      font-size: 1.25rem
+      font-size: 1.25rem !important
     }
     @include breakpoint(medium) {
-      font-size: 1.5rem;
+      font-size: 1.5rem!important;
     }
     @include breakpoint(large) {
-      font-size: 2rem;
+      font-size: 4rem !important;
     }    
   }
   a {
@@ -122,14 +122,15 @@
 .top-bar {
   .menu {
     a {
-    font-family: $font-stack-gentona-semibold;  
+    font-family: $font-stack-gentona-semibold;
+    font-weight: $font-stack-gentona-semibold-weight;
     @include breakpoint(small) {
       font-size: 1rem
     }
     @include breakpoint(medium) {
       font-size: 1.125rem;
     }
-    @include breakpoint(large) {
+    @include breakpoint(xlarge) {
       font-size: 1.25rem
     }  
     
@@ -204,7 +205,9 @@ ul.dropdown.menu.vertical.submenu.is-dropdown-submenu {
 .roof-header-top {
   width: 100%;
   height: 1.5rem;
-  padding: 8px 20px 10px;
+  padding: 1rem 2.5rem 1.25rem;
+  margin: 0rem .5rem 1rem;
+  ;
   li.bar {
     &:after { 
       font-family: $font-stack-gentona-semibold;

@@ -57,13 +57,14 @@ p {
   }
 }
 
-.curated-posts-section-wrapper, .news-section-wrapper, .dean-seen-section-wrapper, .social-section-wrapper, .past-issues-section-wrapper, .related-posts-container, .related-features-container, .toc .story {
-  a {
-  color: $heritageblue;
-    &:hover, &:focus {
-      color: $spiritblue;
-    }
-  }
+.padding-top {
+  padding-top: 1rem;
+}
+
+cite, em, i {
+  font-family: $font-stack-arnhem-italic;
+  font-weight: $font-stack-arnhem-italic-weight;
+  font-style: italic;
 }
 
 .entry-content {
@@ -71,21 +72,10 @@ p {
   a {
     color: $heritageblue;
   }
-}
-.padding-top {
-  padding-top: 1rem;
-}
-
-.breadcrumbs {
-    margin: 0 0 1rem 0;
-    list-style: none;
-    text-transform: uppercase;
-    font-family: $font-header-gentona-verybold;
-    font-weight: $font-header-gentona-verybold-weight;
-    a {
-      color: $heritageblue;
-      &:hover {
-        text-decoration: none;
-      }
+  p {
+    strong, b {
+      font-family: $font-stack-arnhem-bold;
+      font-weight: $font-stack-arnhem-bold-weight;
     }
+  }
 }
