@@ -25,7 +25,7 @@ get_header(); ?>
 					</header>
 					<div class="entry-content">
 						<?php if ( function_exists('get_field') && get_field('ecpt_author_byline')):?> 
-							<h4>By <?php the_field( 'ecpt_author_byline' );?></h4>
+							<h4><?php the_field( 'ecpt_author_byline' );?></h4>
 						<?php endif;?>
 						<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?> 
 							<h4><?php the_field( 'ecpt_other_credits' );?></h4>
