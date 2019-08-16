@@ -130,11 +130,11 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				<?php wp_reset_postdata(); endif;?>
 				<?php if ( function_exists('get_field') && get_field('current_issue_link')):?>
 				<div class="cell small-12 cta-section">
-					<div class="float-right cta-link">
-						<h3>
+					<div class="float-right">
 							<?php $current_issue_link = get_field( 'current_issue_link' ); ?>
 							<?php if ( $current_issue_link ) { ?>
-								<a href="<?php echo $current_issue_link; ?>">View The Rest Of This Issue <span class="fas fa-arrow-circle-right"></span></a>
+								<a class="button cta-link" href="<?php echo $current_issue_link; ?>">View The Rest Of This Issue <span class="fas fa-arrow-circle-right"></span>
+								</a>
 							<?php } ?>
 						
 						</h3>
@@ -169,13 +169,11 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				<?php wp_reset_postdata(); endif;?>
 				<?php if ( function_exists('get_field') && get_field('contact_link')):?>
 				<div class="cell small-12 cta-section">
-					<div class="float-right cta-link">
-						<h3>
-							<?php $contact_link = get_field( 'contact_link' ); ?>
-							<?php if ( $contact_link ) { ?>
-								<a href="<?php echo $contact_link; ?>">Send Us Your News <span class="far fa-thumbs-up"></span></a>
-							<?php } ?>							
-						</h3>
+					<div class="float-right">
+						<?php $contact_link = get_field( 'contact_link' ); ?>
+						<?php if ( $contact_link ) { ?>
+							<a class="button cta-link" href="<?php echo $contact_link; ?>">Send Us Your News <span class="far fa-thumbs-up"></span></a>
+						<?php } ?>							
 					</div>
 				</div>
 				<?php endif;?>
