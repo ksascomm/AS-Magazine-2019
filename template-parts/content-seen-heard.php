@@ -29,8 +29,8 @@
 					<?php if ( function_exists('get_field') && get_field('seen_heard_citation')):?>
 						<?php the_field( 'seen_heard_citation' ); ?>
 					<?php endif;?>
-					<?php if ( function_exists('get_field') && get_field('seen_heard_source')):?>
-						<?php the_field( 'seen_heard_source' ); ?>
+					<?php if ( function_exists('get_field') && get_field('seen_heard_source') || get_field('seen_heard_source_date') ):?>
+						<p class="source"><em><?php the_field( 'seen_heard_source' ); ?></em>, <?php the_field( 'seen_heard_source_date' ); ?></p>
 					<?php endif;?>
 				</cite>
 				<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
