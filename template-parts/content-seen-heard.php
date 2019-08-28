@@ -24,7 +24,7 @@
 	<div class="grid-x">
 		<div class="cell large-9">
 			<div class="entry-content">
-				<blockquote><?php the_content();?></blockquote>
+				<?php the_content();?>
 				<cite>
 					<?php if ( function_exists('get_field') && get_field('seen_heard_citation')):?>
 						<?php the_field( 'seen_heard_citation' ); ?>

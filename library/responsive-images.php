@@ -16,6 +16,11 @@ add_image_size( 'featured-medium', 1280, 400, true );
 add_image_size( 'featured-large', 1440, 450, true );
 add_image_size( 'featured-xlarge', 1920, 600, true );
 
+add_image_size( 'cover-story-small', 640, 267 ); // name, width, height, crop
+add_image_size( 'cover-story-medium', 1280, 533);
+add_image_size( 'cover-story-large', 1440, 600);
+add_image_size( 'cover-story-xlarge', 1920, 800);
+
 // Add additional image sizes
 add_image_size( 'fp-small', 640 );
 add_image_size( 'fp-medium', 1024 );

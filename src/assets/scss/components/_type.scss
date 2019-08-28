@@ -78,4 +78,51 @@ cite, em, i {
       font-weight: $font-stack-arnhem-bold-weight;
     }
   }
+  blockquote {
+    border: none;
+    padding-left: 1rem;
+    p {
+      font-family: $font-stack-arnhem;
+      font-weight: $font-stack-arnhem-weight;
+      color: $black;
+      margin-bottom: 0rem;
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+      letter-spacing: -.03rem;
+      &:before {
+        content: '\201C';
+        display: inline;
+        height: 0;
+        line-height: 0;
+        left: 0px;
+        position: relative;
+        top: 30px;
+        color: $black;
+        font-size: 4em;
+      }
+    }
+  }
+  cite {
+    &:before {
+      display: none;
+    }
+    padding-top: 1rem;
+    font-family: $font-stack-gentona-light;
+    font-weight: $font-stack-gentona-light-weight;    
+    color: $black;
+    font-style: normal;
+    p {
+      font-size: 1rem;
+      line-height: 1.25;  
+      &:before {
+        color: $black;
+        content: "— ";
+      }
+      &.source {
+        &:before {
+          display: none;
+        }
+      }      
+    }  
+  }
 }

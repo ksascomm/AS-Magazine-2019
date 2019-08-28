@@ -35,7 +35,6 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 		'volume' => $currentissue,
 		'tag' => 'seen-heard',
 		'orderby' => 'rand',
-		'order' => 'DESC',
 		'posts_per_page' => 1
 	));		
 	$curated_content = (array(
@@ -66,22 +65,51 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 ?>
 
 	<?php if ( $asmag_homepage_coverstory_query->have_posts() ) : while ($asmag_homepage_coverstory_query->have_posts()) : $asmag_homepage_coverstory_query->the_post(); ?>
+		<style>
+			.cover-story-wrapper {
+				 background-color: <?php the_field('header_background_color'); ?>;
+			}
+		</style>
+		<header class="cover-story-wrapper show-for-large" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'cover-story-small' ); ?>, small], [<?php the_post_thumbnail_url( 'cover-story-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'cover-story-large' ); ?>, large], [<?php the_post_thumbnail_url( 'cover-story-xlarge' ); ?>, xlarge]" style="background: ">
+			<div class="cover-story-text-area">
+				<div class="cover-story-heading-text">
+					<a class="cover-story-link" href="<?php the_permalink();?>" aria-label="<?php the_title();?>">
+						<div class="cover-story-head">
+							<h1>
+								<span class="cover">Cover Story:</span>
+								<?php the_title();?>
+							</h1>
+						</div>
+						<div class="cover-story-subhead">
+							<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
+								<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
+							<?php endif;?>	
+						</div>
+					</a>
+				</div>
+			</div>
+		</header>
+		<!--
 		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 		<div class="cover-story show-for-large" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: center;">
 			<div class="middle-content-section">
 				<div class="marketing">
-					<a href="<?php the_permalink();?>">
 					<div class="tagline">
-						<h1><span class="cover">Cover Story:</span>
-							<?php the_title();?></h1>
+						
+						<h1>
+							<a href="<?php the_permalink();?>"><span class="cover">Cover Story:</span>
+							<?php the_title();?>
+							</a>
+						</h1>
 						<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
 						<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
 						<?php endif;?>
+						
 					</div>
-					</a>
 				</div>
 			</div>
-		</div>
+		</div>-->
+
 		<!--Mobile Version-->
 		<div class="cover-story mobile hide-for-large">
 			<div class="cover-story-image">
