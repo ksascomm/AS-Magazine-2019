@@ -23,6 +23,7 @@
     .marketing {
       @include xy-grid-container(75rem);
       @include xy-grid;
+      padding-left: 0;
     }
     @include breakpoint(small only) {
       a {
@@ -36,6 +37,7 @@
     @include breakpoint(large) {
       height: rem-calc(400);
       padding: rem-calc(35%) 0;
+      padding-left: 0;
       a {
         &:hover {
           opacity: .7;
@@ -63,16 +65,25 @@
 
       @include breakpoint (xlarge) {
         padding-top: 3rem;
+        margin-left: -2rem;
       }
     }
     h1 {
-      font-family: $font-header-gentona-verybold;
-      font-weight: $font-header-gentona-verybold-weight;
+      font-family: $font-stack-arnhem-bold;
+      font-weight: $font-stack-arnhem-bold-weight;
       color: $white;
       margin-bottom: 0rem;
+      font-size: 4rem;
       span.cover {
-        font-size: 65%;
+        font-size: 30%;
         display: block;
+        font-family: $font-header-gentona-verybold;
+        font-weight: $font-header-gentona-verybold-weight;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        @include breakpoint(large){
+          margin-bottom: -.9rem;
+        }
       }
       @include breakpoint(small) {
         font-size: 2.2rem;
@@ -87,8 +98,11 @@
       }
     }
     h2 {
+      font-family: $font-stack-gentona-semibold;
+      font-weight: $font-stack-gentona-semibold-weight;
       color: $white;
       font-size: 1.3125rem;
+      width: calc(70% - 1.875rem);
     }
     h1, h2 {
      filter: drop-shadow(6px 10px 5px rgba(44,44,51,0.63));
@@ -122,32 +136,72 @@
     width: 98.5%;
   }
 }
+
 .curated-posts {
+  @include breakpoint (large) {
+    .article-teaser-2, .article-teaser-3, .article-teaser-4, .article-teaser-5 {
+      padding-top: 1rem;
+    }
+  }
   h1.show-for-small-only {
     @include xy-cell(12);
   }
   .curated-post {
     h1 {
-      font-family: $font-stack-gentona-semibold;
-      font-weight: $font-stack-gentona-semibold-weight;
-    }
-    &.small {
-      h1 {
-        font-size: 1.25rem;
-      }
-      @include breakpoint (large) {
-        .excerpt {
-          font-size: 1rem;
+      font-size: 1.5rem;
+      font-family: $font-header-titling-bold; 
+      font-weight: $font-header-titling-bold-weight;
+      a {
+        color: $black;
+        &:hover {
+          color: $spiritblue;
         }
       }
     }
-    &.large {
-      h1 {
-        font-size: 1.5rem;
+    @include breakpoint (large) {
+      &.order-1 {
+        &:after {
+          content: ""; 
+          display: block; 
+          margin: 0 auto; 
+          width: 90%; 
+          padding-top: 10px; 
+          border-bottom: 1px solid $gray; 
+        }
+        border-right: 1px solid $gray;
       }
+      &.order-6 {
+        &:before {
+          content: ""; 
+          display: block;
+          margin: 0 auto; 
+          width: 90%;
+          padding-top: 10px; 
+          border-top: 1px solid $gray;
+        }
+        border-left: 1px solid $gray;
+        margin-left: -1px;
+      }
+      &.order-2, &.order-4 {
+        border-right: 1px solid $medium-gray;
+      }
+    }
+    &.small {
       @include breakpoint (large) {
         .excerpt {
-          font-size: 1.125rem;
+          //font-size: 1rem;
+        }
+      }
+      @include breakpoint (medium down) {
+        img {
+          height: 250px;
+        }
+      }  
+    }
+    &.large {
+      @include breakpoint (large) {
+        .excerpt {
+          //font-size: 1.125rem;
         }  
       }
     }
@@ -155,6 +209,9 @@
       background-color: $light-gray;
       color: $black;
       font-size: .9rem;
+      font-family: $font-stack-gentona-semibold;
+      font-weight: $font-stack-gentona-semibold-weight;
+      text-transform: uppercase;
     }
     .card {
       border: none;
@@ -164,10 +221,52 @@
         display: block;
       }
     }
+    .excerpt {
+      p {
+        font-family: $font-stack-gentona-light;
+        font-weight: $font-stack-gentona-light-weight;
+        font-size: .95rem;
+        line-height: 1.15;
+        @include breakpoint (large) {
+          margin-top: -10px;
+        }
+      }
+    }
   }
 }
 
 .news-section-wrapper {
+  h1 {
+    font-family: $font-header-titling-medium;
+    font-weight: $font-header-titling-medium-weight;
+    text-transform: uppercase;
+    letter-spacing: .06rem;
+    @include breakpoint (large) {
+      padding-top: 1rem;    
+      padding-left: 1rem;
+      margin-bottom: -2rem;  
+    }
+  }
+  .news-section {
+    p {
+      font-family: $font-stack-gentona-light;
+      font-weight: $font-stack-gentona-light-weight;
+      font-size: .95rem;
+      line-height: 1.25;
+      margin-top: -5px;
+    }
+    h3 {
+      a {
+        font-family: $font-header-titling-bold;
+        font-weight: $font-header-titling-bold-weight;
+        color: $black;
+        line-height: 1.5rem;
+        &:hover {
+          color: $spiritblue;
+        }
+      }
+    }
+  }
   background: $light-gray;
   .slick-slide {
     padding: 0 1rem 0 0;
@@ -189,16 +288,12 @@
   }
 }
 
-.social-section-wrapper {
-
-}
-
 .cta-section {
   .button.cta-link {
     //border: 1px solid $dark-gray;
     background: $light-gray;
     box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-    color: #848080;
+    color: $dark-gray;
     font-size: 1rem;
     letter-spacing: .03rem;
     text-transform: uppercase;
@@ -217,10 +312,148 @@
   }
 }
 
-.past-issues-section-wrapper {
+.section-spacer {
+    height: 4.5rem;
+    clear: both;
+    width: 100%;
+    line-height: 1px;
+}
+
+.deans-desktop {
   h1 {
+    font-family: $font-header-titling-bold;
+    font-weight: $font-header-titling-bold-weight;
+    letter-spacing: .06rem;
+    text-transform: uppercase;    
+    a {
+      color: $black;
+      &:hover {
+        color: $spiritblue;
+      }
+    }
+  }
+}
+
+.curated-post, .seen-heard {
+  .button, button {
     font-family: $font-header-gentona-verybold;
     font-weight: $font-header-gentona-verybold-weight;
+    text-transform: uppercase;
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
+    &:hover {
+      box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.6), 0 0 8px 0 rgba(0, 0, 0, 0.5);
+    }
+    &:focus {
+      box-shadow: inset 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+    }
+  }  
+}
+
+.seen-heard {
+  background-color: $dark-gray;
+  .button.small.tag {
+    color: $white;
+    background-color: $spiritblue;
+    &:hover {
+      background-color: $heritageblue;
+    }
+  }
+  blockquote {
+    border: none;
+    padding-left: 1rem;
+    p {
+      font-family: $font-stack-arnhem;
+      font-weight: $font-stack-arnhem-weight;
+      color: $white;
+      margin-bottom: 0rem;
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+      letter-spacing: -.03rem;
+      &:before {
+        content: '\201C';
+        display: inline;
+        height: 0;
+        line-height: 0;
+        left: 0px;
+        position: relative;
+        top: 30px;
+        color: rgba(255,255,255, .5);
+        font-size: 4em;
+      }
+    }
+  }
+  cite {
+    &:before {
+      display: none;
+    }
+    padding-top: 1rem;
+    font-family: $font-stack-gentona-light;
+    font-weight: $font-stack-gentona-light-weight;    
+    color: $white;
+    font-style: normal;
+    text-align: right;
+    p {
+      font-size: .9rem;
+      line-height: 1.25;  
+      @include breakpoint(large) {
+        padding-left: 10rem;
+      }
+      &:before {
+        color: $white;
+        content: "— ";
+      }
+      &.source {
+        &:before {
+          display: none;
+        }
+      }      
+    }
+    a {
+      color: $spiritblue;
+      &:hover {
+        color: $heritageblue;
+      }
+    }
+  }
+}
+
+
+.social-section-wrapper {
+  h1 {
+    font-family: $font-header-titling-medium;
+    font-weight: $font-header-titling-medium-weight;
+    text-transform: uppercase;
+    letter-spacing: .06rem;
+    padding-left: 1rem;
+  }
+  .menu.simple {
+    float: right;
+    li {
+      font-family: $font-header-gentona-verybold;
+      font-weight: $font-header-gentona-verybold-weight; 
+      font-weight: 700;
+      color: $dark-gray;
+      font-size: 1rem;
+      letter-spacing: .03rem;
+      text-transform: uppercase;
+      a {
+        color: $dark-gray;
+        &:hover {
+          color: $spiritblue;
+        }
+      }
+    }
+  }
+}
+
+.past-issues-section-wrapper {
+  h1 {
+    font-family: $font-header-titling-medium;
+    font-weight: $font-header-titling-medium-weight;
+    text-transform: uppercase;
+    letter-spacing: .06rem;
+    margin-top: -3rem;
+    padding-left: 1rem;    
   }
   .card {
     border: none;
@@ -239,68 +472,7 @@
     }
     .card-section {
       padding: 0rem;
+      margin-top: -.75rem;
     }
   }
-}
-
-.section-spacer {
-    height: 4.5rem;
-    clear: both;
-    width: 100%;
-    line-height: 1px;
-}
-
-.seen-heard {
-  background-color: $dark-gray;
-  .button.small.tag {
-    color: $white;
-    background-color: $spiritblue;
-    &:hover {
-      background-color: $heritageblue;
-    }
-  }
-  blockquote {
-    border: none;
-    padding-left: 0rem;
-    line-height: 1.4;
-    font-size: 1.25rem;
-    font-family: $font-stack-gentona-semibold;
-    font-weight: $font-stack-gentona-semibold-weight;
-  }
-  blockquote, blockquote p {
-    color: $white;
-    margin-bottom: 0rem;
-  }
-  cite {
-    color: $white;
-    text-align: right;
-    font-size: 1.125rem;
-    a {
-      color: $spiritblue;
-      &:hover {
-        color: $heritageblue;
-      }
-    }
-  }
-}
-
-.deans-desktop {
-  h1 {
-    font-family: $font-header-gentona-verybold;
-    font-weight: $font-header-gentona-verybold-weight;
-  }
-}
-
-.curated-post, .seen-heard {
-  .button, button {
-    font-family: $font-header-gentona-verybold;
-    font-weight: $font-header-gentona-verybold-weight;
-    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.2);
-    &:hover {
-      box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.6), 0 0 8px 0 rgba(0, 0, 0, 0.5);
-    }
-    &::focus {
-      box-shadow: inset 0 3px 5px 0 rgba(0, 0, 0, 0.2);
-    }
-  }  
 }

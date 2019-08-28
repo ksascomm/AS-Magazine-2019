@@ -73,6 +73,8 @@ $font-header-quadon-extrabold-weight: 700;
 }
 
 //GENTONA
+$font-stack-gentona-light: 'gentona-light', 'Helvetica Neue', Roboto, sans-serif;
+$font-stack-gentona-light-weight: 300;
 $font-stack-gentona-semibold: 'gentona-semibold', 'Helvetica Neue', Roboto, sans-serif;
 $font-stack-gentona-semibold-weight: 600;
 $font-header-gentona-verybold: 'gentona-bold', 'Helvetica Neue', Roboto, sans-serif;;
@@ -119,10 +121,13 @@ $font-header-gentona-verybold-weight: 700;
 }
 
 //Titling Gothic
+$font-header-titling-regular: 'titling-gothic-medium', 'Helvetica Neue', Roboto, sans-serif;
+$font-header-titling-regular-weight: 500;
+$font-header-titling-medium: 'titling-gothic-medium', 'Helvetica Neue', Roboto, sans-serif;
+$font-header-titling-medium-weight: 500;
+$font-header-titling-bold: 'titling-gothic-bold', 'Helvetica Neue', Roboto, sans-serif;;
+$font-header-titling-bold-weight: 700;
 
-/*==================*/
-/*=== Bold (700) ===*/
-/*==================*/
 @font-face {
   font-family: 'titling-gothic-bold';
   src: url('../fonts/titling-gothic/Titling-Gothic-Bold.eot');
@@ -135,11 +140,6 @@ $font-header-gentona-verybold-weight: 700;
 }
 
 
-
-
-/*====================*/
-/*=== Medium (500) ===*/
-/*====================*/
 @font-face {
   font-family: 'titling-gothic-medium';
   src: url('../fonts/titling-gothic/Titling-Gothic-Medium.eot');
@@ -152,11 +152,6 @@ $font-header-gentona-verybold-weight: 700;
 }
 
 
-
-
-/*=====================*/
-/*=== Regular (300) ===*/
-/*=====================*/
 @font-face {
   font-family: 'titling-gothic-regular';
   src: url('../fonts/titling-gothic/Titling-Gothic-Regular.eot');

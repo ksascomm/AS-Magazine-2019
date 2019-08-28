@@ -117,12 +117,14 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						while ($curated_content_query->have_posts()) : $curated_content_query->the_post();
 						//$count++; 
 						//if ($count == 1 || $count == 6) :
+						$field = get_field_object('curated_order'); $value = $field['value'];
 						if ( function_exists('get_field') && ( get_field('curated_order') == '1' || get_field('curated_order') == '6')): ?>
-							<div class="cell small-12 large-6">
+							
+							<div class="cell small-12 large-6 article-teaser-<?php echo $value; ?>">
 								<?php get_template_part( 'template-parts/content', 'curated-large' ); ?>
 							</div>
 						<?php else: ?>
-							<div class="cell small-12 large-3">
+							<div class="cell small-12 large-3 article-teaser-<?php echo $value; ?>">
 								<?php get_template_part( 'template-parts/content', 'curated-small' ); ?>
 							</div>
 						<?php endif; endwhile;?>
@@ -207,13 +209,13 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							if ( ! empty( $seenheardtags ) ) {
 							    echo '<a class="button small tag" href="' . esc_url( get_tag_link( $seenheardtags[0]->term_id ) ) . '">' . esc_html( $seenheardtags[0]->name ) . '</a>';
 							}?>							
-							<blockquote><?php the_content();?></blockquote>
-							<cite>
+							<?php the_content();?>
+							<cite class="seen-heard">
 								<?php if ( function_exists('get_field') && get_field('seen_heard_citation')):?>
 									<?php the_field( 'seen_heard_citation' ); ?>
 								<?php endif;?>
-								<?php if ( function_exists('get_field') && get_field('seen_heard_source')):?>
-									<?php the_field( 'seen_heard_source' ); ?>
+								<?php if ( function_exists('get_field') && get_field('seen_heard_source') || get_field('seen_heard_source_date') ):?>
+									<p class="source"><em><?php the_field( 'seen_heard_source' ); ?></em>, <?php the_field( 'seen_heard_source_date' ); ?></p>
 								<?php endif;?>
 							</cite>
 						</div>
@@ -250,7 +252,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				<div class="cell">
 					<div class="past-issue card">
 						<p>
-							<a href="https://magazine.local/spring-2019-v16n2/"><img src="http://magazine.local/wp-content/uploads/2019/05/Sp19-ASMagCover-1.jpg" /></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2019-v16n2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/05/Sp19-ASMagCover-1.jpg" /></a>
 						</p>
 						<div class="card-section">
 							<p>
@@ -262,7 +264,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				<div class="cell">
 					<div class="past-issue card">
 						<p>
-							<a href="https://magazine.local/fall-2018-v16n1/"><img src="http://magazine.local/wp-content/uploads/2019/05/f18-cover.jpg" /></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2018-v16n1/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/05/f18-cover.jpg" /></a>
 						</p>
 						<div class="card-section">
 							<p>
@@ -273,7 +275,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				</div>
 				<div class="cell">
 					<div class="past-issue card">
-						<p><a href="https://magazine.local/spring-2018-volume-15-number-2/"><img src="http://magazine.local/wp-content/uploads/2018/11/sp18-archive-thm.jpg" /></a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2018-volume-15-number-2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/11/sp18-archive-thm.jpg" /></a></p>
 						<div class="card-section">
 							<p>
 								Spring 2018
@@ -283,7 +285,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				</div>
 				<div class="cell">
 					<div class="past-issue card">
-						<p><a href="http://magazine.local/v15n1/"><img src="http://magazine.local/wp-content/uploads/2018/05/F17-cover.jpg" /></a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>v15n1/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/05/F17-cover.jpg" /></a></p>
 						<div class="card-section">
 							<p>
 								Fall 2017

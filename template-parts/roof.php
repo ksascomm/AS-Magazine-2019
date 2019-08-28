@@ -7,22 +7,6 @@
  */
 
 ?>
-<ul class="menu simple roof-menu align-right">
-	<li class="roof-padding">
-		<form method="GET" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" aria-label="Utility Bar Search">
-			<div class="input-group">
-				<div class="input-group-button">
-	    			<button type="submit" class="button" aria-label="search"><span class="fa fa-search"></span></button>
-	  			</div>
-				<label for="s" class="screen-reader-text">
-	                Search This Website
-	            </label>
-				<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" data-swplive="true" placeholder="Search this site" aria-label="Search This Website"/>	
-			</div>
-		</form>
-	</li>
-	<li><a class="button" href="#" aria-label="Explore KSAS" data-toggle="offCanvasTop1">Explore KSAS <span class="fa fa-bars" aria-hidden="true"></span></a></li>
-</ul>	
 <div class="off-canvas position-top" id="offCanvasTop1" data-off-canvas aria-hidden="true">
 	<div id="global-links" class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-3">
 		<h1 class="show-for-sr">Explore KSAS</h1>
