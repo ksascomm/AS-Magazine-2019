@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for featured images on 2019+ era features
+ * Template part for vertical featured images on 2019+ era features
  *
  * @package FoundationPress
  * @since FoundationPress 1.0.0
@@ -12,21 +12,32 @@
 // If a featured image is set, insert into layout and use Interchange
 // to select the optimal image size per named media query.
 if ( has_post_thumbnail( $post->ID ) ) : ?>
-	<header class="feature-2019-redesign-heading" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'featured-small' ); ?>, small], [<?php the_post_thumbnail_url( 'featured-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'featured-large' ); ?>, large], [<?php the_post_thumbnail_url( 'full' ); ?>, xlarge]">
-		<div class="feature-2019-redesign-heading-area hide-for-small-only">
-			<div class="feature-2019-redesign-heading-text">
+
+<div class="grid-container">
+	<div class="grid-x vertical-featured-image-box">
+		<div class="cell small-12 large-5">
+			<div class="vertical-featured-image">
+				<img src="https://via.placeholder.com/600x713/68ace5/000000" alt="image">
+			</div>
+		</div>
+		<div class="cell small-12 large-7">
+			<div class="vertical-featured-image-text">
 				<h1><?php the_title(); ?></h1>
 				<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?> 
 					<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
 				<?php endif;?>
-				<h3><?php echo $volume_name; ?></h3>
+				<?php foundationpress_entry_meta(); ?>
+				<?php $volume_name = get_the_volume_name($post); ?>
+					<h3>Issue: <a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo $volume_name; ?></a></h3>
 				<?php if ( function_exists('get_field') && get_field('ecpt_author_byline')):?> 
 					<h4>By <?php the_field( 'ecpt_author_byline' );?></h4>
 				<?php endif;?>
 				<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?> 
 					<h4><?php the_field( 'ecpt_other_credits' );?></h4>
 				<?php endif;?>
+
 			</div>
 		</div>
-	</header>
+	</div>
+</div>
 <?php endif;

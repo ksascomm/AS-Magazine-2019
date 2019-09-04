@@ -13,11 +13,11 @@
 	<header class="post-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	<div class="entry-meta">
-		<p class="byline issue">
-			<?php $volume_name = get_the_volume_name($post); 
-			echo $volume_name; ?>
-		</p>
 		<?php foundationpress_entry_meta(); ?>
+		<p class="byline issue">
+			<?php $volume_name = get_the_volume_name($post); ?>
+			Issue: <a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo $volume_name; ?></a>
+		</p>		
 		<p class="byline other-credits">
 			<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?>
 				<?php the_field( 'ecpt_other_credits' ); ?>

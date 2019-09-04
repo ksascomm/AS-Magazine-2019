@@ -1,4 +1,14 @@
 <?php
+/**
+ * Template part for standard featured images on archival features, pages, and posts
+ *
+ * @package FoundationPress
+ * @since FoundationPress 1.0.0
+ */
+
+?>
+
+<?php
 // If a featured image is set, insert into layout and use Interchange
 // to select the optimal image size per named media query.
 if ( has_post_thumbnail( $post->ID ) ) : ?>

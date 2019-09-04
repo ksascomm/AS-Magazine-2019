@@ -1,28 +1,28 @@
 <?php
 /*
-Template Name: Feature (2019 Redesign)
+Template Name: Feature (Horizontal Featured Image)
 */
 get_header(); ?>
 
 
-<?php if ( function_exists('get_field') && get_field('ecpt_asmag_css')):?> 
-	<style><?php the_field( 'ecpt_asmag_css' );?></style>
-<?php endif;?>
-
 <?php $volume = get_the_volume($post); $volume_name = get_the_volume_name($post);?>
 
-<?php get_template_part( 'template-parts/feature-2019-featured-image' ); ?>
+<?php get_template_part( 'template-parts/featured-image-horizontal' ); ?>
 <div class="main-container">
 	<div class="main-grid feature-2019">
 		<main class="main-content features" >
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="small-title-tag show-for-small-only">
-						<h1><?php the_title(); ?></h1>
-					<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?> 
-						<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
-					<?php endif;?>
-					<h3><?php echo $volume_name; ?></h3>
+					<header class="small-title-tag">
+						<div class="show-for-small-only">
+							<h1><?php the_title(); ?></h1>
+							<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?> 
+							<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
+							<?php endif;?>
+					</div>
+					<?php foundationpress_entry_meta(); ?>
+					<?php $volume_name = get_the_volume_name($post); ?>
+					<h3>Issue: <a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo $volume_name; ?></a></h3>
 					<?php if ( function_exists('get_field') && get_field('ecpt_author_byline')):?> 
 						<h4>By <?php the_field( 'ecpt_author_byline' );?></h4>
 					<?php endif;?>

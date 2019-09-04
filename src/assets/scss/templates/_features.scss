@@ -161,16 +161,33 @@
 
 .small-title-tag {
 	@include callout-base;
-	h2 {
-		font-size: 1.3125rem;
+	@include breakpoint(large) {
+		border: none;
+		margin-bottom: .5rem;
+		padding-top: inherit;
+		padding-bottom: inherit;
 	}
-	h3 {
-		font-size: 1.125rem;
+	p.byline.author {
+		font-size: 1.45rem;
+		font-family: $font-header-gentona-verybold;
+		font-weight: $font-header-gentona-verybold-weight;
+		margin-bottom: 0rem;
 	}
-	h4 {
-		font-size: 1rem;
+	a {
+		color: $heritageblue;
+		border: none;
+		border-bottom: .125em solid;
+		border-bottom-color: $medium-gray;
+		background-color: transparent;
+		border-radius: 0;
+		transition: border-color,background-color,color;
+		transition-duration: 250ms,250ms,250ms;
+		transition-timing-function: ease-in-out,ease-in-out,ease-in-out;
+		&:hover {
+			border-bottom: .125em solid;
+			border-bottom-color: $dark-gray;
+		}
 	}
-
 }
 
 .main-grid.feature-2019 {
@@ -266,4 +283,40 @@ $hero-full-screen-text-color: $white;
 
 	}
 
+}
+
+.vertical-featured-image-box {
+	padding-top: 1rem;
+	@include breakpoint(large) {
+		position: relative;
+	}
+	.vertical-featured-image {
+		padding-right: 1rem;
+	}
+	.vertical-featured-image-text {
+		@include breakpoint(large) {
+			position: absolute;
+			bottom: 0px;
+		}
+		p.byline.author {
+			font-size: 1.45rem;
+			font-family: $font-header-gentona-verybold;
+  			font-weight: $font-header-gentona-verybold-weight;
+		}
+		a {
+			color: $heritageblue;
+			border: none;
+			border-bottom: .125em solid;
+			border-bottom-color: $medium-gray;
+			background-color: transparent;
+			border-radius: 0;
+			transition: border-color,background-color,color;
+			transition-duration: 250ms,250ms,250ms;
+			transition-timing-function: ease-in-out,ease-in-out,ease-in-out;
+			&:hover {
+				border-bottom: .125em solid;
+				border-bottom-color: $dark-gray;
+			}
+		}
+	}
 }
