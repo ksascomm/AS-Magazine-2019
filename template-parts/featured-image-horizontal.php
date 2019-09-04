@@ -26,12 +26,6 @@ if ( has_post_thumbnail( $post->ID ) ) : ?>
 				<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?> 
 					<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
 				<?php endif;?>
-				<?php if ( function_exists('get_field') && get_field('ecpt_author_byline')):?> 
-					<h4>By <?php the_field( 'ecpt_author_byline' );?></h4>
-				<?php endif;?>
-				<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?> 
-					<h4><?php the_field( 'ecpt_other_credits' );?></h4>
-				<?php endif;?>
 			</div>
 		</div>
 	</header>

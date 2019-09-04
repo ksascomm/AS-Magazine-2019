@@ -26,7 +26,7 @@ $issue_name = join(" ", $issue_names); endif; ?>
 			<header>
 				<?php if ( has_post_thumbnail( $post->ID ) ) : ?>
 					<div class="related-image-box">          
-			            <?php the_post_thumbnail('home-featured');?>
+			            <?php the_post_thumbnail('related-posts');?>
 			        </div>
 		    	<?php endif;?>
 				<h1>

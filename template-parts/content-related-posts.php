@@ -43,7 +43,7 @@ if ($tags) :?>
 							<div class="category-title">
 								<?php echo $catname ;?>
 							</div>
-							<?php the_post_thumbnail('home-featured');?>
+							<?php the_post_thumbnail('related-posts');?>
 						</div>
 						<div class="card-section">
 							<h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>

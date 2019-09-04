@@ -93,7 +93,7 @@ get_header(); ?>
 					<?php while ($asmag_features_toc_query->have_posts()) : $asmag_features_toc_query->the_post(); ?>
 					<div class="grid-x grid-padding-x grid-margin-x story">
   						<div class="cell small-12 large-5">
-							<a href="<?php the_permalink();?>"><?php the_post_thumbnail('home-featured');?></a>
+							<a href="<?php the_permalink();?>"><?php the_post_thumbnail('related-posts');?></a>
 						</div>
 						<div class="cell small-12 large-7">
 					        <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>

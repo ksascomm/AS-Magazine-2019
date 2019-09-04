@@ -21,17 +21,11 @@ add_image_size( 'cover-story-medium', 1280, 533);
 add_image_size( 'cover-story-large', 1440, 600);
 add_image_size( 'cover-story-xlarge', 1920, 800);
 
-// Add additional image sizes
-add_image_size( 'fp-small', 640 );
-add_image_size( 'fp-medium', 1024 );
-add_image_size( 'fp-large', 1200 );
-add_image_size( 'fp-xlarge', 1920 );
+add_image_size( 'cover-story-vertical-large', 650, 700);
 
-//add_image_size( 'home-featured' );
-add_image_size( 'home-post', 300, 200, true );
-add_image_size( 'home-featured', 600, 400, true );
-add_image_size( 'related-posts', 300, 150);
-add_image_size( 'single-featured', 250, 250);
+add_image_size( 'home-curated-small', 350, 350);
+add_image_size( 'home-curated-large', 650, 350);
+add_image_size( 'related-posts', 600, 400);
 
 // Register the new image sizes for use in the add media modal in wp-admin
 function foundationpress_custom_sizes( $sizes ) {

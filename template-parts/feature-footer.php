@@ -31,7 +31,7 @@ if ($features_footer_query->have_posts()) : ?>
 				<?php while ($features_footer_query->have_posts()) : $features_footer_query->the_post(); ?>
 				<div class="cell">
 					<div class="card feature">
-						<?php the_post_thumbnail('home-featured'); ?>
+						<?php the_post_thumbnail('related-posts'); ?>
 						<div class="card-section">
 							<h4><a href="<?php the_permalink() ?>"><?php the_title();?></a></h4>
 							<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
