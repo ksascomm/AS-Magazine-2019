@@ -81,7 +81,7 @@ get_header(); ?>
 			'posts_per_page' => 10));			
  ?>
 
-<div class="main-container">
+<div class="main-container" id="page">
 	<div class="main-grid">
 		<main class="main-content-full-width">
 			<?php while ( have_posts() ) : the_post(); ?>

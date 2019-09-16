@@ -12,9 +12,9 @@ get_header(); ?>
 <?php $volume = get_the_volume($post); $volume_name = get_the_volume_name($post);?>
 
 <?php get_template_part( 'template-parts/featured-image-horizontal' ); ?>
-<div class="main-container">
+<div class="main-container" id="page">
 	<div class="main-grid feature-2015">
-		<main class="main-content features" >
+		<main class="main-content features">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="hide-for-medium">
@@ -24,13 +24,13 @@ get_header(); ?>
 					<?php endif;?>
 					</header>
 					<div class="entry-content">
-						<div class="show-for-small-only">
+						
 						<?php foundationpress_entry_meta(); ?>
 						<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?> 
 							<h4><?php the_field( 'ecpt_other_credits' );?></h4>
 						<?php endif;?>
-						<h5>Issue: <a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo $volume_name; ?></a></h5>
-						</div>
+							<h5>Issue: <a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo $volume_name; ?></a></h5>
+					
 						<?php the_content(); ?>
 						<?php if ( function_exists('get_field') && get_field('ecpt_second_section')):?> 
 							<div class="second-section">

@@ -7,9 +7,9 @@ get_header(); ?>
 <?php $volume = get_the_volume($post); $volume_name = get_the_volume_name($post);?>
 
 <?php get_template_part( 'template-parts/featured-image-vertical' ); ?>
-<div class="main-container">
+<div class="main-container" id="page">
 	<div class="main-grid feature-2019">
-		<main class="main-content features" >
+		<main class="main-content features">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<div class="entry-content">

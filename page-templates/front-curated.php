@@ -71,7 +71,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 			}
 		</style>
 		<header class="cover-story-wrapper show-for-large" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'cover-story-small' ); ?>, small], [<?php the_post_thumbnail_url( 'cover-story-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'cover-story-large' ); ?>, large], [<?php the_post_thumbnail_url( 'cover-story-xlarge' ); ?>, xlarge]">
-			<div class="cover-story-text-area">
+			<div class="cover-story-text-area" id="page">
 				<div class="cover-story-heading-text">
 					<a class="cover-story-link" href="<?php the_permalink();?>" aria-label="<?php the_title();?>">
 						<div class="cover-story-head">
@@ -185,7 +185,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 					<?php while ($asmag_homepage_news_query->have_posts() ) : $asmag_homepage_news_query->the_post(); ?>
 						
 						<div data-equalizer-watch>
-							<h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+							<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 							<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
 								<p><?php the_field( 'ecpt_tagline' ); ?></p>
 							<?php else: ?>
@@ -280,7 +280,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				<div class="cell">
 					<div class="past-issue card">
 						<p>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2019-v16n2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/05/Sp19-ASMagCover-1.jpg" /></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2019-v16n2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/05/Sp19-ASMagCover-1.jpg" alt="Spring 2019 Issue"/></a>
 						</p>
 						<div class="card-section">
 							<p>
@@ -292,7 +292,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				<div class="cell">
 					<div class="past-issue card">
 						<p>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2018-v16n1/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/05/f18-cover.jpg" /></a>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2018-v16n1/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/05/f18-cover.jpg"  alt="Fall 2018 Issue" /></a>
 						</p>
 						<div class="card-section">
 							<p>
@@ -303,7 +303,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				</div>
 				<div class="cell">
 					<div class="past-issue card">
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2018-volume-15-number-2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/11/sp18-archive-thm.jpg" /></a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2018-volume-15-number-2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/11/sp18-archive-thm.jpg" alt="Spring 2018 Issue" /></a></p>
 						<div class="card-section">
 							<p>
 								Spring 2018
@@ -313,7 +313,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				</div>
 				<div class="cell">
 					<div class="past-issue card">
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>v15n1/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/05/F17-cover.jpg" /></a></p>
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>v15n1/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/05/F17-cover.jpg"  alt="Fall 2017 Issue"/></a></p>
 						<div class="card-section">
 							<p>
 								Fall 2017

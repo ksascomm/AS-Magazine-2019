@@ -346,7 +346,7 @@ $twenty20-label-radius: 2px !default;
 }
 .slick-list:focus
 {
-    outline: none;
+   outline: -webkit-focus-ring-color auto 5px;
 }
 .slick-list.dragging
 {
@@ -477,13 +477,13 @@ $twenty20-label-radius: 2px !default;
     outline: none;
     background: transparent;
 }
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus
+.slick-prev:hover, .slick-next:hover {
+  outline: none;
+}
+.slick-prev:focus, .slick-next:focus
 {
     color: transparent;
-    outline: none;
+    outline: -webkit-focus-ring-color auto 5px;
     background: transparent;
 }
 .slick-prev:hover:before,
@@ -601,10 +601,13 @@ $twenty20-label-radius: 2px !default;
     outline: none;
     background: transparent;
 }
-.slick-dots li button:hover,
-.slick-dots li button:focus
+.slick-dots li button:hover 
 {
     outline: none;
+}
+.slick-dots li button:focus
+{
+    outline: -webkit-focus-ring-color auto 5px;
 }
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before

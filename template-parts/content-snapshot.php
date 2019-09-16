@@ -37,21 +37,12 @@ $volume_name = get_the_volume_name($post);
 		}
 	?>
 	</header>
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
-		</div>	
+	<div class="grid-x">
+		<div class="cell large-10">
+			<div class="entry-content">
+			<?php the_content(); ?>
+			<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
+			</div>
+		</div>
 	</div>
-	<footer>
-		<div class="grid-x">
-			<div class="cell small-12 large-6">
-				<div class="related-tags">
-					<h5>Explore Related Topics: <?php echo get_the_tag_list('<span class="tags">',', ','</span>'); ?></h5>
-				</div>
-			</div>
-			<div class="cell small-12 large-6">
-				<?php get_template_part( 'template-parts/share-social-bar' ); ?>
-			</div>
-		</div>	
-	</footer>
 </article>

@@ -69,7 +69,7 @@
 		</div>
 
 
-		<nav class="site-navigation mast-head grid-container" role="navigation" id="<?php foundationpress_mobile_menu_id(); ?>">
+		<nav class="site-navigation mast-head grid-container" role="navigation">
 			<div class="grid-x grid-padding-x">
 
 				<div class="cell small-12 medium-4 large-3">

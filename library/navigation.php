@@ -73,3 +73,8 @@ if ( ! function_exists( 'foundationpress_add_menuclass' ) ) {
 	}
 	add_filter( 'wp_nav_menu', 'foundationpress_add_menuclass' );
 }
+
+add_filter('nav_menu_item_id', 'clear_nav_menu_item_id', 10, 3);
+function clear_nav_menu_item_id($id, $item, $args) {
+    return "";
+}

@@ -57,10 +57,13 @@
  background: $black;
   a {
     font-family: $font-stack-gentona-semibold;
-     color: $white;
-     &:hover {
+    color: $white;
+    &:focus, &:hover {
       color: $spiritblue;
-     }
+    }
+    &:focus {
+      outline: -webkit-focus-ring-color auto 5px;
+    }
   }
   
 }
@@ -170,6 +173,14 @@ ul.dropdown.menu.vertical.submenu.is-dropdown-submenu {
   }
 }
 
+.dropdown.menu > li.is-active > a {
+  color: $spiritblue;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  border-color: $spiritblue transparent transparent;
+}
+
 
 .site-title {
   h1 {
@@ -254,6 +265,10 @@ ul.dropdown.menu.vertical.submenu.is-dropdown-submenu {
       background-color: $heritageblue;
       color: $white !important;
       border: 1px solid $white;
+    }
+    &:focus {
+      outline: -webkit-focus-ring-color auto 5px;
+      color: $spiritblue;
     }
   }  
   .off-canvas {

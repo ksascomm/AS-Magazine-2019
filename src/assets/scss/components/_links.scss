@@ -5,6 +5,7 @@
 [data-whatinput="mouse"] a:focus, button:focus
 [data-whatinput="touch"] a:focus, button:focus {
   outline: none;
+  color: $spiritblue;
 }
 
 .breadcrumbs {
@@ -23,9 +24,9 @@
 
 .curated-posts-section-wrapper, .news-section-wrapper, .dean-seen-section-wrapper, .social-section-wrapper, .past-issues-section-wrapper, .related-posts-container, .related-features-container, .toc .story {
   a {
-  color: $heritageblue;
+  color: $black;
     &:hover, &:focus {
-      color: $spiritblue;
+      color: $heritageblue;
     }
   }
 }

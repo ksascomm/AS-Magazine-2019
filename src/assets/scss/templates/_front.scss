@@ -225,7 +225,7 @@
       a {
         color: $black;
         &:hover {
-          color: $spiritblue;
+          color: $heritageblue;
         }
       }
     }
@@ -326,14 +326,14 @@
       line-height: 1.25;
       margin-top: -5px;
     }
-    h3 {
+    h2, h3 {
       a {
         font-family: $font-header-titling-bold;
         font-weight: $font-header-titling-bold-weight;
         color: $black;
         line-height: 1.5rem;
         &:hover {
-          color: $spiritblue;
+          color: $heritageblue;
         }
       }
     }
@@ -399,7 +399,7 @@
     a {
       color: $black;
       &:hover {
-        color: $spiritblue;
+        color: $heritageblue;
       }
     }
   }
@@ -421,12 +421,13 @@
 }
 
 .seen-heard {
-  background-color: $dark-gray;
+  background-color: $homepage-gray;
   .button.small.tag {
-    color: $white;
+    color: $black;
     background-color: $spiritblue;
     &:hover {
       background-color: $heritageblue;
+      color: $white;
     }
   }
   blockquote {
@@ -510,7 +511,7 @@
       a {
         color: $dark-gray;
         &:hover {
-          color: $spiritblue;
+          color: $heritageblue;
         }
       }
     }
