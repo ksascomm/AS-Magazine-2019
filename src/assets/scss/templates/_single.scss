@@ -1,5 +1,6 @@
 //Single Posts
 .entry-meta {
+  margin: 1rem 0rem;
   p.byline.issue, p.byline.author {
     margin-bottom: 0rem;
   }
@@ -41,4 +42,25 @@
 			line-height: 1.25;
   		}	  		
   	}
+}
+
+.tag-major-infatuation {
+  figure.wp-block-pullquote {
+    color: $black;
+    text-align: left;
+    margin: .5rem 0;
+    padding: .5rem 0;
+    border: none;
+    p:before {
+      content: none;
+    }
+    cite {
+      font-size: 1rem;
+      line-height: 1.25;
+      font-weight: bold;
+      &::before {
+        content: "--";
+      }
+    }  
+  }
 }
