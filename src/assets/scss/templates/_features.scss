@@ -105,6 +105,9 @@
 	}
 
 	.feature-2019-redesign-heading-text {
+		em {
+			font-family: inherit;
+		}
 		@include breakpoint(small) {
 		}
 
@@ -236,7 +239,62 @@
 .main-grid.feature-2015 {
 	margin-top: 1rem;
 	.entry-content {
-		
+		p.byline.author {
+			font-size: 1.45rem;
+			font-family: $font-header-gentona-verybold;
+  			font-weight: $font-header-gentona-verybold-weight;
+		}
+		h4, h5 {
+			a {
+				color: $heritageblue;
+				border: none;
+				border-bottom: .125em solid;
+				border-bottom-color: $medium-gray;
+				background-color: transparent;
+				border-radius: 0;
+				transition: border-color,background-color,color;
+				transition-duration: 250ms,250ms,250ms;
+				transition-timing-function: ease-in-out,ease-in-out,ease-in-out;
+				&:hover {
+					border-bottom: .125em solid;
+					border-bottom-color: $dark-gray;
+				}
+			}
+		}
+		blockquote {
+	   		border: none;
+	    	padding-left: 1rem;
+		    p {
+				font-family: $font-stack-arnhem;
+				font-weight: $font-stack-arnhem-weight;
+				color: $black;
+				margin-bottom: 0rem;
+				font-size: 1.5rem;
+				line-height: 1.7rem;
+				letter-spacing: -.03rem;
+				&:before {
+					display: none;
+				}
+		    }
+		}
+		cite {
+		    &:before {
+		      display: none;
+		    }
+		    padding-top: 1rem;
+		    font-family: $font-stack-gentona-light;
+		    font-weight: $font-stack-gentona-light-weight;    
+		    color: $black;
+		    font-style: normal;
+		    p {
+		      font-size: 1rem;
+		      line-height: 1.25;  
+		      &:before {
+		        color: $black;
+		        content: "— ";
+		      }      
+		    }
+		}
 	}
 }
 
@@ -244,45 +302,63 @@
 $hero-full-screen-bg-size: cover;
 $hero-full-screen-text-color: $white;
 
-.hero-full-screen {
-	height: 75vh;
+.page-template-feature-centerpiece {
+	.hero-full-screen {
+		height: 75vh;
 
-	@include breakpoint(medium down) {
-		height: 25vh;
-	}
+		@include breakpoint(medium down) {
+			height: 25vh;
+		}
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	background: center center no-repeat;
-	background-size: $hero-full-screen-bg-size;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		background: center center no-repeat;
+		background-size: $hero-full-screen-bg-size;
 
-	.middle-content-section {
-		text-align: center;
-		color: $hero-full-screen-text-color;
-	}
+		.middle-content-section {
+			text-align: center;
+			color: $hero-full-screen-text-color;
+		}
 
-	.top-content-section {
-		width: 100%;
-	}
+		.top-content-section {
+			width: 100%;
+		}
 
-	.bottom-content-section {
-		padding: 1rem;
+		.bottom-content-section {
+			padding: 1rem;
 
-		svg {
-			height: rem-calc(40);
-			width: rem-calc(40);
-			fill: $hero-full-screen-text-color;
+			svg {
+				height: rem-calc(40);
+				width: rem-calc(40);
+				fill: $hero-full-screen-text-color;
 
-			@include breakpoint(medium down) {
-				display: none;
+				@include breakpoint(medium down) {
+					display: none;
+				}
+
 			}
 
 		}
 
+	}	
+	.entry-content {
+		a {
+			border: none;
+			border-bottom: .125em solid;
+			border-bottom-color: $medium-gray;
+			background-color: transparent;
+			border-radius: 0;
+			transition: border-color,background-color,color;
+			transition-duration: 250ms,250ms,250ms;
+			transition-timing-function: ease-in-out,ease-in-out,ease-in-out;
+			&:hover {
+			border-bottom: .125em solid;
+			border-bottom-color: $dark-gray;
+			}
+		}
 	}
-
 }
 
 .vertical-featured-image-box {

@@ -21,14 +21,14 @@
             </div>         	
             <div class="cell">
                <div class="card">
-                  <a href="https://magazine.krieger.jhu.edu/fall-2018-v16n1/"><img src="http://magazine.krieger.jhu.edu/wp-content/uploads/2019/05/f18-cover.jpg" alt="Fall 2018 Cover"/>
+                  <a href="http://magazine.krieger.jhu.edu/fall-2018-v16n1/"><img src="http://magazine.krieger.jhu.edu/wp-content/uploads/2019/05/f18-cover.jpg" alt="Fall 2018 Cover"/>
                   <div class="card-section">Fall 2018<br />Volume 16, Number 1</div>
                   </a>
                </div>
             </div>
             <div class="cell">
                <div class="card">
-                  <a href="https://magazine.krieger.jhu.edu/spring-2018-volume-15-number-2/"><img src="http://magazine.krieger.jhu.edu/wp-content/uploads/2018/11/sp18-archive-thm.jpg" alt="Spring 2018 Cover"/>
+                  <a href="http://magazine.krieger.jhu.edu/spring-2018-volume-15-number-2/"><img src="http://magazine.krieger.jhu.edu/wp-content/uploads/2018/11/sp18-archive-thm.jpg" alt="Spring 2018 Cover"/>
                   <div class="card-section">Spring 2018<br />Volume 15, Number 2</div>
                   </a>
                </div>
