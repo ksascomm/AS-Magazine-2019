@@ -8,6 +8,19 @@
   color: $heritageblue;
 }
 
+.main-content, .main-content-full-width {
+  p {
+    a {
+      box-shadow: inset 0 -0.125rem 0 0 $heritageblue;
+      transition: box-shadow 0.2s;
+      &:hover {
+          color: $white;
+          box-shadow: inset 0 -2.5rem 0 0 $heritageblue;
+      }
+    }
+  }
+}
+
 .breadcrumbs {
     margin: 0 0 1rem 0;
     list-style: none;
@@ -31,8 +44,3 @@
   }
 }
 
-p.byline {
-  a {
-    color: $heritageblue;
-  }
-}

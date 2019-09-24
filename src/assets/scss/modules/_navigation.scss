@@ -151,6 +151,12 @@
   }
   a {
     color: $white;
+    &:hover, &:visited, &:active {
+      color: $white;
+    }
+    &:focus {
+      color: $white !important;
+    }
   }
   @include breakpoint(medium only) {
    padding: .5rem; 

@@ -55,3 +55,8 @@ p.wp-caption-text{
     @include thumbnail;
   }
 }
+
+.wp-block-image figcaption {
+  color: $dark-gray;
+  font-size: .9rem;
+}
