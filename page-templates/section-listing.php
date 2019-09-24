@@ -29,9 +29,9 @@ get_header(); ?>
 					    $categories = get_categories($sections); ?>
 					<?php foreach($categories as $category) :?>
 						<div class="cell">
-							<div class="section-card">
+							<div class="category section-card">
 								<h2><?php echo $category->name;?></h2>
-								<p><a href="<?php echo get_category_link($category->cat_ID);?>" aria-label="<?php echo $category->name;?> Category Archive Link">See all <?php echo $category->name;?> stories</a></p>
+								<p>Explore articles categorized <a href="<?php echo get_category_link($category->cat_ID);?>" aria-label="<?php echo $category->name;?> Category Archive Link"><?php echo $category->name;?></a>.</p>
 							</div>
 						</div>
 					<?php endforeach;?>
@@ -48,9 +48,9 @@ get_header(); ?>
 			    ?>
 
 		  			<div class="cell">
-						<div class="section-card">
+						<div class="tag section-card">
 							<h2><?php echo $tag->name;?></h2>
-							<p><a href="<?php echo $tag_link;?>" aria-label="<?php echo $tag->name;?> Tag Archive Link">See all <?php echo $tag->name ?> stories</a></p>
+							<p>Explore articles tagged <a href="<?php echo $tag_link;?>" aria-label="<?php echo $tag->name;?> Tag Archive Link"><?php echo $tag->name ?></a>.</p>
 						</div>
 					</div>
 			    <?php endforeach; ?>
