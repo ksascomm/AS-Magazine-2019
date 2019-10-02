@@ -24,13 +24,13 @@ get_header(); ?>
 					<?php endif;?>
 					</header>
 					<div class="entry-content">
-						
+						<div class="entry-meta">
 						<?php foundationpress_entry_meta(); ?>
 						<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?> 
-							<h4><?php the_field( 'ecpt_other_credits' );?></h4>
+							<p class="byline credits"><?php the_field( 'ecpt_other_credits' );?></p>
 						<?php endif;?>
-							<h5>Issue: <a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo $volume_name; ?></a></h5>
-					
+							<p class="byline issue">Issue: <a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo $volume_name; ?></a></p>
+						</div>
 						<?php the_content(); ?>
 						<?php if ( function_exists('get_field') && get_field('ecpt_second_section')):?> 
 							<div class="second-section">

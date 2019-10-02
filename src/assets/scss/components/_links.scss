@@ -41,6 +41,13 @@
     &:hover, &:focus {
       color: $heritageblue;
     }
+    &.button.heritage {
+      color: $white;
+      &:hover {
+        color: $black;
+      }
+    }
   }
+
 }
 

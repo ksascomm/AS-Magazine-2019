@@ -233,28 +233,11 @@
 .main-grid.feature-2015 {
 	margin-top: 1rem;
 	.entry-content {
-		p.byline.author {
+		p.byline, p.byline a, {
 			font-size: 1.45rem;
 			font-family: $font-header-gentona-verybold;
   			font-weight: $font-header-gentona-verybold-weight;
-		}
-		h4, h5 {
-			a {
-				color: $heritageblue;
-				border: none;
-				border-bottom: .125em solid;
-				border-bottom-color: $medium-gray;
-				background-color: transparent;
-				border-radius: 0;
-				transition: border-color,background-color,color;
-				transition-duration: 250ms,250ms,250ms;
-				transition-timing-function: ease-in-out,ease-in-out,ease-in-out;
-				&:hover {
-				  color: $white;
-				  box-shadow: inset 0 -2.5rem 0 0 $heritageblue;
-				  border: none;
-				}
-			}
+  			margin-bottom: .5rem;
 		}
 		blockquote {
 	   		border: none;
@@ -364,7 +347,7 @@ $hero-full-screen-text-color: $white;
 			position: absolute;
 			bottom: 0px;
 		}
-		p.byline.author {
+		p.byline {
 			font-size: 1.45rem;
 			font-family: $font-header-gentona-verybold;
   			font-weight: $font-header-gentona-verybold-weight;

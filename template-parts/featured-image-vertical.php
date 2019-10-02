@@ -27,13 +27,14 @@ if ( has_post_thumbnail( $post->ID ) ) : ?>
 				<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?> 
 					<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
 				<?php endif;?>
-				<?php foundationpress_entry_meta(); ?>
-				<?php $volume_name = get_the_volume_name($post); ?>
-					<h3>Issue: <a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo $volume_name; ?></a></h3>
-				<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?> 
-					<h4><?php the_field( 'ecpt_other_credits' );?></h4>
-				<?php endif;?>
-
+				<div class="entry-meta">
+					<?php foundationpress_entry_meta(); ?>
+					<?php $volume_name = get_the_volume_name($post); ?>
+						<p class="byline issue">Issue: <a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo $volume_name; ?></a></p>
+					<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?> 
+						<p class="byline credits"><?php the_field( 'ecpt_other_credits' );?></p>
+					<?php endif;?>
+				</div>
 			</div>
 		</div>
 	</div>

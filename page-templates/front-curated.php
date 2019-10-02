@@ -89,27 +89,6 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				</div>
 			</div>
 		</header>
-		<!--
-		<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-		<div class="cover-story show-for-large" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: center;">
-			<div class="middle-content-section">
-				<div class="marketing">
-					<div class="tagline">
-						
-						<h1>
-							<a href="<?php the_permalink();?>"><span class="cover">Cover Story:</span>
-							<?php the_title();?>
-							</a>
-						</h1>
-						<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
-						<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
-						<?php endif;?>
-						
-					</div>
-				</div>
-			</div>
-		</div>-->
-
 		<!--Mobile Version-->
 		<div class="cover-story mobile hide-for-large">
 			<div class="cover-story-image">
@@ -217,13 +196,14 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 			<?php if ( $asmag_homepage_highlighted_news_query->have_posts() ) : while ($asmag_homepage_highlighted_news_query->have_posts()) : $asmag_homepage_highlighted_news_query->the_post(); ?>
 				<div class="cell small-12 large-6">	
 					<div class="callout deans-desktop" data-equalizer-watch>
-						<h1><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h1>
+						<h1><?php the_title(); ?></h1>
 						<div class="media-object stack-for-small">
 								<div class="media-object-section">
 								<?php the_post_thumbnail('home-post', array('class' => 'home-post-image')); ?>
 							</div>
 							<div class="media-object-section middle">
-								<?php echo strip_tags( get_the_excerpt() ); ?>
+								<p><?php echo strip_tags( get_the_excerpt() ); ?></p>
+								<p><a class="button heritage" href="<?php the_permalink();?>">Read More</a></p>
 							</div>
 						</div>
 					</div>
