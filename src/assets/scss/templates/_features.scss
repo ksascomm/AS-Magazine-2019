@@ -171,7 +171,7 @@
 		padding-bottom: inherit;
 	}
 	p.byline.author {
-		font-size: 1.45rem;
+		font-size: 1.25rem;
 		font-family: $font-header-gentona-verybold;
 		font-weight: $font-header-gentona-verybold-weight;
 		margin-bottom: 0rem;
@@ -234,10 +234,10 @@
 	margin-top: 1rem;
 	.entry-content {
 		p.byline, p.byline a, {
-			font-size: 1.45rem;
+			font-size: 1.25rem;
 			font-family: $font-header-gentona-verybold;
   			font-weight: $font-header-gentona-verybold-weight;
-  			margin-bottom: .5rem;
+  			margin-bottom: 0rem;
 		}
 		blockquote {
 	   		border: none;
@@ -348,9 +348,10 @@ $hero-full-screen-text-color: $white;
 			bottom: 0px;
 		}
 		p.byline {
-			font-size: 1.45rem;
+			font-size: 1.25rem;
 			font-family: $font-header-gentona-verybold;
   			font-weight: $font-header-gentona-verybold-weight;
+  			margin-bottom: 0rem;
 		}
 		a {
 			color: $heritageblue;
