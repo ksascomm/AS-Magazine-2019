@@ -15,14 +15,14 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<?php wp_head(); ?>
-		<!--Kathy css edits. Bundle back into /assets-->
-		<link rel="stylesheet" href="https://dl.dropbox.com/s/mznfcnfrb69cswq/kathy.css"  type="text/css">
 	</head>
 	<body <?php body_class(); ?>>
+		
 	<div role="navigation" aria-label="Skip to main content">
 		<a class="skip-main show-on-focus" href="#page" >Skip to main content</a>
 	</div>
-	<div class="show-for-print" aria-hidden="true">
+
+	<div class="show-for-print print-mast-head" aria-hidden="true">
 		<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/krieger.logo.horizontal.blue.svg" alt="krieger logo">
 		<h1><?php echo get_bloginfo( 'description' ); ?> <?php echo get_bloginfo( 'title' ); ?></h1>
 	</div>
@@ -46,7 +46,7 @@
 			</a>
 		</div>
 	
-		<div class="roof-header-top show-for-large hide-for-print">
+		<div class="roof-header-top show-for-large">
 	    	<div class="roof-header-top-links">
 				<ul class="menu simple roof-menu align-right">
 					<li class="roof-padding">
@@ -69,7 +69,7 @@
 		</div>
 
 
-		<nav class="site-navigation mast-head grid-container" role="navigation">
+		<nav class="site-navigation mast-head grid-container hide-for-print" role="navigation">
 			<div class="grid-x grid-padding-x">
 
 				<div class="cell small-12 medium-4 large-3">

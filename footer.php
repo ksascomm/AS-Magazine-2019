@@ -14,7 +14,7 @@
 		<div class="footer-grid">
 	        <?php dynamic_sidebar( 'footer-widgets' ); ?>
 	    </div>
-	    <div class="grid-x grid-padding-x hide-for-print align-center-middle text-center">
+	    <div class="grid-x grid-padding-x align-center-middle text-center">
 	    	<div class="copydate">
 	    		<p>&copy; <?php print date('Y'); ?> Johns Hopkins University, Zanvyl Krieger School of Arts & Sciences, 3400 N. Charles St, Baltimore, MD 21218</p>
 	    	</div>

@@ -34,7 +34,7 @@ get_header(); ?>
 	<?php get_template_part('template-parts/explore-and-share');?>
 </div>
 <?php get_template_part ('template-parts/content', 'related-posts');?>
-<div class="grid-container">
+<div class="grid-container hide-for-print">
 	<?php comments_template(); ?>
 </div>
 <?php get_footer();

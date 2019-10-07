@@ -1,0 +1,50 @@
+@media print {
+    // Show Only Active Slide
+    .slick-slide {
+        display: none !important;
+        &.slick-active {
+            display: block !important;
+        }
+    }
+
+    // Reset adaptiveHeight
+    .slick-list {
+        height: auto !important;
+    }
+
+    // Remove Scrollbars
+    .slick-track {
+        width: auto !important;
+        height: auto !important;
+        transform: none !important;
+        .slick-slide {
+            width: auto !important;
+        }
+    }
+	.mobile-logo, .roof-header-top, .footer-grid, .feature-2019-redesign-heading, .fp-gallery, 
+	a.button.small, .related-features-container, .related-posts-container, .tags-share,
+	aside, nav, form, iframe, .menu, .hero, .adslot {
+		display: none;
+	}
+	.print-mast-head {
+		text-align: center;
+		img {
+			width: 500px;
+		}
+		h1 {
+			font-size: 3rem;
+		}
+	}
+	.hero-full-screen {
+		background: inherit !important;
+		height: inherit !important;
+	}
+	.cover-story-wrapper .cover-story-text-area {
+		padding: 0;
+	}
+	//print everything as 1 column
+	@media print {
+		.main-content, .main-content.features, .main-content-full-width { order: 1;  @include xy-cell(12); }
+		.sidebar { order: 2;  @include xy-cell(12); }
+	}	
+}
