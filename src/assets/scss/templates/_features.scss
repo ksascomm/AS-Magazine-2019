@@ -154,7 +154,7 @@
 	}
 
 	h2 {
-		font-size: 1.35rem;
+		font-size: 1.5rem;
 	}
 	h3, h4 {
 		font-size: 1.25rem;
@@ -343,9 +343,32 @@ $hero-full-screen-text-color: $white;
 		//padding-right: 1rem;
 	}
 	.vertical-featured-image-text {
+		text-align: center;
 		@include breakpoint(large) {
 			position: absolute;
 			bottom: 0px;
+		}
+		h1 {
+
+			@include breakpoint(small) {
+				font-size: 2.2rem;
+			}
+
+			@include breakpoint(medium) {
+				font-size: 2.5375rem;
+			}
+
+			@include breakpoint(large) {
+				font-size: 2.875rem;
+			}
+
+		}
+
+		h2 {
+			font-size: 1.5rem;
+		}
+		h3, h4 {
+			font-size: 1.25rem;
 		}
 		p.byline {
 			font-size: 1.25rem;
