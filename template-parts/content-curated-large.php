@@ -19,8 +19,7 @@
 				<?php endif;?>
 			</div>
 			<div class="post-image">
-				<?php //the_post_thumbnail(array( 650, 650)); ?>
-				<img src="http://via.placeholder.com/650x350/002d72" alt="">
+				<?php the_post_thumbnail(array( 650, 650)); ?>
 			</div>	
 		</div>
 	</div>

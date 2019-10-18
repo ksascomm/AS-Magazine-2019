@@ -17,8 +17,7 @@ if ( has_post_thumbnail( $post->ID ) ) : ?>
 	<div class="grid-x grid-padding-x vertical-featured-image-box">
 		<div class="cell small-12 large-6">
 			<div class="vertical-featured-image">
-				<?php //the_post_thumbnail('cover-story-vertical-large'); ?>
-				<img src="https://via.placeholder.com/650x700/68ace5/000000" alt="image">
+				<?php the_post_thumbnail('cover-story-vertical-large'); ?>
 			</div>
 		</div>
 		<div class="cell small-12 large-6">

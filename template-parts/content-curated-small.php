@@ -1,15 +1,14 @@
 <?php $field = get_field_object('curated_order'); $value = $field['value']; ?>
 <div class="curated-post small order-<?php echo $value; ?>">
 	<div class="card">
-		<div class="card-section">		
+		<div class="card-section">
 			<?php $categories = get_the_category();
 			if ( ! empty( $categories ) ) {
 			    echo '<a class="button small category" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
 			}?>	
 			
 			<div class="post-image">
-				<?php //the_post_thumbnail(array( 350, 350)); ?>
-				<img src="http://via.placeholder.com/350x350/68ace5" alt="">
+				<?php the_post_thumbnail(array( 350, 350)); ?>
 			</div>
 			<h1>
 				<?php echo $value; ?>
