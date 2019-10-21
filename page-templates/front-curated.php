@@ -199,7 +199,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						<h1><?php the_title(); ?></h1>
 						<div class="media-object stack-for-small">
 								<div class="media-object-section">
-								<?php the_post_thumbnail('home-post', array('class' => 'home-curated-small')); ?>
+								<?php the_post_thumbnail('home-curated-small', array('class' => 'home-post-image')); ?>
 							</div>
 							<div class="media-object-section middle">
 								<p><?php echo strip_tags( get_the_excerpt() ); ?></p>
