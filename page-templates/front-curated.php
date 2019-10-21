@@ -25,7 +25,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 		'post_type' => 'post',
 		'volume' => $currentissue,
 		'title' => "Dean's Desktop",
-		'category__in' => array(1),
+		'category__in' => array(72),
 		'orderby' => 'modified',
 		'order' => 'DESC',
 		'posts_per_page' => 1
