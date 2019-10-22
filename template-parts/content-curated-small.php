@@ -11,7 +11,6 @@
 				<?php the_post_thumbnail(array( 350, 350)); ?>
 			</div>
 			<h1>
-				<?php echo $value; ?>
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			</h1>
 			<div class="excerpt">

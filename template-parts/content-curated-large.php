@@ -8,7 +8,6 @@
 			    echo '<a class="button small category" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
 			}?>	
 			<h1>
-				<?php echo $value; ?>
 				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 			</h1>
 			<div class="excerpt">
