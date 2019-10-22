@@ -605,8 +605,8 @@
     var options = $.extend({
       default_offset_pct: 0.5,
       orientation: 'horizontal',
-      before_label: 'Before',
-      after_label: 'After',
+      before_label: 'Then',
+      after_label: 'Now',
       no_overlay: false,
       move_slider_on_hover: false,
       move_with_handle_only: true,
