@@ -318,6 +318,9 @@ ul.dropdown.menu.vertical.submenu.is-dropdown-submenu {
       &[type="submit"] {
         font-family: $font-awesome;
       }
+      &[type="text"] {
+          width: 75%;
+      }      
     }
     .input-group {
       margin-bottom: 0;
