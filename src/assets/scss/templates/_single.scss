@@ -3,6 +3,9 @@
   margin: 1rem 0rem;
   p.byline.issue, p.byline.author {
     margin-bottom: 0rem;
+    font-family: $font-stack-gentona-light;
+    font-weight: $font-stack-gentona-light-weight;
+    line-height: 1.3em;
   }
 }
 .post-header {

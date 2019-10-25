@@ -18,6 +18,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 2rem;
+  font-family: $font-header-titling-regular;
+  font-weight: $font-header-titling-regular-weight;
 }
 
 h2 {
@@ -92,7 +94,9 @@ cite, em, i {
     }
     padding-top: 1rem;
     font-family: $font-stack-gentona-light;
-    font-weight: $font-stack-gentona-light-weight;    
+    font-weight: $font-stack-gentona-light-weight;  
+    font-size: 1.3rem;
+    text-align: right;  
     color: $black;
     font-style: normal;
     p {

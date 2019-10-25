@@ -172,9 +172,11 @@
 	}
 	p.byline.author {
 		font-size: 1.25rem;
-		font-family: $font-header-gentona-verybold;
-		font-weight: $font-header-gentona-verybold-weight;
+		font-family: $font-stack-gentona-light;
+		font-weight: $font-stack-gentona-light-weight;;
 		margin-bottom: 0rem;
+		line-height: 1.3em;
+
 	}
 	a {
       box-shadow: inset 0 -0.125rem 0 0 $heritageblue;
@@ -235,9 +237,10 @@
 	.entry-content {
 		p.byline, p.byline a, {
 			font-size: 1.25rem;
-			font-family: $font-header-gentona-verybold;
-  			font-weight: $font-header-gentona-verybold-weight;
+			font-family: $font-stack-gentona-light;
+  			font-weight: $font-stack-gentona-light-weight;;
   			margin-bottom: 0rem;
+  			line-height: 1.3em;
 		}
 		blockquote {
 	   		border: none;
@@ -372,9 +375,10 @@ $hero-full-screen-text-color: $white;
 		}
 		p.byline {
 			font-size: 1.25rem;
-			font-family: $font-header-gentona-verybold;
-  			font-weight: $font-header-gentona-verybold-weight;
+			font-family: $font-stack-gentona-light;
+  			font-weight: $font-stack-gentona-light-weight;;
   			margin-bottom: 0rem;
+  			line-height: 1.3em;
 		}
 		a {
 			color: $heritageblue;
