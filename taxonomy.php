@@ -1,11 +1,9 @@
 <?php
 /**
- * The main template file
+ * The taxonomy archive
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * e.g., it puts together the home page when no home.php file exists.
+ * This is the taxonomy archive for custom theme categories
+ * e.g., Features, Big Ideas, etc.
  *
  * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
  *
