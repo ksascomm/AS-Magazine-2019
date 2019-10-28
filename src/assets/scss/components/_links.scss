@@ -8,8 +8,8 @@
   color: $heritageblue;
 }
 
-.main-content, .main-content-full-width {
-  p {
+.main-content .entry-content, .main-content-full-width .entry-content {
+  p, li, cite {
     a {
       box-shadow: inset 0 -0.125rem 0 0 $heritageblue;
       transition: box-shadow 0.2s;
@@ -28,9 +28,11 @@
     font-family: $font-header-gentona-verybold;
     font-weight: $font-header-gentona-verybold-weight;
     a {
-      color: $heritageblue;
+      box-shadow: inset 0 -0.125rem 0 0 $heritageblue;
+      transition: box-shadow 0.2s;
       &:hover {
-        text-decoration: none;
+          color: $white;
+          box-shadow: inset 0 -2.5rem 0 0 $heritageblue;
       }
     }
 }
