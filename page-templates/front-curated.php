@@ -63,7 +63,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 		'posts_per_page' => '-1'
 	));	
 ?>
-
+<main>	
 	<?php if ( $asmag_homepage_coverstory_query->have_posts() ) : while ($asmag_homepage_coverstory_query->have_posts()) : $asmag_homepage_coverstory_query->the_post(); ?>
 		<style>
 			.cover-story-wrapper {
@@ -72,21 +72,21 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 		</style>
 		<header class="cover-story-wrapper show-for-large" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'cover-story-small' ); ?>, small], [<?php the_post_thumbnail_url( 'cover-story-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'cover-story-large' ); ?>, large], [<?php the_post_thumbnail_url( 'full' ); ?>, xlarge]">
 			<div class="cover-story-text-area" id="page">
-				<div class="cover-story-heading-text">
+				<article class="cover-story-heading-text">
 					<a class="cover-story-link" href="<?php the_permalink();?>" aria-label="<?php the_title();?>">
-						<div class="cover-story-head">
+						<header class="cover-story-head">
 							<h1>
 								<span class="cover">Cover Story:</span>
 								<?php the_title();?>
 							</h1>
-						</div>
+						</header>
 						<div class="cover-story-subhead">
 							<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
 								<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
 							<?php endif;?>	
 						</div>
 					</a>
-				</div>
+				</article>
 			</div>
 		</header>
 		<!--Mobile Version-->
@@ -164,12 +164,16 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 					<?php while ($asmag_homepage_news_query->have_posts() ) : $asmag_homepage_news_query->the_post(); ?>
 						
 						<div data-equalizer-watch>
-							<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-							<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
-								<p><?php the_field( 'ecpt_tagline' ); ?></p>
-							<?php else: ?>
-								<?php the_excerpt();?>
-							<?php endif;?>
+							<article>
+								<header>
+									<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+								</header>
+								<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
+									<p><?php the_field( 'ecpt_tagline' ); ?></p>
+								<?php else: ?>
+									<?php the_excerpt();?>
+								<?php endif;?>
+							</article>
 						</div>						
 					
 					<?php endwhile;?>
@@ -195,7 +199,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 			<div class="grid-x grid-padding-x padding-top" data-equalizer>
 			<?php if ( $asmag_homepage_highlighted_news_query->have_posts() ) : while ($asmag_homepage_highlighted_news_query->have_posts()) : $asmag_homepage_highlighted_news_query->the_post(); ?>
 				<div class="cell small-12 large-6">	
-					<div class="callout deans-desktop" data-equalizer-watch>
+					<article class="callout deans-desktop" data-equalizer-watch>
 						<h1><?php the_title(); ?></h1>
 						<div class="media-object stack-for-small">
 								<div class="media-object-section">
@@ -203,16 +207,16 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							</div>
 							<div class="media-object-section middle">
 								<p><?php echo strip_tags( get_the_excerpt() ); ?></p>
-								<p><a class="button heritage" href="<?php the_permalink();?>">Read More</a></p>
+								<p><a class="button heritage" href="<?php the_permalink();?>">More from Dean Wendland</a></p>
 							</div>
 						</div>
-					</div>
+					</article>
 				</div>	
 				<?php endwhile; wp_reset_postdata(); endif;?>
 				
 				<?php if ( $asmag_homepage_seenheard_news_query->have_posts() ) : while ($asmag_homepage_seenheard_news_query->have_posts()) : $asmag_homepage_seenheard_news_query->the_post(); ?>
 					<div class="cell small-12 large-6">
-						<div class="callout seen-heard" data-equalizer-watch>
+						<article class="callout seen-heard" data-equalizer-watch>
 						<?php $seenheardtags = get_the_tags();
 							if ( ! empty( $seenheardtags ) ) {
 							    echo '<a class="button small tag" href="' . esc_url( get_tag_link( $seenheardtags[0]->term_id ) ) . '">' . esc_html( $seenheardtags[0]->name ) . '</a>';
@@ -226,7 +230,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 									<p class="source"><em><?php the_field( 'seen_heard_source' ); ?></em>, <?php the_field( 'seen_heard_source_date' ); ?></p>
 								<?php endif;?>
 							</cite>
-						</div>
+						</article>
 					</div>
 				<?php endwhile; wp_reset_postdata(); endif;?>
 			</div>
@@ -238,7 +242,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 			<h1>Social</h1>
  				<?php echo do_shortcode('[instagram-feed disablelightbox=true hovertextcolor=#fff hovercolor=#ff0000 hoverdisplay="caption"]');?>
 			<div class="grid-x grid-padding-x padding-top">
-			<div class="cell small-12 cta-section">
+				<div class="cell small-12 cta-section">
 					<div class="float-right cta-link">
 						<ul class="menu simple">
 							<li class="text">Follow us @jhuartsciences</li>
@@ -257,7 +261,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 		<div class="grid-container">
 			<h1>Browse Issues</h1>
 			<div class="grid-x grid-padding-x padding-top small-up-2 medium-up-4">
-				<div class="cell">
+				<article class="cell">
 					<div class="past-issue card">
 						<p>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2019-v16n2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/05/Sp19-ASMagCover-1.jpg" alt="Spring 2019 Issue"/></a>
@@ -268,8 +272,8 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							</p>
 						</div>
 					</div>
-				</div>
-				<div class="cell">
+				</article>
+				<article class="cell">
 					<div class="past-issue card">
 						<p>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2018-v16n1/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/05/f18-cover.jpg"  alt="Fall 2018 Issue" /></a>
@@ -280,8 +284,8 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							</p>
 						</div>
 					</div>
-				</div>
-				<div class="cell">
+				</article>
+				<article class="cell">
 					<div class="past-issue card">
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2018-volume-15-number-2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/11/sp18-archive-thm.jpg" alt="Spring 2018 Issue" /></a></p>
 						<div class="card-section">
@@ -290,8 +294,8 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							</p>
 						</div>
 					</div>
-				</div>
-				<div class="cell">
+				</article>
+				<article class="cell">
 					<div class="past-issue card">
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>v15n1/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/05/F17-cover.jpg"  alt="Fall 2017 Issue"/></a></p>
 						<div class="card-section">
@@ -300,8 +304,9 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							</p>
 						</div>
 					</div>
-				</div>
+				</article>
 			</div>
 		</div>
 	</div>
+</main>	
 <?php get_footer();
