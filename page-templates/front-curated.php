@@ -70,7 +70,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				 background-color: <?php the_field('header_background_color'); ?>;
 			}
 		</style>
-		<header class="cover-story-wrapper show-for-large" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'cover-story-small' ); ?>, small], [<?php the_post_thumbnail_url( 'cover-story-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'cover-story-large' ); ?>, large], [<?php the_post_thumbnail_url( 'cover-story-xlarge' ); ?>, xlarge]">
+		<header class="cover-story-wrapper show-for-large" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'cover-story-small' ); ?>, small], [<?php the_post_thumbnail_url( 'cover-story-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'cover-story-large' ); ?>, large], [<?php the_post_thumbnail_url( 'full' ); ?>, xlarge]">
 			<div class="cover-story-text-area" id="page">
 				<div class="cover-story-heading-text">
 					<a class="cover-story-link" href="<?php the_permalink();?>" aria-label="<?php the_title();?>">

@@ -38,8 +38,6 @@
       }      
       .cover-story-head {
         h1 {
-          font-family: $font-stack-arnhem-bold;
-          font-weight: $font-stack-arnhem-bold-weight;
           color: $white;
           margin-bottom: 0rem;
           font-size: 4rem;
@@ -61,13 +59,13 @@
           font-family: $font-stack-gentona-semibold;
           font-weight: $font-stack-gentona-semibold-weight;
           color: $white;
-          font-size: 1.3125rem;
+          font-size: 1.5rem;
           width: calc(85% - 1.875rem);
         }
       }
       .cover-story-head, .cover-story-subhead {
-        //background-color: rgba(44, 44, 51, 0.45);
-        background-color: rgba(49, 38, 29, 0.4);
+        background-color: rgba(44, 44, 51, 0.45);
+        //background-color: rgba(49, 38, 29, 0.4);
         padding: 1rem;
         padding-right: 0rem;
       }         
