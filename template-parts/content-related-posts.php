@@ -37,7 +37,7 @@ if ($tags) :?>
 					$issue_names[] = $issue->name;
 				}
 				$issue_name = join(" ", $issue_names); endif; ?>
-				<div class="cell">
+				<article class="cell related-post" aria-labelledby="post-<?php the_ID(); ?>">
 					<div class="card">
 						<div class="related-image-box">
 							<div class="category-title">
@@ -46,11 +46,11 @@ if ($tags) :?>
 							<?php the_post_thumbnail('related-posts');?>
 						</div>
 						<div class="card-section">
-							<h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
+							<h4><a href="<?php the_permalink();?>" id="post-<?php the_ID(); ?>"><?php the_title();?></a></h4>
 							<h5><?php echo $issue->name; ?></h5>
 						</div>
 					</div>
-				</div>
+				</article>
 			<?php endwhile; endif; wp_reset_query();?>
 		</div>
 	</div>

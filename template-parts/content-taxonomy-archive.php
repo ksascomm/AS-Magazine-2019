@@ -22,7 +22,7 @@ foreach($issues as $issue) {
 $issue_name = join(" ", $issue_names); endif; ?>
 <div class="cell">
     <div class="taxonomy-archive card">
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article aria-labelledby="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header>
 				<?php if ( has_post_thumbnail( $post->ID ) ) : ?>
 					<div class="related-image-box">          
