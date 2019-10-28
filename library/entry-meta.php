@@ -18,7 +18,12 @@ if ( ! function_exists( 'foundationpress_entry_meta' ) ) :
 		elseif ($author == '2') {
 			echo '<p class="byline author">' . __( 'By Magazine Staff', 'foundationpress' ) . '</p>';
 
-		}		
+		}
+		//Kathy
+		elseif ($author == '5') {
+			echo '<p class="byline author">' . __( 'By Magazine Staff', 'foundationpress' ) . '</p>';
+
+		}				
 		//Morgan
 		elseif ($author == '151') {
 			echo '<p class="byline author">' . __( 'By Magazine Staff', 'foundationpress' ) . '</p>';
