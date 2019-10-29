@@ -1,0 +1,107 @@
+table.gsc-above-wrapper-area-container {
+    border: 1px solid $white;
+    margin-bottom: 0px;
+}
+
+table.gsc-resultsHeader {
+    display: none;
+}
+
+.gsc-above-wrapper-area {
+	border-left: 1px solid $gray;
+	border-right: 1px solid $gray;
+	border-bottom:  1px solid $gray;
+}
+
+.gsc-input-box, table#gs_id50, table.gsc-table-result {
+	border: none !important;
+}
+
+form.gsc-search-box.gsc-search-box-tools, {
+	border-top: 1px solid $gray;
+	border-left: 1px solid $gray;
+	border-right: 1px solid $gray;
+	font-size: 1rem;
+	margin-bottom: -2px;
+}
+
+.gsc-control-cse, .gsc-control-cse .gsc-table-result {
+	font-size: 1rem;
+	font-family: $font-stack-arnhem !important;
+}
+
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+	height: 2em;
+	background-color: #f4f4f4;
+}
+
+
+button.gsc-search-button.gsc-search-button-v2 {
+    margin-top: 1.5rem;
+}
+
+.gs-web-image-box-portrait img.gs-image {
+	max-width: 100px;
+	max-height: 240px;
+}
+
+.gs-webResult.gs-result {
+	font-size: 1.5rem !important; 
+	a.gs-title {
+		font-family: $font-stack-gentona-light;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1.5rem !important; 
+		b {
+			font-family: $font-stack-gentona-semibold;
+			font-weight: 600;
+			font-style: normal;
+			font-size: 1.5rem !important; 
+		}
+	}
+	.gsc-url-top {
+		font-size: 1.25rem;
+		.gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-long {
+			&::before {
+				font-family: FontAwesome;
+				content: '\f0ac';
+				font-style: normal;
+				padding-right: .4rem;
+			}
+		}			
+	}
+	.gs-bidi-start-align.gs-snippet {
+		font-size: 1rem;
+	}
+	.gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-long {
+		color: #4a484c;
+		font-family: $font-stack-gentona-light;
+		font-weight: 400;
+		font-style: normal;
+	}
+}
+
+input#gsc-i-id1 {
+    height: 2rem !important;
+    padding-left: .5rem !important;
+}
+
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+	color: $heritageblue !important;
+	font-size: 1rem;
+}
+
+.gsc-cursor-page.gsc-cursor-current-page {
+	font-family: $font-stack-gentona-semibold;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.gsc-result .gs-title {
+	height: inherit !important;
+}
+
+.gs-webResult div.gs-visibleUrl, .gs-imageResult div.gs-visibleUrl, .gs-webResult .gs-snippet, .gs-imageResult .gs-snippet, .gs-fileFormatType, .gsc-result-info, .gsc-orderby-label, .gsc-branding-text, .gcsc-branding-text {
+	color: $black !important;
+}
+
