@@ -15,8 +15,25 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<?php wp_head(); ?>
-		<!--Kathy css edits. Bundle back into /assets-->
-		<link rel="stylesheet" href="https://dl.dropbox.com/s/mznfcnfrb69cswq/kathy.css"  type="text/css">		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100553583-17"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-100553583-17');
+		</script>
+		<script type="text/javascript">
+		/*<![CDATA[*/
+		(function() {
+		var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+		sz.src = '//siteimproveanalytics.com/js/siteanalyze_11464.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+		})();
+		/*]]>*/
+		</script>		
+
 	</head>
 	<body <?php body_class(); ?>>
 		
