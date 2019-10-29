@@ -18,8 +18,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 2rem;
-  font-family: $font-header-titling-regular;
-  font-weight: $font-header-titling-regular-weight;
+  font-family: $font-header-titling-medium;
+  font-weight: $font-header-titling-medium-weight;
 }
 
 h2 {
@@ -54,7 +54,7 @@ cite, em, i {
 
 .entry-content {
   margin-bottom: 2rem;
-  p {
+  p, li {
     strong, b {
       font-family: $font-stack-arnhem-bold;
       font-weight: $font-stack-arnhem-bold-weight;
