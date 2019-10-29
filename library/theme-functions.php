@@ -78,3 +78,14 @@ function tags_categories_support_query($wp_query) {
 // tag and category hooks
 add_action('init', 'tags_categories_support_all');
 add_action('pre_get_posts', 'tags_categories_support_query');
+
+//add PAGE post type to author.php loop
+function wpbrigade_author_custom_post_types( $query ) {
+  if( is_author() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'page'
+		));
+	  return $query;
+	}
+}
+add_filter( 'pre_get_posts', 'wpbrigade_author_custom_post_types' );
