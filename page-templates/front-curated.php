@@ -264,6 +264,18 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				<article class="cell">
 					<div class="past-issue card">
 						<p>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2019/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/10/f19-asmag-cover.jpg" alt="Fall 2019 Issue"/></a>
+						</p>
+						<div class="card-section">
+							<p>
+								Fall 2019
+							</p>
+						</div>
+					</div>
+				</article>				
+				<article class="cell">
+					<div class="past-issue card">
+						<p>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2019-v16n2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/05/Sp19-ASMagCover-1.jpg" alt="Spring 2019 Issue"/></a>
 						</p>
 						<div class="card-section">
@@ -291,16 +303,6 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						<div class="card-section">
 							<p>
 								Spring 2018
-							</p>
-						</div>
-					</div>
-				</article>
-				<article class="cell">
-					<div class="past-issue card">
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>v15n1/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/05/F17-cover.jpg"  alt="Fall 2017 Issue"/></a></p>
-						<div class="card-section">
-							<p>
-								Fall 2017
 							</p>
 						</div>
 					</div>
