@@ -11,7 +11,7 @@
 
 if ( have_comments() ) :
 ?>
-	<section id="comments">
+	<section id="comment-section">
 		<?php
 
 		wp_list_comments(
