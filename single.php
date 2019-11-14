@@ -24,7 +24,9 @@ get_header(); ?>
 				elseif (has_tag('snapshot') ):
 					get_template_part('template-parts/content', 'snapshot');
 				elseif (has_category('then-now') ):
-					get_template_part('template-parts/content', 'then-now');					
+					get_template_part('template-parts/content', 'then-now');
+				elseif (has_category('alumni') ):
+					get_template_part('template-parts/content', 'alumni');										
 				else:
 					get_template_part( 'template-parts/content', '' ); ?>
 			<?php endif;
@@ -34,7 +36,5 @@ get_header(); ?>
 	<?php get_template_part('template-parts/explore-and-share');?>
 </div>
 <?php get_template_part ('template-parts/content', 'related-posts');?>
-<div class="grid-container hide-for-print">
-	<?php comments_template(); ?>
-</div>
+
 <?php get_footer();
