@@ -202,6 +202,9 @@
 		}		
 		.wp-block-column:first-child {
 			flex-basis: 125%;
+			@include breakpoint (large) {
+				flex-basis: 100%;
+			}
 		}
 		.wp-block-column:nth-child(2n) {
 			//background: blue;

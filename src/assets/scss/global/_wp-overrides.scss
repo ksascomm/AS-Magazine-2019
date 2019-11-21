@@ -61,3 +61,41 @@ p.wp-caption-text{
   font-size: .9rem;
   text-align: left;
 }
+
+.wp-block-image {
+  .alignleft, .alignright {
+    @include breakpoint (small only) {
+      float: unset;
+    }
+  }
+}
+
+.wp-block-pullquote {
+  padding: 1.5em 0;
+  margin-bottom: .75rem;
+  &.is-style-solid-color {
+    blockquote {
+      @include breakpoint (small only) {
+        max-width: 95%;
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      @include breakpoint (medium) {
+        max-width: 85%;
+        p {
+          font-size: 1.75rem;
+        }
+      } 
+      @include breakpoint (large) {
+        max-width: 75%;
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+    cite {
+      padding-top: inherit;
+    }
+  }
+}
