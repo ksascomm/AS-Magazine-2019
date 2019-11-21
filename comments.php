@@ -67,7 +67,7 @@ endif;
 <?php
 if ( comments_open() ) :
 ?>
-<section id="respond">
+<section id="response">
 	<?php
 		comment_form(
 			array(
