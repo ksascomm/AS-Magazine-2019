@@ -14,6 +14,13 @@
          <div class="grid-x grid-padding-x small-up-2 medium-up-4">
             <div class="cell">
                <div class="card">
+                  <a href="https://magazine.krieger.jhu.edu/fall-2019/"><img src="https://magazine.krieger.jhu.edu//wp-content/uploads/2019/11/f19-asmag-cover.jpg" alt="Fall 2019 Cover"/>
+                  <div class="card-section">Fall 2019<br />Volume 17, Number 1</div>
+                  </a>
+               </div>
+            </div>             
+            <div class="cell">
+               <div class="card">
                   <a href="http://magazine.krieger.jhu.edu/spring-2019-v16n2/"><img src="http://magazine.krieger.jhu.edu/wp-content/uploads/2019/11/Sp19-ASMagCover-1.jpg" alt="Spring 2019 Cover"/>
                   <div class="card-section">Spring 2019<br />Volume 16, Number 2</div>
                   </a>
