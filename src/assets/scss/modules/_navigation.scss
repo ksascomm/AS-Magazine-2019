@@ -82,46 +82,7 @@
 }
 
 
-
-.topbar-center-logo {
-  
-  .menu {
-
-    a {
-      color: $white;
-    }
-  }
-}
-
-.topbar-center-logo .top-bar-center {
-  flex: 1 0 auto;
-
-  @include breakpoint(small only) {
-    display: none;
-  }
-  h1 {
-    @include breakpoint(small) {
-      font-size: 1.25rem !important
-    }
-    @include breakpoint(medium) {
-      font-size: 1.5rem!important;
-    }
-    @include breakpoint(large) {
-      font-size: 4rem !important;
-    }    
-  }
-  a {
-  	color: $white;
-  }
-}
-
-.topbar-center-logo-mobile {
-
-  .menu-icon {
-    vertical-align: text-top;
-  }
-}
-
+//Top Bar
 .top-bar, .mast-head {
   .menu {
     a {
@@ -161,6 +122,16 @@
   @include breakpoint(medium only) {
    padding: .5rem; 
   }  
+}
+
+.site-menu {
+  .dropdown.menu.desktop-menu {
+    @include breakpoint(large) {
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+    }
+  }
 }
 
 ul.dropdown.menu.vertical.submenu.is-dropdown-submenu {
@@ -237,7 +208,6 @@ ul.dropdown.menu.vertical.submenu.is-dropdown-submenu {
   width: 100%;
   height: 1.5rem;
   padding: 1rem 2.5rem 1.25rem;
-  margin: 0rem .5rem 1rem;
   li.bar {
     &:after { 
       font-family: $font-stack-gentona-semibold;
@@ -257,6 +227,7 @@ ul.dropdown.menu.vertical.submenu.is-dropdown-submenu {
     @include xy-grid-container();
     .roof-menu {
       @include xy-grid();
+      margin-right: 1rem;
       a {
         font-family: $font-stack-gentona-semibold;
         font-weight: $font-stack-gentona-semibold-weight;

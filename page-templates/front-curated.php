@@ -74,12 +74,12 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 			<div class="cover-story-text-area" id="page">
 				<article class="cover-story-heading-text">
 					<a class="cover-story-link" href="<?php the_permalink();?>" aria-label="<?php the_title();?>">
-						<header class="cover-story-head">
+						<div class="cover-story-head">
 							<h1>
 								<span class="cover">Cover Story:</span>
 								<?php the_title();?>
 							</h1>
-						</header>
+						</div>
 						<div class="cover-story-subhead">
 							<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
 								<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
@@ -145,8 +145,6 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 								<a class="button cta-link" href="<?php echo $current_issue_link; ?>">View The Rest Of This Issue <span class="fas fa-arrow-circle-right"></span>
 								</a>
 							<?php } ?>
-						
-						</h3>
 					</div>
 				</div>
 				<?php endif;?>				

@@ -93,3 +93,28 @@
     padding-bottom: inherit !important;
   }
 }
+
+//Simple Lightbox Styles
+#slb_viewer_wrap .slb_theme_slb_default .slb_data_title, #slb_viewer_wrap .slb_theme_slb_default .slb_group_status {
+  font-family: $font-stack-arnhem !important;
+  font-weight: $font-stack-arnhem-weight;
+  font-size: 1.25rem !important;
+}
+
+#slb_viewer_wrap .slb_theme_slb_baseline * {
+  line-height: 1.3 !important;
+  letter-spacing: -.2px;
+}
+
+#slb_viewer_wrap .slb_theme_slb_default .slb_group_status {
+  color: $black !important;
+  font-style: inherit !important;
+  font-family: $font-header-gentona-verybold !important;
+  font-weight: $font-header-gentona-verybold-weight;
+}
+
+span.slb_template_tag.slb_template_tag_item.slb_template_tag_item_description {
+  font-family: $font-stack-arnhem !important;
+  font-weight: $font-stack-arnhem-weight;
+  font-size: .9rem;
+}
