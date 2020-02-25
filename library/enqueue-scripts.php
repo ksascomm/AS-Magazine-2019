@@ -40,16 +40,16 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'app.css' ), array(), '2.10.4', 'all' );
 
 		// Deregister the jquery version bundled with WordPress.
-		wp_deregister_script( 'jquery' );
+		//wp_deregister_script( 'jquery' );
 
 		// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
-		wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', false );
+		//wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', false );
 
 		// Deregister the jquery-migrate version bundled with WordPress.
-		wp_deregister_script( 'jquery-migrate' );
+		//wp_deregister_script( 'jquery-migrate' );
 
 		// CDN hosted jQuery migrate for compatibility with jQuery 3.x
-		wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', false );
+		//wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', false );
 
 		// Enqueue jQuery migrate. Uncomment the line below to enable.
 		//wp_enqueue_script( 'jquery-migrate' );
@@ -58,7 +58,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'app.js' ), array( 'jquery' ), '2.10.4', true );
 
 		// Enqueue FontAwesome from CDN. Uncomment the line below if you need FontAwesome.
-		wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.11.2/css/all.css', array(), '5.11.2', 'all' );
+		wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.12.0/css/all.css', array(), '5.12.0', 'all' );
 
 		// Add the comment-reply library on pages where it is necessary
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -69,3 +69,17 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
 endif;
+
+// Defer non-essential/plugin javascript files
+// Defer jQuery Parsing using the HTML5 defer property
+if (!(is_admin() )) {
+    function defer_parsing_of_js ( $url ) {
+        if ( FALSE === strpos( $url, '.js' ) ) return $url;
+        if ( strpos( $url, 'jquery.js' ) ) return $url;
+        if ( strpos( $url, 'app.js' ) ) return $url;
+        // return "$url' defer ";
+        return "$url' defer onload='";
+    }
+    add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+}
+
