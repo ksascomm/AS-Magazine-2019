@@ -88,7 +88,7 @@
 		</div>
 
 
-		<nav class="site-navigation mast-head grid-container hide-for-print" role="navigation">
+		<nav class="site-navigation mast-head grid-container hide-for-print" aria-label="Main Menu">
 			<div class="grid-x grid-padding-x">
 
 				<div class="cell small-12 medium-4 large-3">
