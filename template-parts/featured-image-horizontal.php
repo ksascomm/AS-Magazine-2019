@@ -19,7 +19,7 @@ if ( has_post_thumbnail( $post->ID ) ) : ?>
 			}
 		</style>
 	<?php endif;?>
-	<header class="feature-2019-redesign-heading" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'featured-small' ); ?>, small], [<?php the_post_thumbnail_url( 'featured-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'featured-large' ); ?>, large], [<?php the_post_thumbnail_url( 'full' ); ?>, xlarge]">
+	<header class="feature-2019-redesign-heading" role="banner" aria-label="Post Featured Image" data-interchange="[<?php the_post_thumbnail_url( 'featured-small' ); ?>, small], [<?php the_post_thumbnail_url( 'featured-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'featured-large' ); ?>, large], [<?php the_post_thumbnail_url( 'full' ); ?>, xlarge]">
 		<div class="feature-2019-redesign-heading-area hide-for-small-only">
 			<div class="feature-2019-redesign-heading-text">
 				<h1><?php the_title(); ?></h1>
