@@ -70,10 +70,10 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				 background-color: <?php the_field('header_background_color'); ?>;
 			}
 		</style>
-		<header class="cover-story-wrapper show-for-large" role="banner" data-interchange="[<?php the_post_thumbnail_url( 'cover-story-small' ); ?>, small], [<?php the_post_thumbnail_url( 'cover-story-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'cover-story-large' ); ?>, large], [<?php the_post_thumbnail_url( 'full' ); ?>, xlarge]">
+		<header class="cover-story-wrapper show-for-large" role="banner" aria-label="Cover Story" data-interchange="[<?php the_post_thumbnail_url( 'cover-story-small' ); ?>, small], [<?php the_post_thumbnail_url( 'cover-story-medium' ); ?>, medium], [<?php the_post_thumbnail_url( 'cover-story-large' ); ?>, large], [<?php the_post_thumbnail_url( 'full' ); ?>, xlarge]">
 			<div class="cover-story-text-area" id="page">
-				<article class="cover-story-heading-text">
-					<a class="cover-story-link" href="<?php the_permalink();?>" aria-label="<?php the_title();?>">
+				<article class="cover-story-heading-text" aria-label="<?php the_title();?>">
+					<a class="cover-story-link" href="<?php the_permalink();?>">
 						<div class="cover-story-head">
 							<h1>
 								<span class="cover">Cover Story:</span>
@@ -162,9 +162,9 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 					<?php while ($asmag_homepage_news_query->have_posts() ) : $asmag_homepage_news_query->the_post(); ?>
 						
 						<div data-equalizer-watch>
-							<article>
+							<article aria-labelledby="news-carousel-post-<?php the_ID(); ?>">
 								<header>
-									<h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+									<h2><a href="<?php the_permalink();?>" id="news-carousel-post-<?php the_ID(); ?>"><?php the_title(); ?></a></h2>
 								</header>
 								<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
 									<p><?php the_field( 'ecpt_tagline' ); ?></p>
@@ -197,7 +197,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 			<div class="grid-x grid-padding-x padding-top" data-equalizer>
 			<?php if ( $asmag_homepage_highlighted_news_query->have_posts() ) : while ($asmag_homepage_highlighted_news_query->have_posts()) : $asmag_homepage_highlighted_news_query->the_post(); ?>
 				<div class="cell small-12 large-6">	
-					<article class="callout deans-desktop" data-equalizer-watch>
+					<article class="callout deans-desktop" aria-labelledby="post-<?php the_ID(); ?>" data-equalizer-watch>
 						<h1><?php the_title(); ?></h1>
 						<div class="media-object stack-for-small">
 								<div class="media-object-section">
@@ -205,7 +205,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							</div>
 							<div class="media-object-section middle">
 								<p><?php echo strip_tags( get_the_excerpt() ); ?></p>
-								<p><a class="button heritage" href="<?php the_permalink();?>">More from Dean Wendland</a></p>
+								<p><a class="button heritage" href="<?php the_permalink();?>" id="post-<?php the_ID(); ?>">More from Dean Wendland</a></p>
 							</div>
 						</div>
 					</article>
@@ -214,7 +214,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				
 				<?php if ( $asmag_homepage_seenheard_news_query->have_posts() ) : while ($asmag_homepage_seenheard_news_query->have_posts()) : $asmag_homepage_seenheard_news_query->the_post(); ?>
 					<div class="cell small-12 large-6">
-						<article class="callout seen-heard" data-equalizer-watch>
+						<article class="callout seen-heard" aria-label="<?php the_field( 'seen_heard_citation' ); ?>" data-equalizer-watch>
 						<?php $seenheardtags = get_the_tags();
 							if ( ! empty( $seenheardtags ) ) {
 							    echo '<a class="button small tag" href="' . esc_url( get_tag_link( $seenheardtags[0]->term_id ) ) . '">' . esc_html( $seenheardtags[0]->name ) . '</a>';
@@ -259,7 +259,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 		<div class="grid-container">
 			<h1>Browse Issues</h1>
 			<div class="grid-x grid-padding-x padding-top small-up-2 medium-up-4">
-				<article class="cell">
+				<article class="cell" aria-label="Fall 2019 Issue">
 					<div class="past-issue card">
 						<p>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2019/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/11/f19-asmag-cover.jpg" alt="Fall 2019 Issue"/></a>
@@ -271,7 +271,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						</div>
 					</div>
 				</article>				
-				<article class="cell">
+				<article class="cell" aria-label="Spring 2018 Issue">
 					<div class="past-issue card">
 						<p>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2019-v16n2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/11/Sp19-ASMagCover-1.jpg" alt="Spring 2019 Issue"/></a>
@@ -283,7 +283,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						</div>
 					</div>
 				</article>
-				<article class="cell">
+				<article class="cell" aria-label="Fall 2018 Issue">
 					<div class="past-issue card">
 						<p>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2018-v16n1/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/05/f18-cover.jpg"  alt="Fall 2018 Issue" /></a>
@@ -295,7 +295,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						</div>
 					</div>
 				</article>
-				<article class="cell">
+				<article class="cell" aria-label="Spring 2018 Issue">
 					<div class="past-issue card">
 						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2018-volume-15-number-2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/11/sp18-archive-thm.jpg" alt="Spring 2018 Issue" /></a></p>
 						<div class="card-section">

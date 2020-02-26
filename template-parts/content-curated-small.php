@@ -1,5 +1,5 @@
 <?php $field = get_field_object('curated_order'); $value = $field['value']; ?>
-<article class="curated-post small order-<?php echo $value; ?>">
+<article class="curated-post small order-<?php echo $value; ?>" aria-labelledby="post-<?php the_ID(); ?>">
 	<div class="card">
 		<div class="card-section">
 			<?php $categories = get_the_category();
@@ -11,7 +11,7 @@
 					<?php the_post_thumbnail(array( 350, 350)); ?>
 				</div>
 				<h1>
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?></a>
 				</h1>	
 			</header>
 			<div class="excerpt">
