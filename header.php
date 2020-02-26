@@ -60,7 +60,7 @@
 			</div>
 		</div>
 		<div class="mobile-logo show-for-small-only">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<a href="https://krieger.jhu.edu/" rel="home">
 				<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/krieger.logo.horizontal.blue.svg" alt="Krieger School of Arts & Sciences">
 			</a>
 		</div>
@@ -93,7 +93,7 @@
 
 				<div class="cell small-12 medium-4 large-3">
 					<div class="site-shield">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<a href="https://krieger.jhu.edu/" rel="home">
 							<img data-interchange="[<?php echo get_template_directory_uri(); ?>/dist/assets/images/ksas-horizontal-md.png, small], [<?php echo get_template_directory_uri(); ?>/dist/assets/images/ksas-horizontal-md.png, medium], [<?php echo get_template_directory_uri(); ?>/dist/assets/images/ksas-horizontal-lg.png, large]" alt="Krieger School of Arts & Sciences">
 						</a>
 					</div>
