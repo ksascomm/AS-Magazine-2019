@@ -214,7 +214,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				
 				<?php if ( $asmag_homepage_seenheard_news_query->have_posts() ) : while ($asmag_homepage_seenheard_news_query->have_posts()) : $asmag_homepage_seenheard_news_query->the_post(); ?>
 					<div class="cell small-12 large-6">
-						<article class="callout seen-heard" aria-label="<?php the_field( 'seen_heard_citation' ); ?>" data-equalizer-watch>
+						<article class="callout seen-heard" aria-label="post-<?php the_ID(); ?>" data-equalizer-watch>
 						<?php $seenheardtags = get_the_tags();
 							if ( ! empty( $seenheardtags ) ) {
 							    echo '<a class="button small tag" href="' . esc_url( get_tag_link( $seenheardtags[0]->term_id ) ) . '">' . esc_html( $seenheardtags[0]->name ) . '</a>';
