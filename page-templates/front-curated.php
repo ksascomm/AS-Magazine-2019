@@ -40,7 +40,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 	$curated_content = (array(
 		'posts_per_page' => 6,
 		'post_type' => array('post', 'page'),
-		'volume' => $currentissue,
+		//'volume' => $currentissue,
 		'meta_query' => array(
 			array(
 		 		'key' => 'curated_content',
