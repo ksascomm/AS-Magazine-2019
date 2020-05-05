@@ -106,3 +106,14 @@ function remove_jquery_migrate( &$scripts) {
 	}
 }
 add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
+
+//Remove plugin CSS on specific page types
+function dequeue_css() {
+	if (is_home() || is_front_page()) {
+		wp_dequeue_style( 'slb_core' );
+	}
+	if (!is_home() || !is_front_page()) {
+		wp_dequeue_style('sb_instagram_styles');
+	}
+}
+add_action( 'wp_print_styles', 'dequeue_css', 100 );
