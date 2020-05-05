@@ -112,7 +112,7 @@ function dequeue_css() {
 	if (is_home() || is_front_page()) {
 		wp_dequeue_style( 'slb_core' );
 	}
-	if (!is_home() || !is_front_page()) {
+	else {
 		wp_dequeue_style('sb_instagram_styles');
 	}
 }
