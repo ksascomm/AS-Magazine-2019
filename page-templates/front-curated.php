@@ -259,6 +259,16 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 		<div class="grid-container">
 			<h1>Browse Issues</h1>
 			<div class="grid-x grid-padding-x padding-top small-up-2 medium-up-4">
+				<article class="cell" aria-label="Spring 2020 Issue">
+					<div class="past-issue card">
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2020/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2020/05/sp20-asmag-cover.jpg" alt="Spring 2020 Issue" /></a></p>
+						<div class="card-section">
+							<p>
+								Spring 2020
+							</p>
+						</div>
+					</div>
+				</article>				
 				<article class="cell" aria-label="Fall 2019 Issue">
 					<div class="past-issue card">
 						<p>
@@ -291,16 +301,6 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						<div class="card-section">
 							<p>
 								Fall 2018
-							</p>
-						</div>
-					</div>
-				</article>
-				<article class="cell" aria-label="Spring 2018 Issue">
-					<div class="past-issue card">
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2018-volume-15-number-2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/11/sp18-archive-thm.jpg" alt="Spring 2018 Issue" /></a></p>
-						<div class="card-section">
-							<p>
-								Spring 2018
 							</p>
 						</div>
 					</div>
