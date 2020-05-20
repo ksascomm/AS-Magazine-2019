@@ -52,6 +52,9 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 		//Enable Wide Alignments
 		add_theme_support('align-wide');
 
+		//Enable Page Excerpt
+		add_post_type_support( 'page', 'excerpt' );
+
 		// Add foundation.css as editor style https://codex.wordpress.org/Editor_Style
 		// add_editor_style( 'dist/assets/css/' . foundationpress_asset_path( 'editor.css' ) );
 	}
