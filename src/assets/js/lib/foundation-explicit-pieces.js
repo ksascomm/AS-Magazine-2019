@@ -100,4 +100,4 @@ Foundation.plugin(Tabs, 'Tabs');
 
 Foundation.plugin(ResponsiveAccordionTabs, 'ResponsiveAccordionTabs');
 
-module.exports = Foundation;
+export default Foundation;
