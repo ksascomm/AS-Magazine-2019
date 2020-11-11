@@ -25,6 +25,14 @@
 
 		  gtag('config', 'UA-100553583-17');
 		</script>
+		<!-- End Global site tag (gtag.js) -->
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5VTN64C');</script>
+		<!-- End Google Tag Manager -->
 		<script type="text/javascript">
 		/*<![CDATA[*/
 		(function() {
@@ -33,11 +41,16 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
 		})();
 		/*]]>*/
-		</script>		
+		</script>
 
 	</head>
 	<body <?php body_class(); ?>>
-		
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VTN64C"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
 	<div role="navigation" aria-label="Skip to main content">
 		<a class="skip-main show-on-focus" href="#page" >Skip to main content</a>
 	</div>
@@ -65,7 +78,7 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/krieger.logo.horizontal.blue.svg" alt="Krieger School of Arts & Sciences">
 			</a>
 		</div>
-	
+
 		<div class="roof-header-top show-for-large">
 	    	<div class="roof-header-top-links">
 				<ul class="menu simple roof-menu align-right">
@@ -78,7 +91,7 @@
 								<label for="s" class="screen-reader-text">
 					                Search This Website
 					            </label>
-								<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search this site" aria-label="Search This Website"/>	
+								<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search this site" aria-label="Search This Website"/>
 							</div>
 						</form>
 					</li>
