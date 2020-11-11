@@ -11,7 +11,7 @@
 					<?php the_post_thumbnail(array( 350, 350)); ?>
 				</div>
 				<h1>
-					<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?></a>
+					<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>" class="curated-post-link"><?php the_title(); ?></a>
 				</h1>	
 			</header>
 			<div class="excerpt">
