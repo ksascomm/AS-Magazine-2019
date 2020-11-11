@@ -1,7 +1,7 @@
 //TYPOGRAPHY
 //font-stack-arnhem = arnhem
 //font-header = quadon
-//font-stack-gentona-semibold = gentonasemibold. 
+//font-stack-gentona-semibold = gentonasemibold.
 body {
   font-family: $font-stack-arnhem;
   font-weight: $font-stack-arnhem-weight;
@@ -46,12 +46,6 @@ h6 {
   padding-top: 1rem;
 }
 
-cite, em, i {
-  font-family: $font-stack-arnhem-italic;
-  font-weight: $font-stack-arnhem-italic-weight;
-  font-style: italic;
-}
-
 .entry-content {
   margin-bottom: 2rem;
   p, li {
@@ -62,6 +56,11 @@ cite, em, i {
     a {
       font-family: $font-stack-arnhem-bold;
       font-weight: $font-stack-arnhem-bold-weight;
+    }
+    cite, em, i {
+      font-family: $font-stack-arnhem-italic;
+      font-weight: $font-stack-arnhem-italic-weight;
+      font-style: italic;
     }
   }
   blockquote {
@@ -94,14 +93,14 @@ cite, em, i {
     }
     padding-top: 1rem;
     font-family: $font-stack-gentona-light;
-    font-weight: $font-stack-gentona-light-weight;  
+    font-weight: $font-stack-gentona-light-weight;
     font-size: 1.3rem;
-    text-align: right;  
+    text-align: right;
     color: $black;
     font-style: normal;
     p {
       font-size: 1rem;
-      line-height: 1.25;  
+      line-height: 1.25;
       &:before {
         color: $black;
         content: "— ";
@@ -110,7 +109,7 @@ cite, em, i {
         &:before {
           display: none;
         }
-      }      
-    }  
+      }
+    }
   }
 }
