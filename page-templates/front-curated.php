@@ -204,7 +204,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							</div>
 							<div class="media-object-section middle">
 								<p><?php echo strip_tags( get_the_excerpt() ); ?></p>
-								<p><a class="button heritage" href="<?php the_permalink();?>" id="post-<?php the_ID(); ?>">More from Dean Wendland</a></p>
+								<p><a class="button heritage" href="<?php the_permalink();?>" id="post-<?php the_ID(); ?>">More from the Dean</a></p>
 							</div>
 						</div>
 					</article>
