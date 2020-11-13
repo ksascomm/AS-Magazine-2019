@@ -7,7 +7,7 @@ Template Name: Front Curated
 <?php get_header(); ?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
-<?php 
+<?php
 $currentissue = asmag_get_theme_option( 'input_example' );
 
 $volume = get_the_volume($post); $parent = get_queried_object_id();
@@ -24,7 +24,6 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 	$asmag_homepage_highlighted_news_query = new WP_Query(array(
 		'post_type' => 'post',
 		'volume' => $currentissue,
-		'title' => "Dean's Desktop",
 		'category__in' => array(72),
 		'orderby' => 'modified',
 		'order' => 'DESC',
@@ -36,7 +35,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 		'tag' => 'seen-heard',
 		'orderby' => 'rand',
 		'posts_per_page' => 1
-	));		
+	));
 	$curated_content = (array(
 		'posts_per_page' => 6,
 		'post_type' => array('post', 'page'),
@@ -61,9 +60,9 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 		'orderby' => 'modified',
 		'order' => 'DESC',
 		'posts_per_page' => '-1'
-	));	
+	));
 ?>
-<main>	
+<main>
 	<?php if ( $asmag_homepage_coverstory_query->have_posts() ) : while ($asmag_homepage_coverstory_query->have_posts()) : $asmag_homepage_coverstory_query->the_post(); ?>
 		<style>
 			.cover-story-wrapper {
@@ -83,7 +82,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						<div class="cover-story-subhead">
 							<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
 								<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
-							<?php endif;?>	
+							<?php endif;?>
 						</div>
 					</a>
 				</article>
@@ -98,7 +97,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				<div class="grid-x grid-padding-x padding-top">
 					<div class="cover-story-title">
 						<h1>Cover Story: <?php the_title(); ?></h1>
-					</div>					
+					</div>
 					<div class="cover-story-excerpt">
 						<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
 							<p><?php the_field( 'ecpt_tagline' ); ?></p>
@@ -122,11 +121,11 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						<h1 class="show-for-small-only">Inside this Issue</h1>
 						<?php
 						while ($curated_content_query->have_posts()) : $curated_content_query->the_post();
-						//$count++; 
+						//$count++;
 						//if ($count == 1 || $count == 6) :
 						$field = get_field_object('curated_order'); $value = $field['value'];
 						if ( function_exists('get_field') && ( get_field('curated_order') == '1' || get_field('curated_order') == '6')): ?>
-							
+
 							<div class="cell small-12 large-6 article-teaser-<?php echo $value; ?>">
 								<?php get_template_part( 'template-parts/content', 'curated-large' ); ?>
 							</div>
@@ -147,8 +146,8 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							<?php } ?>
 					</div>
 				</div>
-				<?php endif;?>				
-			</div> 
+				<?php endif;?>
+			</div>
 		</div>
 	</div>
 	<div class="section-spacer"></div>
@@ -160,7 +159,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 				<div class="news-section">
 					<div class="news-carousel" data-equalizer>
 					<?php while ($asmag_homepage_news_query->have_posts() ) : $asmag_homepage_news_query->the_post(); ?>
-						
+
 						<div data-equalizer-watch>
 							<article aria-labelledby="news-carousel-post-<?php the_ID(); ?>">
 								<header>
@@ -172,11 +171,11 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 									<?php the_excerpt();?>
 								<?php endif;?>
 							</article>
-						</div>						
-					
+						</div>
+
 					<?php endwhile;?>
-					</div>	
-				</div> 
+					</div>
+				</div>
 				<?php wp_reset_postdata(); endif;?>
 				<?php if ( function_exists('get_field') && get_field('contact_link')):?>
 				<div class="cell small-12 cta-section">
@@ -184,7 +183,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						<?php $contact_link = get_field( 'contact_link' ); ?>
 						<?php if ( $contact_link ) { ?>
 							<a class="button cta-link" href="<?php echo $contact_link; ?>">Send Us Your News <span class="far fa-thumbs-up"></span></a>
-						<?php } ?>							
+						<?php } ?>
 					</div>
 				</div>
 				<?php endif;?>
@@ -192,11 +191,11 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 		</div>
 	</div>
 	<div class="section-spacer"></div>
-	<div class="dean-seen-section-wrapper">	
+	<div class="dean-seen-section-wrapper">
 		<div class="grid-container">
 			<div class="grid-x grid-padding-x padding-top" data-equalizer>
 			<?php if ( $asmag_homepage_highlighted_news_query->have_posts() ) : while ($asmag_homepage_highlighted_news_query->have_posts()) : $asmag_homepage_highlighted_news_query->the_post(); ?>
-				<div class="cell small-12 large-6">	
+				<div class="cell small-12 large-6">
 					<article class="callout deans-desktop" aria-labelledby="post-<?php the_ID(); ?>" data-equalizer-watch>
 						<h1><?php the_title(); ?></h1>
 						<div class="media-object stack-for-small">
@@ -209,16 +208,16 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							</div>
 						</div>
 					</article>
-				</div>	
+				</div>
 				<?php endwhile; wp_reset_postdata(); endif;?>
-				
+
 				<?php if ( $asmag_homepage_seenheard_news_query->have_posts() ) : while ($asmag_homepage_seenheard_news_query->have_posts()) : $asmag_homepage_seenheard_news_query->the_post(); ?>
 					<div class="cell small-12 large-6">
 						<article class="callout seen-heard" aria-label="post-<?php the_ID(); ?>" data-equalizer-watch>
 						<?php $seenheardtags = get_the_tags();
 							if ( ! empty( $seenheardtags ) ) {
 							    echo '<a class="button small tag" href="' . esc_url( get_tag_link( $seenheardtags[0]->term_id ) ) . '">' . esc_html( $seenheardtags[0]->name ) . '</a>';
-							}?>							
+							}?>
 							<?php the_content();?>
 							<cite class="seen-heard">
 								<?php if ( function_exists('get_field') && get_field('seen_heard_citation')):?>
@@ -268,7 +267,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							</p>
 						</div>
 					</div>
-				</article>				
+				</article>
 				<article class="cell" aria-label="Fall 2019 Issue">
 					<div class="past-issue card">
 						<p>
@@ -280,7 +279,7 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 							</p>
 						</div>
 					</div>
-				</article>				
+				</article>
 				<article class="cell" aria-label="Spring 2018 Issue">
 					<div class="past-issue card">
 						<p>
@@ -308,5 +307,5 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 			</div>
 		</div>
 	</div>
-</main>	
+</main>
 <?php get_footer();
