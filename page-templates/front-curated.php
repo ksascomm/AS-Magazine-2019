@@ -258,7 +258,19 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 		<div class="grid-container">
 			<h1>Browse Issues</h1>
 			<div class="grid-x grid-padding-x padding-top small-up-2 medium-up-4">
-			<article class="cell" aria-label="Fall 2020 Issue">
+				<article class="cell" aria-label="Spring 2021 Issue">
+						<div class="past-issue card">
+							<p>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2021/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2021/05/Sp21_Cover.jpg" alt="Spring 2021 Issue"/></a>
+							</p>
+							<div class="card-section">
+								<p>
+									Spring 2021
+								</p>
+							</div>
+						</div>
+					</article>
+				<article class="cell" aria-label="Fall 2020 Issue">
 					<div class="past-issue card">
 						<p>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2020/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2020/11/f20-as-mag-cover.jpg"  alt="Fall 2020 Issue" /></a>
@@ -288,18 +300,6 @@ $volume = get_the_volume($post); $parent = get_queried_object_id();
 						<div class="card-section">
 							<p>
 								Fall 2019
-							</p>
-						</div>
-					</div>
-				</article>
-				<article class="cell" aria-label="Spring 2018 Issue">
-					<div class="past-issue card">
-						<p>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2019-v16n2/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/11/Sp19-ASMagCover-1.jpg" alt="Spring 2019 Issue"/></a>
-						</p>
-						<div class="card-section">
-							<p>
-								Spring 2019
 							</p>
 						</div>
 					</div>
