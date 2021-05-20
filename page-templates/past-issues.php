@@ -15,11 +15,12 @@
 		<?php endwhile; ?>
 		<div class="past-issues">
 			<div class="grid-x grid-padding-x small-up-2 medium-up-4">
-			<div class="cell">
+				<div class="cell">
 					<div class="card">
 						<a href="https://magazine.krieger.jhu.edu/spring-2021/"><img src="https://magazine.krieger.jhu.edu/wp-content/uploads/2021/05/Sp21_Cover.jpg" alt="Spring 2021 Cover"/>
 						<div class="card-section">Spring 2021<br />Volume 18, Number 2</div>
 						</a>
+					</div>
 				</div>
 				<div class="cell">
 					<div class="card">
