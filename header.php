@@ -24,6 +24,7 @@
 		  gtag('js', new Date());
 
 		  gtag('config', 'UA-100553583-17');
+		  gtag('config', 'G-BXWF6LM8V4');
 		</script>
 		<!-- End Global site tag (gtag.js) -->
 		<!-- Google Tag Manager -->
@@ -45,7 +46,7 @@
 		fbq('set','agent','tmgoogletagmanager', '417795779228010');
 		fbq('track', "PageView");
 		</script>
-		<noscript><img height="1" width="1" style="display:none"
+		<noscript><img height="1" width="1" alt="" style="display:none"
 		src="https://www.facebook.com/tr?id=417795779228010&ev=PageView&noscript=1"
 		/></noscript>
 		<!-- End Facebook Pixel Code -->
@@ -96,25 +97,25 @@
 		</div>
 
 		<div class="roof-header-top show-for-large">
-	    	<div class="roof-header-top-links">
+			<div class="roof-header-top-links">
 				<ul class="menu simple roof-menu align-right">
 					<li class="roof-padding">
 						<form method="GET" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" aria-label="Utility Bar Search">
 							<div class="input-group">
 								<div class="input-group-button">
-					    			<button type="submit" class="button" aria-label="search"><span class="fa fa-search"></span></button>
-					  			</div>
+									<button type="submit" class="button" aria-label="search"><span class="fa fa-search"></span></button>
+								  </div>
 								<label for="s" class="screen-reader-text">
-					                Search This Website
-					            </label>
+									Search This Website
+								</label>
 								<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search this site" aria-label="Search This Website"/>
 							</div>
 						</form>
 					</li>
 					<li><a class="button" href="#" aria-label="Explore KSAS" data-toggle="offCanvasTop1">Explore KSAS <span class="fa fa-bars" aria-hidden="true"></span></a></li>
 				</ul>
-	    		<?php get_template_part( 'template-parts/roof' ); ?>
-	      	</div>
+				<?php get_template_part( 'template-parts/roof' ); ?>
+			  </div>
 		</div>
 
 
