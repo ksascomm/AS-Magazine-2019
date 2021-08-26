@@ -17,20 +17,20 @@ if ( has_post_thumbnail( $post->ID ) ) : ?>
 	<div class="grid-x grid-padding-x vertical-featured-image-box">
 		<div class="cell small-12 large-6">
 			<div class="vertical-featured-image">
-				<?php the_post_thumbnail('cover-story-vertical-large'); ?>
+				<?php the_post_thumbnail('full'); ?>
 			</div>
 		</div>
 		<div class="cell small-12 large-6">
 			<div class="vertical-featured-image-text">
 				<h1><?php the_title(); ?></h1>
-				<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?> 
+				<?php if ( function_exists('get_field') && get_field('ecpt_tagline')):?>
 					<h2><?php the_field( 'ecpt_tagline' ); ?></h2>
 				<?php endif;?>
 				<div class="entry-meta">
 					<?php foundationpress_entry_meta(); ?>
 					<?php $volume_name = get_the_volume_name($post); ?>
 						<p class="byline issue">Issue: <a href="<?php echo get_permalink( $post->post_parent ); ?>"><?php echo $volume_name; ?></a></p>
-					<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?> 
+					<?php if ( function_exists('get_field') && get_field('ecpt_other_credits')):?>
 						<p class="byline credits"><?php the_field( 'ecpt_other_credits' );?></p>
 					<?php endif;?>
 				</div>
