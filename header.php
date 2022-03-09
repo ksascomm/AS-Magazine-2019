@@ -19,12 +19,12 @@
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100553583-17"></script>
 		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-		  gtag('config', 'UA-100553583-17');
-		  gtag('config', 'G-BXWF6LM8V4');
+		gtag('config', 'UA-100553583-17');
+		gtag('config', 'G-BXWF6LM8V4');
 		</script>
 		<!-- End Global site tag (gtag.js) -->
 		<!-- Google Tag Manager -->
@@ -32,7 +32,7 @@
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-5VTN64C');</script>
+		})(window,document,'script','dataLayer','GTM-T9S2PC4');</script>
 		<!-- End Google Tag Manager -->
 		<!-- Facebook Pixel Code -->
 		<script nonce="rJGsCAAe">
@@ -104,7 +104,7 @@
 							<div class="input-group">
 								<div class="input-group-button">
 									<button type="submit" class="button" aria-label="search"><span class="fa fa-search"></span></button>
-								  </div>
+								</div>
 								<label for="s" class="screen-reader-text">
 									Search This Website
 								</label>
@@ -115,7 +115,7 @@
 					<li><a class="button" href="#" aria-label="Explore KSAS" data-toggle="offCanvasTop1">Explore KSAS <span class="fa fa-bars" aria-hidden="true"></span></a></li>
 				</ul>
 				<?php get_template_part( 'template-parts/roof' ); ?>
-			  </div>
+			</div>
 		</div>
 
 
