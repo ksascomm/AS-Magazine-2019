@@ -309,6 +309,18 @@ endif;
 		<div class="grid-container">
 			<h1>Browse Issues</h1>
 			<div class="grid-x grid-padding-x padding-top small-up-2 medium-up-4">
+				<article class="cell" aria-label="Fall 2021 Issue">
+					<div class="past-issue card">
+						<p>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2021/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2021/11/F21_cover.jpg" alt="Fall 2021 Issue Cover art"/></a>
+						</p>
+						<div class="card-section">
+							<p>
+								Fall 2021
+							</p>
+						</div>
+					</div>
+				</article>
 				<article class="cell" aria-label="Spring 2021 Issue">
 						<div class="past-issue card">
 							<p>
@@ -339,18 +351,6 @@ endif;
 						<div class="card-section">
 							<p>
 								Spring 2020
-							</p>
-						</div>
-					</div>
-				</article>
-				<article class="cell" aria-label="Fall 2019 Issue">
-					<div class="past-issue card">
-						<p>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2019/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2019/11/f19-asmag-cover.jpg" alt="Fall 2019 Issue"/></a>
-						</p>
-						<div class="card-section">
-							<p>
-								Fall 2019
 							</p>
 						</div>
 					</div>
