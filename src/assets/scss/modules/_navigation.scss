@@ -15,7 +15,10 @@
       font-family: $font-stack-gentona-semibold;
     }
     &[type="submit"] {
-      font-family: $font-awesome !important;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font: var(--fa-font-regular);
     }
     &.search-field {
     height: 34px;
@@ -287,7 +290,10 @@ ul.dropdown.menu.vertical.submenu.is-dropdown-submenu {
     input {
       height: 2rem;
       &[type="submit"] {
-        font-family: $font-awesome;
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font: var(--fa-font-regular);
       }
       &[type="text"] {
           width: 75%;

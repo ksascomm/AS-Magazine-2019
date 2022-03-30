@@ -662,14 +662,20 @@ $twenty20-label-radius: 2px !default;
 }
 
 .slick-prev:before {
-	font-family: $font-awesome;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
 	font-weight: 900;
 	content: '\f053';
 	color: $black;
 	font-size: 2.25rem;
 }
 .slick-next:before {
-	font-family: $font-awesome;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
 	font-weight: 900;
 	content: '\f054';
 	color: $black;

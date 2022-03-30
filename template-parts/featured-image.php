@@ -2,8 +2,8 @@
 /**
  * Template part for standard featured images on archival features, pages, and posts
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package ASMagazine
+ * @since ASMagazine 1.0.0
  */
 
 ?>

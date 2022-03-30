@@ -17,20 +17,21 @@ add_image_size( 'featured-large', 1440, 450, true );
 add_image_size( 'featured-xlarge', 1920, 600, true );
 
 add_image_size( 'cover-story-small', 640, 267 ); // name, width, height, crop
-add_image_size( 'cover-story-medium', 1280, 533);
-add_image_size( 'cover-story-large', 1440, 600);
-add_image_size( 'cover-story-xlarge', 1920, 800);
+add_image_size( 'cover-story-medium', 1280, 533 );
+add_image_size( 'cover-story-large', 1440, 600 );
+// add_image_size( 'cover-story-xlarge', 1920, 800);
 
-add_image_size( 'cover-story-vertical-large', 650, 700);
+// add_image_size( 'cover-story-vertical-large', 650, 700);
 
-add_image_size( 'home-curated-small', 350, 350);
-add_image_size( 'home-curated-large', 650, 350);
-add_image_size( 'related-posts', 600, 400);
+add_image_size( 'home-curated-small', 350, 350 );
+// add_image_size( 'home-curated-large', 650, 350);
+add_image_size( 'related-posts', 600, 400 );
 
 // Register the new image sizes for use in the add media modal in wp-admin
 function foundationpress_custom_sizes( $sizes ) {
 	return array_merge(
-		$sizes, array(
+		$sizes,
+		array(
 			'fp-small'  => __( 'FP Small' ),
 			'fp-medium' => __( 'FP Medium' ),
 			'fp-large'  => __( 'FP Large' ),
@@ -73,3 +74,16 @@ function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
 	return $html;
 }
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
+
+
+// Disable a few default image sizes that I don’t need
+add_filter( 'intermediate_image_sizes', 'remove_default_img_sizes', 10, 1 );
+function remove_default_img_sizes( $sizes ) {
+	$targets = array( 'medium_large', '1536x1536', '2048x2048' );
+	foreach ( $sizes as $size_index => $size ) {
+		if ( in_array( $size, $targets ) ) {
+			unset( $sizes[ $size_index ] );
+		}
+	}
+	return $sizes;
+}

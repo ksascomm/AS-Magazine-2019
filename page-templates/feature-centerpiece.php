@@ -1,10 +1,12 @@
 <?php
-/*
-Template Name: Feature (Centerpiece)
-*/
-get_header(); ?>
-<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-<div class="hero-full-screen hide-for-print" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; background-size: cover; background-position: center;">
+/**
+ * Template Name: Feature (Centerpiece)
+ */
+
+get_header();
+?>
+<?php $background_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+<div class="hero-full-screen hide-for-print" style="background: url('<?php echo $background_img[0]; ?>') no-repeat; background-size: cover; background-position: center;">
 	<div class="middle-content-section">
 		<!--<h1>Centerpiece</h1>-->
 	</div>
@@ -15,9 +17,12 @@ get_header(); ?>
 <div class="main-container" id="page">
 	<div class="main-grid">
 		<main class="main-content-full-width" id="main-content-section" data-magellan-target="main-content-section">
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
 				<div class="show-for-print">
-					<?php the_post_thumbnail('large'); ?>
+					<?php the_post_thumbnail( 'large' ); ?>
 				</div>
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 			<?php endwhile; ?>
@@ -25,4 +30,5 @@ get_header(); ?>
 	</div>
 </div>
 <?php get_template_part( 'template-parts/feature', 'footer' ); ?>
-<?php get_footer();
+<?php
+get_footer();

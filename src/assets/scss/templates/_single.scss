@@ -5,7 +5,7 @@
     margin-bottom: 0rem;
     font-family: $font-stack-gentona-light;
     font-weight: $font-stack-gentona-light-weight;
-    line-height: 1.3em;
+    line-height: 1.5;
   }
 }
 .post-header {
@@ -42,7 +42,7 @@
   		}
   		cite {
 			font-size: 1rem;
-			line-height: 1.25;
+			line-height: 1.5;
   		}	  		
   	}
 }
@@ -59,7 +59,7 @@
     }
     cite {
       font-size: 1rem;
-      line-height: 1.25;
+      line-height: 1.5;
       font-weight: bold;
       &::before {
         content: "--";

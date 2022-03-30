@@ -2,17 +2,17 @@
 /**
  * Register widget areas
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package ASMagazine
+ * @since ASMagazine 1.0.0
  */
 
-if ( ! function_exists( 'foundationpress_sidebar_widgets' ) ) :
-	function foundationpress_sidebar_widgets() {
+if ( ! function_exists( 'asmagazine_sidebar_widgets' ) ) :
+	function asmagazine_sidebar_widgets() {
 		register_sidebar(
 			array(
 				'id'            => 'sidebar-widgets',
-				'name'          => __( 'Sidebar widgets', 'foundationpress' ),
-				'description'   => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
+				'name'          => __( 'Sidebar widgets', 'asmagazine' ),
+				'description'   => __( 'Drag widgets to this sidebar container.', 'asmagazine' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h6>',
@@ -23,8 +23,8 @@ if ( ! function_exists( 'foundationpress_sidebar_widgets' ) ) :
 		register_sidebar(
 			array(
 				'id'            => 'footer-widgets',
-				'name'          => __( 'Footer widgets', 'foundationpress' ),
-				'description'   => __( 'Drag widgets to this footer container', 'foundationpress' ),
+				'name'          => __( 'Footer widgets', 'asmagazine' ),
+				'description'   => __( 'Drag widgets to this footer container', 'asmagazine' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h6>',
@@ -33,5 +33,5 @@ if ( ! function_exists( 'foundationpress_sidebar_widgets' ) ) :
 		);
 	}
 
-	add_action( 'widgets_init', 'foundationpress_sidebar_widgets' );
+	add_action( 'widgets_init', 'asmagazine_sidebar_widgets' );
 endif;

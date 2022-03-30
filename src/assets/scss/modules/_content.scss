@@ -36,11 +36,11 @@
     }
 
     @include breakpoint(medium) {
-      @include xy-cell(8);
+      @include xy-cell(9);
     }
     &.features {
       @include breakpoint(medium) {
-        @include xy-cell(8);
+        @include xy-cell(9);
       }
     }
   }
@@ -52,7 +52,6 @@
 
     @include breakpoint(medium) {
       @include xy-cell(3);
-      @include xy-cell-offset(1);
       margin-top: 1rem;
     }
 

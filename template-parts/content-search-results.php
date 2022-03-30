@@ -4,12 +4,12 @@
  *
  * Used for both single and index/archive/search.
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package ASMagazine
+ * @since ASMagazine 1.0.0
  */
 
 ?>
-<article aria-labelledby="post-<?php the_ID(); ?>" <?php post_class('post-listing news-article single-search-result'); ?>>
+<article aria-labelledby="post-<?php the_ID(); ?>" <?php post_class( 'post-listing news-article single-search-result' ); ?>>
 	<header>
 		<h3>
 			<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">	
@@ -17,16 +17,16 @@
 			</a>
 		</h3>
 		<h4>
-			<?php $volume_name = get_the_volume_name($post); ?>			
-			Issue: <?php echo $volume_name; ?>	
+			<?php $volume_name = get_the_volume_name( $post ); ?>
+			Issue: <?php echo $volume_name; ?>
 		</h4>
 	</header>
 
 	<div class="entry-content">
 		<?php
-        $content = get_the_excerpt();
-  		$trimmed_content = wp_trim_words( $content, 15, '...' );
-        ?>
-  		<p><?php echo $trimmed_content; ?></p>
+		$content         = get_the_excerpt();
+		$trimmed_content = wp_trim_words( $content, 15, '...' );
+		?>
+		<p><?php echo $trimmed_content; ?></p>
 	</div>	
 </article>

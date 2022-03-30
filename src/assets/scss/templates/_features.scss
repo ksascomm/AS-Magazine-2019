@@ -3,7 +3,7 @@
 	background: $black;
 	background-repeat: no-repeat;
 	@include breakpoint(small) {
-		padding: rem-calc(65%) 0 ;
+		padding: rem-calc(65%) 0;
 		margin: 0 0 rem-calc(32);
 		height: auto;
 		position: relative;
@@ -11,7 +11,7 @@
 	}
 
 	@include breakpoint(medium only) {
-		padding: rem-calc(27%) 0 ;
+		padding: rem-calc(27%) 0;
 		height: 50vh;
 	}
 	@include breakpoint(large) {
@@ -194,9 +194,6 @@
 		.entry-content {
 			@include xy-cell(100%);
 		}
-		.wp-block-columns {
-		 
-		}
 		.wp-block-column {
 		  margin: 0 3rem 0 0;
 		}		
@@ -217,9 +214,6 @@
 				line-height: 1.5;
 			}
 		}
-		.sidebar-header, .sidebar-paragraph {
-			
-		}	
 	}
 	@include breakpoint(medium down) {
 		.wp-block-columns.has-2-columns {
@@ -243,7 +237,7 @@
 			font-family: $font-stack-gentona-light;
   			font-weight: $font-stack-gentona-light-weight;;
   			margin-bottom: 0rem;
-  			line-height: 1.3em;
+  			line-height: 1.5;
 		}
 		blockquote {
 	   		border: none;
@@ -254,7 +248,7 @@
 				color: $black;
 				margin-bottom: 0rem;
 				font-size: 1.5rem;
-				line-height: 1.7rem;
+				line-height: 1.5;
 				letter-spacing: -.03rem;
 				&:before {
 					display: none;
@@ -267,12 +261,12 @@
 		    }
 		    padding-top: 1rem;
 		    font-family: $font-stack-gentona-light;
-		    font-weight: $font-stack-gentona-light-weight;    
+		    font-weight: $font-stack-gentona-light-weight;
 		    color: $black;
 		    font-style: normal;
 		    p {
 		      font-size: 1rem;
-		      line-height: 1.25;  
+		      line-height: 1.5;
 		      &:before {
 		        color: $black;
 		        content: "— ";

@@ -2,14 +2,14 @@
 /**
  * Register theme support for languages, menus, post-thumbnails, post-formats etc.
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package ASMagazine
+ * @since ASMagazine 1.0.0
  */
 
-if ( ! function_exists( 'foundationpress_theme_support' ) ) :
-	function foundationpress_theme_support() {
+if ( ! function_exists( 'asmagazine_theme_support' ) ) :
+	function asmagazine_theme_support() {
 		// Add language support
-		load_theme_textdomain( 'foundationpress', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'asmagazine', get_template_directory() . '/languages' );
 
 		// Switch default core markup for search form, comment form, and comments to output valid HTML5
 		add_theme_support(
@@ -56,8 +56,8 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 		add_post_type_support( 'page', 'excerpt' );
 
 		// Add foundation.css as editor style https://codex.wordpress.org/Editor_Style
-		// add_editor_style( 'dist/assets/css/' . foundationpress_asset_path( 'editor.css' ) );
+		// add_editor_style( 'dist/assets/css/' . asmagazine_asset_path( 'editor.css' ) );
 	}
 
-	add_action( 'after_setup_theme', 'foundationpress_theme_support' );
+	add_action( 'after_setup_theme', 'asmagazine_theme_support' );
 endif;

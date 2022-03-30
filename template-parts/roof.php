@@ -2,12 +2,12 @@
 /**
  * The default template for the "roof"
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package ASMagazine
+ * @since ASMagazine 1.0.0
  */
 
 ?>
-<div class="off-canvas position-top" id="offCanvasTop1" data-off-canvas aria-hidden="true">
+<div class="off-canvas position-top" id="offCanvasTop1" data-off-canvas>
 	<div id="global-links" class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-3">
 		<h1 class="show-for-sr">Explore KSAS</h1>
 		<div class="cell">
@@ -38,7 +38,7 @@
 			</ul>
 		</div>
 		<button class="close-button" aria-label="Close menu" type="button" data-close>
-		  <span aria-hidden="true">&times;</span>
-		</button>			
+		<span aria-hidden="true">&times;</span>
+		</button>
 	</div>
 </div>

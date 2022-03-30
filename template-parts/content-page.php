@@ -2,9 +2,8 @@
 /**
  * The default template for displaying page content
  *
- *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package ASMagazine
+ * @since ASMagazine 1.0.0
  */
 
 ?>
@@ -15,6 +14,6 @@
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( '(Edit)', 'asmagazine' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>
 </article>
