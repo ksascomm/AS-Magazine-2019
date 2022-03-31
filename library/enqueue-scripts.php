@@ -11,7 +11,7 @@
 
 
 // Check to see if rev-manifest exists for CSS and JS static asset revisioning
-//https://github.com/sindresorhus/gulp-rev/blob/master/integration.md
+// https://github.com/sindresorhus/gulp-rev/blob/master/integration.md
 
 if ( ! function_exists( 'asmagazine_asset_path' ) ) :
 	function asmagazine_asset_path( $filename ) {
@@ -37,22 +37,7 @@ if ( ! function_exists( 'asmagazine_scripts' ) ) :
 	function asmagazine_scripts() {
 
 		// Enqueue the main Stylesheet.
-		wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/dist/assets/css/app.css', array(), filemtime(get_template_directory() . '/src/assets/scss'), 'all' );
-
-		// Deregister the jquery version bundled with WordPress.
-		//wp_deregister_script( 'jquery' );
-
-		// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
-		//wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', false );
-
-		// Deregister the jquery-migrate version bundled with WordPress.
-		//wp_deregister_script( 'jquery-migrate' );
-
-		// CDN hosted jQuery migrate for compatibility with jQuery 3.x
-		//wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', false );
-
-		// Enqueue jQuery migrate. Uncomment the line below to enable.
-		//wp_enqueue_script( 'jquery-migrate' );
+		wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/dist/assets/css/app.css', array(), filemtime( get_template_directory() . '/src/assets/scss' ), 'all' );
 
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . asmagazine_asset_path( 'app.js' ), array( 'jquery' ), '4.0.0', true );
@@ -72,12 +57,18 @@ if ( ! function_exists( 'asmagazine_scripts' ) ) :
 	add_action( 'wp_enqueue_scripts', 'asmagazine_scripts' );
 endif;
 
-// Defer non-essential/plugin javascript files
-// Defer jQuery Parsing using the HTML5 defer property
+// Defer non-essential/plugin javascript files.
+// Defer jQuery Parsing using the HTML5 defer property.
 function defer_parsing_of_js( $url ) {
-	if ( is_user_logged_in() ) return $url; //don't break WP Admin
-	if ( FALSE === strpos( $url, '.js' ) ) return $url;
-	if ( strpos( $url, 'jquery.js' ) ) return $url;
+	if ( is_user_logged_in() ) {
+		return $url; // don't break WP Admin!
+	}
+	if ( false === strpos( $url, '.js' ) ) {
+		return $url;
+	}
+	if ( strpos( $url, 'jquery.min.js' ) ) {
+		return $url;
+	}
 	return str_replace( ' src', ' defer src', $url );
 }
 add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
