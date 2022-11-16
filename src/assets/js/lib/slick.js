@@ -64,7 +64,7 @@
                 focusOnChange: false,
                 infinite: true,
                 initialSlide: 0,
-                lazyLoad: 'ondemand',
+                lazyLoad: 'progressive',
                 mobileFirst: false,
                 pauseOnHover: true,
                 pauseOnFocus: true,
