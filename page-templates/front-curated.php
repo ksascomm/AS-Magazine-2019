@@ -309,6 +309,26 @@ endif;
 		<div class="grid-container">
 			<h1>Browse Issues</h1>
 			<div class="grid-x grid-padding-x padding-top small-up-2 medium-up-4">
+			<article class="cell" aria-label="Fall 2022 Issue">
+					<div class="past-issue card">
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2022/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2022/11/fall22-cover-portrait.jpg" alt="Fall 2022 Issue Cover" /></a></p>
+						<div class="card-section">
+							<p>
+								Fall 2022
+							</p>
+						</div>
+					</div>
+				</article>
+				<article class="cell" aria-label="Spring 2022 Issue">
+					<div class="past-issue card">
+						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2022/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2022/05/spring-2022.jpg" alt="Spring 2020 Issue" /></a></p>
+						<div class="card-section">
+							<p>
+								Spring 2022
+							</p>
+						</div>
+					</div>
+				</article>
 				<article class="cell" aria-label="Fall 2021 Issue">
 					<div class="past-issue card">
 						<p>
@@ -333,28 +353,6 @@ endif;
 							</div>
 						</div>
 					</article>
-				<article class="cell" aria-label="Fall 2020 Issue">
-					<div class="past-issue card">
-						<p>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2020/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2020/11/f20-as-mag-cover.jpg"  alt="Fall 2020 Issue" /></a>
-						</p>
-						<div class="card-section">
-							<p>
-								Fall 2020
-							</p>
-						</div>
-					</div>
-				</article>
-				<article class="cell" aria-label="Spring 2020 Issue">
-					<div class="past-issue card">
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2020/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2020/05/sp20-asmag-cover.jpg" alt="Spring 2020 Issue" /></a></p>
-						<div class="card-section">
-							<p>
-								Spring 2020
-							</p>
-						</div>
-					</div>
-				</article>
 			</div>
 		</div>
 	</div>

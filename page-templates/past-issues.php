@@ -16,6 +16,20 @@ get_header();
 		<?php endwhile; ?>
 		<div class="past-issues">
 			<div class="grid-x grid-padding-x small-up-2 medium-up-4">
+			<div class="cell">
+					<div class="card">
+						<a href="https://magazine.krieger.jhu.edu/fall-2022/"><img src="https://magazine.krieger.jhu.edu/wp-content/uploads/2022/11/fall22-cover-portrait.jpg" alt="Fall 2022 cover art"/>
+						<div class="card-section">Fall 2022<br />Volume 20, Number 1</div>
+						</a>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="card">
+						<a href="https://magazine.krieger.jhu.edu/spring-2022/"><img src="https://magazine.krieger.jhu.edu/wp-content/uploads/2022/05/spring-2022.jpg" alt="Spring 2022 cover art"/>
+						<div class="card-section">Spring 2022<br />Volume 19, Number 2</div>
+						</a>
+					</div>
+				</div>
 				<div class="cell">
 					<div class="card">
 						<a href="https://magazine.krieger.jhu.edu/fall-2021/"><img src="https://magazine.krieger.jhu.edu/wp-content/uploads/2021/11/F21_cover.jpg" alt="Fall 2021 cover art"/>
