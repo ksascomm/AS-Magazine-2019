@@ -1,5 +1,7 @@
 .main-container {
   @include xy-grid-container;
+  width: 100%; 
+  overflow: hidden;
 }
 
 .main-grid {

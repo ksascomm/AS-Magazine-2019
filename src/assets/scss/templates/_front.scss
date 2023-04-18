@@ -195,7 +195,7 @@
     padding: 1rem;
   }
 }
-.sbi_item {
+/*.sbi_item {
   position: relative;
 }
 
@@ -211,7 +211,7 @@
   p {
     width: 98.5%;
   }
-}
+}*/
 
 .curated-posts {
   @include breakpoint (large) {
@@ -401,13 +401,16 @@
     font-family: $font-header-titling-bold;
     font-weight: $font-header-titling-bold-weight;
     letter-spacing: .06rem;
-    text-transform: uppercase;    
+    text-transform: uppercase;
     a {
       color: $black;
       &:hover {
         color: $heritageblue;
       }
     }
+  }
+  .card.no-border {
+    border: none;
   }
 }
 
@@ -473,6 +476,14 @@
   }
 }
 
+.instagram-feed {
+  h1 {
+    font-family: $font-header-titling-bold;
+    font-weight: $font-header-titling-bold-weight;
+    letter-spacing: .06rem;
+    text-transform: uppercase;
+  }
+}
 
 .social-section-wrapper {
   h1 {

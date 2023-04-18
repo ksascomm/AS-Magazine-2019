@@ -71,3 +71,17 @@ Frontend styles for gutenberg blocks
     }
   }
 }
+
+/** === Alignments === */
+@media (min-width: 1000px) {
+.alignwide,
+.alignfull {
+  width: 950px;
+}
+}
+@media (min-width: 1300px) {
+.alignwide,
+.alignfull {
+  width: 1250px;
+}
+}

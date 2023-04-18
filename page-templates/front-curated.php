@@ -235,11 +235,11 @@ endif;
 				<div class="cell small-12 large-6">
 					<article class="callout deans-desktop" aria-labelledby="post-<?php the_ID(); ?>" data-equalizer-watch>
 						<h1><?php the_title(); ?></h1>
-						<div class="media-object stack-for-small">
-							<div class="media-object-section">
+						<div class="card no-border">
+							<div class="card-image">
 								<?php the_post_thumbnail( 'home-curated-small', array( 'class' => 'home-post-image' ) ); ?>
 							</div>
-							<div class="media-object-section middle">
+							<div class="card-section">
 								<p><?php echo strip_tags( get_the_excerpt() ); ?></p>
 								<p><a class="button heritage" href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">More from the Dean</a></p>
 							</div>
@@ -252,9 +252,9 @@ endif;
 				endif;
 			?>
 				<div class="cell small-12 large-6">
-					<article class="callout" aria-label="post-<?php the_ID(); ?>" data-equalizer-watch>
+					<article class="callout instagram-feed" aria-label="post-<?php the_ID(); ?>" data-equalizer-watch>
 						<h1>Social</h1>
-						<?php echo do_shortcode( '[instagram-feed disablelightbox=true hovertextcolor=#fff hovercolor=#ff0000 hoverdisplay="caption"]' ); ?>
+						<?php echo do_shortcode( '[instagram-feed feed=1]' ); ?>
 					</article>
 				</div>
 			</div>
