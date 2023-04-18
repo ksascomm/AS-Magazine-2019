@@ -236,8 +236,8 @@ endif;
 					<article class="callout deans-desktop" aria-labelledby="post-<?php the_ID(); ?>" data-equalizer-watch>
 						<h1><?php the_title(); ?></h1>
 						<div class="media-object stack-for-small">
-								<div class="media-object-section">
-												<?php the_post_thumbnail( 'home-curated-small', array( 'class' => 'home-post-image' ) ); ?>
+							<div class="media-object-section">
+								<?php the_post_thumbnail( 'home-curated-small', array( 'class' => 'home-post-image' ) ); ?>
 							</div>
 							<div class="media-object-section middle">
 								<p><?php echo strip_tags( get_the_excerpt() ); ?></p>
@@ -246,49 +246,22 @@ endif;
 						</div>
 					</article>
 				</div>
-								<?php
+					<?php
 				endwhile;
 				wp_reset_postdata();
-endif;
+				endif;
 			?>
-
-				<?php
-				if ( $asmag_homepage_seenheard_news_query->have_posts() ) :
-					while ( $asmag_homepage_seenheard_news_query->have_posts() ) :
-						$asmag_homepage_seenheard_news_query->the_post();
-						?>
-					<div class="cell small-12 large-6">
-						<article class="callout seen-heard" aria-label="post-<?php the_ID(); ?>" data-equalizer-watch>
-											<?php
-											$seenheardtags = get_the_tags();
-											if ( ! empty( $seenheardtags ) ) {
-												echo '<a class="button small tag" href="' . esc_url( get_tag_link( $seenheardtags[0]->term_id ) ) . '">' . esc_html( $seenheardtags[0]->name ) . '</a>';
-											}
-											?>
-							<?php the_content(); ?>
-							<cite class="seen-heard">
-								<?php if ( function_exists( 'get_field' ) && get_field( 'seen_heard_citation' ) ) : ?>
-									<?php the_field( 'seen_heard_citation' ); ?>
-								<?php endif; ?>
-								<?php if ( function_exists( 'get_field' ) && get_field( 'seen_heard_source' ) || get_field( 'seen_heard_source_date' ) ) : ?>
-									<p class="source"><em><?php the_field( 'seen_heard_source' ); ?></em>, <?php the_field( 'seen_heard_source_date' ); ?></p>
-								<?php endif; ?>
-							</cite>
-						</article>
-					</div>
-									<?php
-				endwhile;
-					wp_reset_postdata();
-endif;
-				?>
+				<div class="cell small-12 large-6">
+					<article class="callout" aria-label="post-<?php the_ID(); ?>" data-equalizer-watch>
+						<h1>Social</h1>
+						<?php echo do_shortcode( '[instagram-feed disablelightbox=true hovertextcolor=#fff hovercolor=#ff0000 hoverdisplay="caption"]' ); ?>
+					</article>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="section-spacer"></div>
 	<div class="social-section-wrapper">
 		<div class="grid-container">
-			<h1>Social</h1>
-				<?php echo do_shortcode( '[instagram-feed disablelightbox=true hovertextcolor=#fff hovercolor=#ff0000 hoverdisplay="caption"]' ); ?>
 			<div class="grid-x grid-padding-x padding-top">
 				<div class="cell small-12 cta-section">
 					<div class="float-right cta-link">
