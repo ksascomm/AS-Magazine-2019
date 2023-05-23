@@ -282,15 +282,27 @@ endif;
 		<div class="grid-container">
 			<h1>Browse Issues</h1>
 			<div class="grid-x grid-padding-x padding-top small-up-2 medium-up-4">
-			<article class="cell" aria-label="Fall 2022 Issue">
-					<div class="past-issue card">
-						<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2022/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2022/11/fall22-cover-portrait.jpg" alt="Fall 2022 Issue Cover" /></a></p>
-						<div class="card-section">
-							<p>
-								Fall 2022
-							</p>
-						</div>
+			<article class="cell" aria-label="Spring 2023 Issue">
+				<div class="past-issue card">
+					<p>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2023/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2023/05/sp23_cover-1-1.jpg" alt="Spring 2023 Issue"/></a>
+					</p>
+					<div class="card-section">
+						<p>
+							Spring 2023
+						</p>
 					</div>
+				</div>
+			</article>
+			<article class="cell" aria-label="Fall 2022 Issue">
+				<div class="past-issue card">
+					<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>fall-2022/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2022/11/fall22-cover-portrait.jpg" alt="Fall 2022 Issue Cover" /></a></p>
+					<div class="card-section">
+						<p>
+							Fall 2022
+						</p>
+					</div>
+				</div>
 				</article>
 				<article class="cell" aria-label="Spring 2022 Issue">
 					<div class="past-issue card">
@@ -314,18 +326,6 @@ endif;
 						</div>
 					</div>
 				</article>
-				<article class="cell" aria-label="Spring 2021 Issue">
-						<div class="past-issue card">
-							<p>
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>spring-2021/"><img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2021/05/Sp21_Cover.jpg" alt="Spring 2021 Issue"/></a>
-							</p>
-							<div class="card-section">
-								<p>
-									Spring 2021
-								</p>
-							</div>
-						</div>
-					</article>
 			</div>
 		</div>
 	</div>
