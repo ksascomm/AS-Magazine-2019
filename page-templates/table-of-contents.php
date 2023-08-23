@@ -2,6 +2,7 @@
 /**
  * Template Name: Table of Contents
  */
+
 get_header();
 ?>
 
@@ -20,6 +21,61 @@ get_header();
 			)
 		);
 
+		$asmag_faculty_toc_query = new WP_Query(
+			array(
+				'post_type'      => 'post',
+				'volume'         => $volume,
+				'category__in'   => array( 345 ),
+				'orderby'        => 'modified',
+				'order'          => 'DESC',
+				'posts_per_page' => 20,
+			)
+		);
+
+		$asmag_studentresearch_toc_query = new WP_Query(
+			array(
+				'post_type'      => 'post',
+				'volume'         => $volume,
+				'category__in'   => array( 351 ),
+				'orderby'        => 'modified',
+				'order'          => 'DESC',
+				'posts_per_page' => 20,
+			)
+		);
+
+		$asmag_classroom_toc_query = new WP_Query(
+			array(
+				'post_type'      => 'post',
+				'volume'         => $volume,
+				'category__in'   => array( 348 ),
+				'orderby'        => 'modified',
+				'order'          => 'DESC',
+				'posts_per_page' => 20,
+			)
+		);
+
+		$asmag_community_toc_query = new WP_Query(
+			array(
+				'post_type'      => 'post',
+				'volume'         => $volume,
+				'category__in'   => array( 349 ),
+				'orderby'        => 'modified',
+				'order'          => 'DESC',
+				'posts_per_page' => 20,
+			)
+		);
+
+		$asmag_oncampus_toc_query = new WP_Query(
+			array(
+				'post_type'      => 'post',
+				'volume'         => $volume,
+				'category__in'   => array( 350 ),
+				'orderby'        => 'modified',
+				'order'          => 'DESC',
+				'posts_per_page' => 20,
+			)
+		);
+
 		$asmag_bigideas_toc_query = new WP_Query(
 			array(
 				'post_type'      => 'post',
@@ -27,7 +83,7 @@ get_header();
 				'category__in'   => array( 70 ),
 				'orderby'        => 'modified',
 				'order'          => 'DESC',
-				'posts_per_page' => 10,
+				'posts_per_page' => 20,
 			)
 		);
 
@@ -38,7 +94,7 @@ get_header();
 				'category__in'   => array( 76 ),
 				'orderby'        => 'modified',
 				'order'          => 'DESC',
-				'posts_per_page' => 10,
+				'posts_per_page' => 20,
 			)
 		);
 
@@ -49,7 +105,7 @@ get_header();
 				'category__in'   => array( 69 ),
 				'orderby'        => 'modified',
 				'order'          => 'DESC',
-				'posts_per_page' => 10,
+				'posts_per_page' => 20,
 			)
 		);
 
@@ -60,7 +116,7 @@ get_header();
 				'category__in'   => array( 73 ),
 				'orderby'        => 'modified',
 				'order'          => 'DESC',
-				'posts_per_page' => 10,
+				'posts_per_page' => 20,
 			)
 		);
 
@@ -71,7 +127,7 @@ get_header();
 				'category__in'   => array( 75 ),
 				'orderby'        => 'modified',
 				'order'          => 'DESC',
-				'posts_per_page' => 10,
+				'posts_per_page' => 20,
 			)
 		);
 
@@ -82,7 +138,7 @@ get_header();
 				'category__in'   => array( 78 ),
 				'orderby'        => 'modified',
 				'order'          => 'DESC',
-				'posts_per_page' => 10,
+				'posts_per_page' => 20,
 			)
 		);
 
@@ -93,7 +149,7 @@ get_header();
 				'category__in'   => array( 79 ),
 				'orderby'        => 'modified',
 				'order'          => 'DESC',
-				'posts_per_page' => 10,
+				'posts_per_page' => 20,
 			)
 		);
 
@@ -104,7 +160,7 @@ get_header();
 				'post_parent'    => $parent,
 				'orderby'        => 'menu_order',
 				'order'          => 'ASC',
-				'posts_per_page' => 10,
+				'posts_per_page' => 20,
 			)
 		);
 		?>
@@ -151,6 +207,81 @@ get_header();
 					<?php
 					while ( $asmag_news_toc_query->have_posts() ) :
 						$asmag_news_toc_query->the_post();
+						?>
+						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
+						<?php
+					endwhile;
+					wp_reset_postdata();
+					?>
+
+				</div>
+			<?php endif; ?>
+			<?php if ( $asmag_faculty_toc_query->have_posts() ) : ?>	
+				<div class="toc home faculty">
+					<h1>Faculty</h1>
+					<?php
+					while ( $asmag_faculty_toc_query->have_posts() ) :
+						$asmag_faculty_toc_query->the_post();
+						?>
+						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
+						<?php
+					endwhile;
+					wp_reset_postdata();
+					?>
+
+				</div>
+			<?php endif; ?>
+			<?php if ( $asmag_studentresearch_toc_query->have_posts() ) : ?>	
+				<div class="toc home studentresearch">
+					<h1>Student Research</h1>
+					<?php
+					while ( $asmag_studentresearch_toc_query->have_posts() ) :
+						$asmag_studentresearch_toc_query->the_post();
+						?>
+						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
+						<?php
+					endwhile;
+					wp_reset_postdata();
+					?>
+
+				</div>
+			<?php endif; ?>
+			<?php if ( $asmag_classroom_toc_query->have_posts() ) : ?>	
+				<div class="toc home classroom">
+					<h1>Classroom</h1>
+					<?php
+					while ( $asmag_classroom_toc_query->have_posts() ) :
+						$asmag_classroom_toc_query->the_post();
+						?>
+						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
+						<?php
+					endwhile;
+					wp_reset_postdata();
+					?>
+
+				</div>
+			<?php endif; ?>
+			<?php if ( $asmag_community_toc_query->have_posts() ) : ?>	
+				<div class="toc home community">
+					<h1>Community</h1>
+					<?php
+					while ( $asmag_community_toc_query->have_posts() ) :
+						$asmag_community_toc_query->the_post();
+						?>
+						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
+						<?php
+					endwhile;
+					wp_reset_postdata();
+					?>
+
+				</div>
+			<?php endif; ?>
+			<?php if ( $asmag_oncampus_toc_query->have_posts() ) : ?>	
+				<div class="toc home oncampus">
+					<h1>On Campus</h1>
+					<?php
+					while ( $asmag_oncampus_toc_query->have_posts() ) :
+						$asmag_oncampus_toc_query->the_post();
 						?>
 						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
 						<?php
