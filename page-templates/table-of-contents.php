@@ -76,17 +76,6 @@ get_header();
 			)
 		);
 
-		$asmag_bigideas_toc_query = new WP_Query(
-			array(
-				'post_type'      => 'post',
-				'volume'         => $volume,
-				'category__in'   => array( 70 ),
-				'orderby'        => 'modified',
-				'order'          => 'DESC',
-				'posts_per_page' => 20,
-			)
-		);
-
 		$asmag_students_toc_query = new WP_Query(
 			array(
 				'post_type'      => 'post',
@@ -312,21 +301,6 @@ get_header();
 					<?php
 					while ( $asmag_oncampus_toc_query->have_posts() ) :
 						$asmag_oncampus_toc_query->the_post();
-						?>
-						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
-						<?php
-					endwhile;
-					wp_reset_postdata();
-					?>
-
-				</div>
-			<?php endif; ?>
-			<?php if ( $asmag_bigideas_toc_query->have_posts() ) : ?>
-				<div class="toc home bigideas">
-					<h1>Big Ideas</h1>
-					<?php
-					while ( $asmag_bigideas_toc_query->have_posts() ) :
-						$asmag_bigideas_toc_query->the_post();
 						?>
 						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
 						<?php
