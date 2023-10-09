@@ -216,6 +216,21 @@ get_header();
 
 				</div>
 			<?php endif; ?>
+			<?php if ( $asmag_research_toc_query->have_posts() ) : ?>	
+				<div class="toc home research">
+					<h1>Research</h1>
+					<?php
+					while ( $asmag_research_toc_query->have_posts() ) :
+						$asmag_research_toc_query->the_post();
+						?>
+						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
+						<?php
+					endwhile;
+					wp_reset_postdata();
+					?>
+
+				</div>
+			<?php endif; ?>
 			<?php if ( $asmag_faculty_toc_query->have_posts() ) : ?>	
 				<div class="toc home faculty">
 					<h1>Faculty</h1>
@@ -245,7 +260,7 @@ get_header();
 					?>
 
 				</div>
-			<?php endif; ?>
+			<?php endif; ?>			
 			<?php if ( $asmag_classroom_toc_query->have_posts() ) : ?>	
 				<div class="toc home classroom">
 					<h1>Classroom</h1>
@@ -267,6 +282,21 @@ get_header();
 					<?php
 					while ( $asmag_community_toc_query->have_posts() ) :
 						$asmag_community_toc_query->the_post();
+						?>
+						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
+						<?php
+					endwhile;
+					wp_reset_postdata();
+					?>
+
+				</div>
+			<?php endif; ?>
+			<?php if ( $asmag_alumni_toc_query->have_posts() ) : ?>	
+				<div class="toc home alumni">
+					<h1>Alumni</h1>
+					<?php
+					while ( $asmag_alumni_toc_query->have_posts() ) :
+						$asmag_alumni_toc_query->the_post();
 						?>
 						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
 						<?php
@@ -320,43 +350,13 @@ get_header();
 					?>
 
 				</div>
-			<?php endif; ?>
-			<?php if ( $asmag_alumni_toc_query->have_posts() ) : ?>	
-				<div class="toc home alumni">
-					<h1>Alumni</h1>
-					<?php
-					while ( $asmag_alumni_toc_query->have_posts() ) :
-						$asmag_alumni_toc_query->the_post();
-						?>
-						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
-						<?php
-					endwhile;
-					wp_reset_postdata();
-					?>
-
-				</div>
-			<?php endif; ?>
+			<?php endif; ?>			
 			<?php if ( $asmag_insights_toc_query->have_posts() ) : ?>	
 				<div class="toc home insights">
 					<h1>Insights</h1> 
 					<?php
 					while ( $asmag_insights_toc_query->have_posts() ) :
 						$asmag_insights_toc_query->the_post();
-						?>
-						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
-						<?php
-					endwhile;
-					wp_reset_postdata();
-					?>
-
-				</div>
-			<?php endif; ?>
-			<?php if ( $asmag_research_toc_query->have_posts() ) : ?>	
-				<div class="toc home research">
-					<h1>Research</h1>
-					<?php
-					while ( $asmag_research_toc_query->have_posts() ) :
-						$asmag_research_toc_query->the_post();
 						?>
 						<?php get_template_part( 'template-parts/content', 'toc' ); ?>
 						<?php
