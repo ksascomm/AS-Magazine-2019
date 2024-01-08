@@ -9,7 +9,6 @@
  * @since ASMagazine 1.0.0
  */
 
-
 // Check to see if rev-manifest exists for CSS and JS static asset revisioning
 // https://github.com/sindresorhus/gulp-rev/blob/master/integration.md
 
@@ -42,11 +41,6 @@ if ( ! function_exists( 'asmagazine_scripts' ) ) :
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/dist/assets/js/' . asmagazine_asset_path( 'app.js' ), array( 'jquery' ), '4.0.0', true );
 
-		// Enqueue FontAwesome from CDN.
-		wp_register_script( 'fontawesome', 'https://kit.fontawesome.com/72c92fef89.js', array(), '6.0.0', false );
-		wp_enqueue_script( 'fontawesome' );
-		wp_script_add_data( 'fontawesome', array( 'crossorigin' ), array( 'anonymous' ) );
-
 		// Add the comment-reply library on pages where it is necessary
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -72,3 +66,25 @@ function defer_parsing_of_js( $url ) {
 	return str_replace( ' src', ' defer src', $url );
 }
 add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
+
+
+/**
+ * Font Awesome Kit Setup
+ *
+ * This will add your Font Awesome Kit to the front-end, the admin back-end,
+ * and the login screen area.
+ */
+if ( ! function_exists( 'fa_custom_setup_kit' ) ) {
+	function fa_custom_setup_kit( $kit_url = '' ) {
+		foreach ( array( 'wp_enqueue_scripts', 'admin_enqueue_scripts', 'login_enqueue_scripts' ) as $action ) {
+			add_action(
+				$action,
+				function () use ( $kit_url ) {
+					wp_enqueue_script( 'font-awesome-kit', $kit_url, array(), '6.5.1', false );
+				}
+			);
+		}
+	}
+}
+
+fa_custom_setup_kit( 'https://kit.fontawesome.com/72c92fef89.js' );
