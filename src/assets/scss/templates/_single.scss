@@ -1,11 +1,24 @@
 //Single Posts
 .entry-meta {
   margin: 1rem 0rem;
-  p.byline.issue, p.byline.author {
+  p.byline.issue, p.byline.author, .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-wrapper.pp-multiple-authors-layout-inline {
     margin-bottom: 0rem;
     font-family: $font-stack-gentona-light;
     font-weight: $font-stack-gentona-light-weight;
     line-height: 1.5;
+  }
+  .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-wrapper.pp-multiple-authors-layout-inline  {
+	a {
+		box-shadow: inset 0 -0.125rem 0 0 $heritageblue;
+		transition: box-shadow 0.2s;
+		&:hover {
+			color: $white;
+			box-shadow: inset 0 -2.5rem 0 0 $heritageblue;
+		}
+	  }
+  }
+  .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-wrapper.pp-multiple-authors-layout-inline::before {
+	content: "By";
   }
 }
 .post-header {
